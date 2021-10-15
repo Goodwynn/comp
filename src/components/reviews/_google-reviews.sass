@@ -1,0 +1,27 @@
+.google-reviews
+  padding: 8px
+  border-radius: 4px
+
+  .swiper
+    &-controls
+      position: absolute
+      z-index: 2
+      top: 6px
+      left: 69%
+      transform: translateX(-50%)
+      display: flex
+      align-items: center
+      gap: 10px
+    &-button
+      &-next,
+      &-prev
+        size: 8px
+        background-size: cover
+        background-image: svg-load('../icons/svg-mono/arrow-right.svg', fill=none, stroke=$colorSecondary)
+        cursor: pointer
+      &-prev
+        transform: rotate(180deg)
+    &-pagination
+      font-size: 10px
+      font-weight: 600
+      color: $colorDarkGrey

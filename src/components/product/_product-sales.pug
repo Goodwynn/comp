@@ -1,5 +1,5 @@
 -
-  var items = [
+  var products = [
     {
       class: 'col-2',
       img: '../img/prod/prod-img1.jpg',
@@ -66,15 +66,14 @@ section.product-sales
   .container 
     h3.mb-4 Топ продаж
     .row.g-3
-      each item in items 
+      each item in products 
         include _product-card
-      .col-12
-        a(href="#").ms-auto
-          span Смотреть все товары
-          +svgMono('arrow-right')
-      each item in items 
+    a(href="#").show-more.ms-auto.my-4
+      span Смотреть все товары
+      +svgMono('arrow-right')
+    .row.g-3
+      each item in products 
         include _product-card
-      .col-12
-        a(href="#").ms-auto
-          span Смотреть все товары
-          +svgMono('arrow-right')
+    a(href="#").show-more.ms-auto.my-4
+      span Смотреть все товары
+      +svgMono('arrow-right')

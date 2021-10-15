@@ -1,0 +1,28 @@
+.game-card
+  display: block
+  &:hover
+    .game-card-image
+      filter: drop-shadow(0px 0px 10px #EB04FF)
+
+  &-image
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 200px
+    width: 100%
+    text-align: center
+    &-bg
+      position: absolute
+      size: 200px
+      border-radius: 50%
+      background-color: $colorWhite
+    img
+      position: relative
+      z-index: 2
+
+  &-title
+    font-size: 18px
+    font-weight: 700
+    text-align: center
+    color: $colorWhite

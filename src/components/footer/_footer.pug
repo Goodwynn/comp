@@ -1,6 +1,85 @@
 // FOOTER :: START
 footer.footer
   .container
-    .footer__wrapper
+    .footer-top.row.pb-5
+      .col-3
+        .footer-column-title Информация
+        nav 
+          a(href="#") Акции
+          a(href="#") Кредит
+          a(href="#") Оплата и доставка
+          a(href="#") Гарантия
+          a(href="#") Частые вопросы
+          a(href="#") Новости
+          a(href="#") Блог
+          a(href="#") О нас
+          a(href="#") Политика конфиденциальности
+          a(href="#") Контакты
+      .col-3
+        .footer-column-title Услуги и сервисы
+        nav 
+          a(href="#") Сервисный центр v-comp
+          a(href="#") Магазин Б/У товара
+          a(href="#") Скупка Б/У 
+          a(href="#") Ремонт ПК и оргтехники
+          a(href="#") Компьютерная помощь
+          a(href="#") Сотрудничество
+          a(href="#") Главная
+      .col-3
+        .footer-column-title Контакты
+        a(href="#").phone
+          span (067) 11-12-485 - Отдел продаж
+        a(href="#").phone
+          span (066) 484-39-22 - Отдел продаж
+        a(href="#").phone
+          span (063) 747-33-48 - Отдел продаж
+          +svgMono('viber')
+          +svgMono('teleg')
+        p Днепр
+          span Европейская, 8 (бывшая Миронова 8)
+        p Понедельник-Пятница 9:00-19:00
+        p Суббота-Воскресенье: с 9:00-16:00
+      .col-3
+        .footer-column-title Следите за нами
+        .row.g-2.mb-4
+          .col-auto
+            a(href="#").btn-soc
+              +svgMono('instag')
+          .col-auto
+            a(href="#").btn-soc
+              +svgMono('fb')
+          .col-auto
+            a(href="#").btn-soc
+              +svgMono('viber')
+          .col-auto
+            a(href="#").btn-soc
+              +svgMono('teleg')
+          .col-auto
+            a(href="#").btn-soc
+              +svgMono('yt')
+          .col-auto
+            a(href="#").btn-soc
+              +svgMono('linked')
+        .footer-column-title Подписывайтесь на скидки
+        .input-group 
+          input(type="text" placeholder="Укажите ваш email...").ct-input
+          button(type="submit") 
+            +svgMono('send')
+    .footer-bottom.row.align-items-center.justify-content-between.py-3.border-top.border-bottom
+      .col-auto
+        .row.align-items-center
+          .col-auto
+            a(href="#").company-logo
+              +svgMono('logo-mono')
+          .col-auto 
+            .footer-copyright 2008-2021 Интернет-магазин v-comp.com.UA 
+              br 
+              | Все права защищены
+      .col-auto 
+        .row.align-items-center.g-2
+          .col-auto 
+            +svgColor('mastercard')
+          .col-auto 
+            +svgColor('visa')
 
 // FOOTER :: END

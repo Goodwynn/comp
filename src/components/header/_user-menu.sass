@@ -1,0 +1,30 @@
+.usermenu
+  position: fixed
+  z-index: 3
+  top: 0
+  left: 0
+  bottom: 0
+  padding: 60px 30px
+  width: fit-content
+  background-color: $colorDark
+  transform: translateX(-100%)
+  transition: 0.25s all
+
+  &.open
+    transform: translateX(0)
+
+  &-close
+    .ico
+      color: #d9d9d9
+
+  .company-logo
+    .ico
+      color: $colorWhite
+
+  a, button
+    color: #d9d9d9
+    border-color: #d9d9d9
+
+  button
+    font-size: 18px
+    font-weight: 600

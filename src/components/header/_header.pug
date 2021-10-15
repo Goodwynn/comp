@@ -6,7 +6,7 @@ header.header
         .col-auto
           .row.align-items-center
             .col-auto
-              button.btn-hamburger
+              button.btn-hamburger.usermenu-btn
                 +svgMono('hamburger')
             .col-auto
               nav.header-nav
@@ -35,10 +35,10 @@ header.header
               a(href="#").company-logo
                 +svgColor('logo')
             .col-6
-              button.btn-ct-primary-fill
+              button.btn-ct-primary-fill.catalog-btn
                 span КАТАЛОГ ТОВАРОВ
                 +svgMono('btn-icon')
-        .col-6 
+        .col 
           .input-group 
             input(type="text" placeholder="Поиск").ct-input
             button.btn-ct-secondary-out
@@ -68,3 +68,5 @@ header.header
                   a(href="#").btn-control.cart
                     +svgMono('basket')
                     .counter 22
+  include _megamenu
+  include _user-menu

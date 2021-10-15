@@ -1,0 +1,34 @@
+.swiper-slide.google-review
+  .row.align-items-center.g-3
+    .col-9.border-end
+      .row.g-2
+        .col-auto 
+          img(src=item.img, alt="")
+        .col
+          .google-review-author=item.name 
+          .google-review-text=item.text
+          .row.justify-content-between.align-items-center.mt-1
+            .col-auto
+              .google-review-stars
+                - for (i=1; i<=5; i++)
+                  if (item.curentRating >= i)
+                    .star.active 
+                      +svgMono('star')
+                  else 
+                    .star 
+                      +svgMono('star')
+            .col-auto 
+              .google-review-date=item.date
+    .col-3
+      .google-review-author-rating=item.averageRating
+      .google-review-stars.my-2
+        - for (i=1; i<=5; i++)
+          if (item.averageRating >= i)
+            .star.active 
+              +svgMono('star')
+          else 
+            .star 
+              +svgMono('star')
+      .google-review-author-grades=item.allReviews
+        | &nbsp;
+        | отзыва на Google

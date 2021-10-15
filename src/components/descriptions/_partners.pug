@@ -1,0 +1,19 @@
+section.partners 
+  .container 
+    h3.mb-4 Партнеры
+    .row.align-items-center.justify-content-between.flex-nowrap
+      -for(i=1; i<=5; i++)
+        .col-auto 
+          a(href="#") 
+            img(src="../img/partners/partner"+i+".png", alt="")
+      -for(i=1; i<=5; i++)
+        .col-auto 
+          a(href="#") 
+            img(src="../img/partners/partner"+i+".png", alt="")
+      -for(i=1; i<=2; i++)
+        .col-auto 
+          a(href="#") 
+            img(src="../img/partners/partner"+i+".png", alt="")
+    a(href="#").show-more.mt-4.ms-auto
+      span Все партнеры
+      +svgMono('arrow-right')

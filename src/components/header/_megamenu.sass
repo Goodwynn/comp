@@ -1,0 +1,33 @@
+.megamenu
+  position: absolute
+  top: 100%
+  left: 0
+  right: 0
+  height: 100vh
+  padding-top: 10px
+  transform: translateY(-100%)
+  transition: 0.25s all
+  &.open
+    z-index: 2
+    transform: translateY(0)
+
+  &-category-title
+    display: block
+    margin-bottom: 15px
+    font-size: 16px
+    font-weight: 700
+    color: $colorSecondary
+    & + .megamenu-category-title
+      margin-top: 25px
+
+  &-link
+    margin-bottom: 5px
+    display: block
+    font-size: 14px
+    font-weight: 500
+    color: $colorGS60
+    & + .megamenu-category-title
+      margin-top: 25px
+
+  .container
+    background-color: $colorWhite

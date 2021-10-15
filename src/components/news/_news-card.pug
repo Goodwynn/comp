@@ -1,0 +1,13 @@
+.col-3
+  .news-card.shadow.pb-2
+    .news-card-image.mb-3
+      img(src=item.img, alt=item.title)
+    .news-card-title.mb-2.px-2=item.title 
+    .news-card-text.mb-2.px-2=item.text 
+    .news-card-footer.row.justify-content-between.align-items-center.px-2
+      .col-auto
+        .news-card-date=item.date 
+      .col-auto
+        a(href="#").show-more
+          span Читать полностью
+          +svgMono('arrow-right')

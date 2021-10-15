@@ -1,0 +1,53 @@
+-
+  var googleReviews = [
+    {
+      img: '../img/avatar.jpg',
+      name: 'Сергей Филимонов',
+      text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
+      date: '07.04.2021',
+      curentRating: 1,
+      allReviews: 532,
+      averageRating: 4
+    },
+    {
+      img: '../img/avatar.jpg',
+      name: 'Сергей Филимонов',
+      text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
+      date: '07.04.2021',
+      curentRating: 2,
+      allReviews: 532,
+      averageRating: 4.2
+    },
+    {
+      img: '../img/avatar.jpg',
+      name: 'Сергей Филимонов',
+      text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
+      date: '07.04.2021',
+      curentRating: 3,
+      allReviews: 532,
+      averageRating: 4.5
+    },
+    {
+      img: '../img/avatar.jpg',
+      name: 'Сергей Филимонов',
+      text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
+      date: '07.04.2021',
+      curentRating: 4,
+      allReviews: 532,
+      averageRating: 4.7
+    },
+  ]
+.google-reviews.shadow
+  .swiper-container 
+    .swiper-wrapper 
+      each item in googleReviews
+        include _google-review
+    .swiper-controls
+      .swiper-button-prev
+      .swiper-pagination
+      .swiper-button-next
+    
+
+a(href="#").show-more.mt-4.ms-auto
+  span Все отзывы на Google
+  +svgMono('arrow-right')

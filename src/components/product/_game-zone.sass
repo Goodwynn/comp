@@ -2,11 +2,30 @@
   padding: 40px 0
   background-image: url(../img/game-zone-bg.jpg)
 
+  &-title
+    font-size: 36px
+    font-weight: 600
+    text-transform: uppercase
+    color: $colorWhite
+
   .product-card
     background-color: $colorWhite
     &:hover
+      border-radius: 4px
       .product-card-short-information
         display: none
+
+  .show-more
+    color: $colorWhite
+    &:hover
+      color: $colorWhite
+    .ico
+      stroke: $colorWhite
+
+  hr
+    height: 2px
+    background-color: $colorWhite
+    opacity: 1
 
   h3
     color: $colorWhite

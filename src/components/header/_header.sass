@@ -1,7 +1,21 @@
 .header
+  position: relative
 
   &-up
+    position: relative
+    z-index: 3
     background-color: $colorDark
+    a
+      display: block
+      font-size: 10px
+      font-weight: 700
+      color: $colorSoft
+      text-transform: uppercase
+
+  &-functions
+    position: relative
+    z-index: 3
+    background-color: $colorWhite
 
   &-nav
     display: flex
@@ -28,10 +42,3 @@
 
   .border-start.border-2
     border-color: $colorDark !important
-
-  a
-    display: block
-    font-size: 10px
-    font-weight: 700
-    color: $colorSoft
-    text-transform: uppercase
