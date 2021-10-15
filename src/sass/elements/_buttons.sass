@@ -34,10 +34,12 @@ button
       color: $colorDark
       border-radius: 50%
       background-color: $colorYellow
-      transform: translate(25%, -25%)
+      transform: translate(50%, -50%)
     .ico, i
       font-size: 32px
-      color: $colorDark
+    .ico
+      fill: none
+      stroke: $colorDark
 
   &-ct-primary-fill
     padding: 10px 15px
@@ -54,7 +56,8 @@ button
     background-color: $colorPrimary
     .ico, i
       font-size: 18px
-      color: $colorSoft
+      fill: none
+      stroke: $colorSoft
     &:hover
       background-color: #37bd8d
     &:active
@@ -63,13 +66,11 @@ button
     &:disabled
       color: $colorGS40
       background-color: $colorGS20
+      cursor: default
+      pointer-events: none
       .ico, i
-        color: $colorGS40
-      &:hover
-        color: $colorGS40
-        background-color: inherit
-        .ico, i
-          color: $colorGS40
+        fill: none
+        stroke: $colorGS40
 
   &-ct-primary-out
     padding: 10px 15px
@@ -85,25 +86,22 @@ button
     border-radius: 4px
     .ico, i
       font-size: 18px
-      color: $colorPrimary
+      fill: none
+      stroke: $colorPrimary
     &:hover
       color: $colorSoft
       background-color: #37bd8d
       .ico, i
-        color: $colorSoft
+        fill: none
+        stroke: $colorSoft
     &:active
       background-color: $colorPrimary
       border-color: rgba(38, 99, 255, 0.5)
     &:disabled
       color: $colorGS40
       border-color: $colorGS40
-      .ico, i
-        color: $colorGS40
-      &:hover
-        color: $colorGS40
-        background-color: inherit
-        .ico, i
-          color: $colorGS40
+      cursor: default
+      pointer-events: none
 
   &-ct-secondary-fill
     padding: 10px 15px
@@ -120,7 +118,8 @@ button
     background-color: $colorSecondary
     .ico, i
       font-size: 18px
-      color: $colorSoft
+      fill: none
+      stroke: $colorSoft
     &:hover
       background-color: #3582bf
     &:active
@@ -129,13 +128,11 @@ button
     &:disabled
       color: $colorGS40
       background-color: $colorGS20
+      cursor: default
+      pointer-events: none
       .ico, i
-        color: $colorGS40
-      &:hover
-        color: $colorGS40
-        background-color: inherit
-        .ico, i
-          color: $colorGS40
+        fill: none
+        stroke: $colorGS40
 
   &-ct-secondary-out
     padding: 10px 15px
@@ -151,13 +148,15 @@ button
     background-color: $colorWhite
     .ico, i
       font-size: 18px
-      color: $colorSecondary
+      fill: none
+      stroke: $colorSecondary
     &:hover
       color: $colorSoft
       border-color: #3582bf
       background-color: #3582bf
       .ico, i
-        color: $colorSoft
+        fill: none
+        stroke: $colorSoft
     &:active
       background-color: $colorSecondary
       border-color: rgba(38, 99, 255, 0.5)
@@ -165,14 +164,11 @@ button
       color: $colorGS40
       background-color: $colorWhite
       border-color: $colorGS20
+      cursor: default
+      pointer-events: none
       .ico, i
-        color: $colorGS40
-      &:hover
-        color: $colorGS40
-        background-color: $colorWhite
-        border-color: $colorGS20
-        .ico, i
-          color: $colorGS40
+        fill: none
+        stroke: $colorGS40
 
   &-banner
     padding: 15px 40px

@@ -42,7 +42,7 @@ header.header
           .input-group 
             input(type="text" placeholder="Поиск").ct-input
             button.btn-ct-secondary-out
-              <i class="bi bi-search"></i>
+              +svgMono('search')
         .col-3 
           .row.align-items-center
             .col-6
@@ -58,13 +58,13 @@ header.header
               .row.justify-content-between
                 .col-auto
                   a(href="#").btn-control
-                    <i class="bi bi-suit-heart"></i>
+                    +svgMono('scales')
                     .counter 22
                 .col-auto
                   a(href="#").btn-control
-                    <i class="bi bi-suit-heart"></i>
+                    +svgMono('heart')
                     .counter 22
                 .col-auto
                   a(href="#").btn-control.cart
-                    <i class="bi bi-suit-heart"></i>
+                    +svgMono('basket')
                     .counter 22

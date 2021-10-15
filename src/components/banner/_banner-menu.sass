@@ -5,10 +5,13 @@
     align-items: center
     gap: 10px
     font-size: 16px
-    font-weight: 500
+    font-weight: 700
     color: $colorDark
     .ico, i
       size: 24px
+    .ico
+      fill: none
+      stroke: $colorDark
     span
       position: relative
     .notice
@@ -24,4 +27,4 @@
       margin-left: auto
       size: 8px 14px
       background-size: cover
-      background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=$colorDark)
+      background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=none, stroke=$colorDark)

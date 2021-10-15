@@ -1,32 +1,34 @@
 div(class=item.class)
   .product-card.shadow
 
-    .product-card-header.row.justify-content-between
+    .product-card-header.row.justify-content-between.align-items-center
       .col-auto
         if (item.newCome == true)
-          .product-new-notice Новинка
+          .product-card-new-notice Новинка
       .col-auto
-        .row
+        .row.align-items-center.g-2
           .col-auto
             a(href="#")
-              <i class="bi bi-suit-heart"></i>
+              +svgMono('scales')
           .col-auto
             a(href="#") 
-              <i class="bi bi-suit-heart"></i>
+              +svgMono('heart')
 
-    .product-card-information 
-      .product-card-image.text-center
+    .product-card-description
+      .product-card-description-image.text-center
         img(src=item.img, alt=item.name)
-      .name=item.name
+      a(href="#").product-card-description-name=item.name
 
     .product-card-rating 
       if (item.rating != null)
-        .product-card-stars 
+        .product-card-stars
           - for (i=1; i<=5; i++)
             if (item.rating >= i )
-              .star +
+              .star.active
+                +svgMono('star')
             else 
-              .star -
+              .star
+                +svgMono('star')
       .product-card-reviews Отзывов: 
         span=item.review
 
@@ -42,6 +44,29 @@ div(class=item.class)
             span грн.
       button.btn-ct-primary-fill КУПИТЬ
 
+    .product-card-short-information 
+      hr
+      .title.mb-2 Характеристики
+      .row.justify-content-between.align-items-center 
+        .col-auto
+          .name Диагональ: 
+        .col-auto
+          .value 21,5“
+      .row.justify-content-between.align-items-center 
+        .col-auto
+          .name Тип матрицы: 
+        .col-auto
+          .value IPS
+      .row.justify-content-between.align-items-center 
+        .col-auto
+          .name Частота: 
+        .col-auto
+          .value 60 Гц
+      .row.justify-content-between.align-items-center 
+        .col-auto
+          .name Разрешение: 
+        .col-auto
+          .value FullHD
         
 
 

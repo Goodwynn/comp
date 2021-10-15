@@ -1,22 +1,54 @@
 .product-card
+  position: relative
+  border-radius: 4px
+  &:hover
+    .product-card-short-information
+      display: block
 
-  &-information
-    padding: 10px 12px 5px
+  &-header
+    padding: 10px 12px 0
+    min-height: 38px
+    a
+      display: flex
+    .ico
+      font-size: 18px
+      fill: none
+      stroke: $colorSecondary
 
-  &-image
-    display: flex
-    align-items: center
-    justify-content: center
-    height: 220px
+  &-description
+    padding: 6px 12px 10px
+    &-image
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 220px
+    &-name
+      font-size: 14px
+      font-weight: 700
+      color: $colorDarkGrey
 
   &-stars
     display: flex
+    align-items: center
     gap: 5px
+    .star
+      display: flex
+      .ico
+        font-size: 10px
+        color: #d9d9d9
+      &.active
+        .ico
+          color: $colorYellow
 
   &-rating
-    padding: 5px 12px
+    padding: 0px 12px
     display: flex
+    align-items: center
     gap: 10px
+
+  &-reviews
+    font-size: 11px
+    color: $colorGS40
 
   &-footer
     display: flex
@@ -25,5 +57,73 @@
     padding: 5px 12px 10px
 
   &-price
-    &-container
+    font-size: 18px
+    font-weight: 700
+    color: $colorDark
+    &.default
+      font-size: 10px
+      color: $colorGS40
+      text-decoration: line-through
+    &.sale
+      color: $colorRed
+      margin-left: 10px
+      margin-top: -5px
+
+  &-new
+    &-notice
       position: relative
+      padding: 5px 10px 5px 0px
+      font-size: 12px
+      font-weight: 700
+      color: $colorWhite
+      background-color: $colorRed
+      &::before
+        position: absolute
+        content: ""
+        top: 0
+        left: -12px
+        width: 12px
+        height: 100%
+        background-color: $colorRed
+      &::after
+        position: absolute
+        content: ""
+        top: 0
+        right: -12px
+        width: 12px
+        height: 100%
+        border-style: solid
+        border-width: 28px 12px 0 0
+        border-color: $colorRed transparent transparent transparent
+
+  &-short-information
+    position: absolute
+    z-index: 2
+    top: 100%
+    left: 0
+    display: none
+    width: 100%
+    padding: 0px 12px 10px
+    background-color: $colorWhite
+    .title
+      font-size: 12px
+      font-weight: 700
+      line-height: 16px
+      color: $colorDarkGrey
+    .name
+      font-size: 12px
+      font-weight: 700
+      line-height: 16px
+      color: $colorGS40
+    .value
+      font-size: 12px
+      font-weight: 700
+      line-height: 16px
+      color: $colorDarkGrey
+    .row
+      &:not(:last-child)
+        margin-bottom: 5px
+    hr
+      margin: 0 0 8px
+      height: 2px
+      background-color: $colorGS10
