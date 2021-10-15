@@ -1,0 +1,70 @@
+// HEADER :: START
+header.header
+  .header-up
+    .container
+      .row.justify-content-between.py-2
+        .col-auto
+          .row.align-items-center
+            .col-auto
+              button.btn-hamburger
+                +svgMono('hamburger')
+            .col-auto
+              nav.header-nav
+                a(href="#") Акции
+                a(href="#") Кредит
+                a(href="#") Оплата и доставка
+                a(href="#") Помощь
+                a(href="#") Скупка Б/У
+                a(href="#") Контакты
+        .col-auto
+          .row.align-items-center
+            .col-auto
+              .lang-toggle 
+                a(href="#") RU
+                .divider /
+                a(href="#").active UA
+            .col-auto 
+              button.header-cabinet 
+                +svgMono('person')
+  .header-functions.shadow.py-4
+    .container
+      .row.justify-content-betweeen.align-items-center
+        .col-3 
+          .row.align-items-center
+            .col-6
+              a(href="#").company-logo
+                +svgColor('logo')
+            .col-6
+              button.btn-ct-primary-fill
+                span КАТАЛОГ ТОВАРОВ
+                +svgMono('btn-icon')
+        .col-6 
+          .input-group 
+            input(type="text" placeholder="Поиск").ct-input
+            button.btn-ct-secondary-out
+              <i class="bi bi-search"></i>
+        .col-3 
+          .row.align-items-center
+            .col-6
+              .btn-group.align-items-center
+                a(href="#").phone 050 065 87 96
+                button(data-bs-toggle="dropdown" aria-expanded="false")
+                  <i class="bi bi-chevron-down"></i>
+                ul.dropdown-menu
+                  a(href="#").phone 050 065 87 96
+                  a(href="#").phone 050 065 87 96
+                  a(href="#").phone 050 065 87 96
+            .col-6.border-start.border-2
+              .row.justify-content-between
+                .col-auto
+                  a(href="#").btn-control
+                    <i class="bi bi-suit-heart"></i>
+                    .counter 22
+                .col-auto
+                  a(href="#").btn-control
+                    <i class="bi bi-suit-heart"></i>
+                    .counter 22
+                .col-auto
+                  a(href="#").btn-control.cart
+                    <i class="bi bi-suit-heart"></i>
+                    .counter 22

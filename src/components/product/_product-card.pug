@@ -1,0 +1,49 @@
+div(class=item.class)
+  .product-card.shadow
+
+    .product-card-header.row.justify-content-between
+      .col-auto
+        if (item.newCome == true)
+          .product-new-notice Новинка
+      .col-auto
+        .row
+          .col-auto
+            a(href="#")
+              <i class="bi bi-suit-heart"></i>
+          .col-auto
+            a(href="#") 
+              <i class="bi bi-suit-heart"></i>
+
+    .product-card-information 
+      .product-card-image.text-center
+        img(src=item.img, alt=item.name)
+      .name=item.name
+
+    .product-card-rating 
+      if (item.rating != null)
+        .product-card-stars 
+          - for (i=1; i<=5; i++)
+            if (item.rating >= i )
+              .star +
+            else 
+              .star -
+      .product-card-reviews Отзывов: 
+        span=item.review
+
+    .product-card-footer 
+      .product-card-price-container
+        if (item.salePrice != null )
+          .product-card-price.default=item.price
+            span грн.
+          .product-card-price.sale=item.salePrice 
+            span грн.
+        else 
+          .product-card-price=item.price
+            span грн.
+      button.btn-ct-primary-fill КУПИТЬ
+
+        
+
+
+
+   

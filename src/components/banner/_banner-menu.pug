@@ -1,0 +1,60 @@
+-
+  var items = [
+    {
+      svg: 'menu1',
+      text: 'Комплектующие ПК',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu2',
+      text: 'Мониторы',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu3',
+      text: 'Компьютеры',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu4',
+      text: 'Ноутбуки',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu5',
+      text: 'Игровые консоли',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu6',
+      text: 'Комплектующие к ноутбукам',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu7',
+      text: 'Планшеты',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu8',
+      text: 'Принтеры и МФУ',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu9',
+      text: 'Акустические колонки',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu10',
+      text: 'Сетевое оборудование',
+      notice: 'NEW'
+    }
+  ]
+
+nav.banner-menu
+  each item in items 
+    a(href="#").banner-menu-link.p-3
+      +svgMono(item.svg)
+      span=item.text
+        .notice=item.notice

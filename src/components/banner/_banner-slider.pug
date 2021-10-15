@@ -1,0 +1,40 @@
+-
+  var items = [
+    {
+      img: '../img/banner-img.jpg',
+      title: 'TEXT BANNER',
+      desc: 'BANNER DESCRIPTION SMALL TEXT'
+    },
+    {
+      img: '../img/banner-img.jpg',
+      title: 'TEXT BANNER 2',
+      desc: 'BANNER DESCRIPTION SMALL TEXT 2'
+    },
+    {
+      img: '../img/banner-img.jpg',
+      title: 'TEXT BANNER 3',
+      desc: 'BANNER DESCRIPTION SMALL TEXT 3'
+    },
+    {
+      img: '../img/banner-img.jpg',
+      title: 'TEXT BANNER 4',
+      desc: 'BANNER DESCRIPTION SMALL TEXT 4'
+    },
+    {
+      img: '../img/banner-img.jpg',
+      title: 'TEXT BANNER 5',
+      desc: 'BANNER DESCRIPTION SMALL TEXT 5'
+    }
+  ]
+
+.banner-slider 
+  .swiper-container 
+    .swiper-wrapper 
+      each item in items
+        .swiper-slide
+          img(src=item.img, alt="")
+          .swiper-slide-content
+            .swiper-slide-title.mb-4=item.title
+            .swiper-slide-description.mb-4=item.desc 
+            button.btn-banner BANNER BUTTON
+    .swiper-pagination 

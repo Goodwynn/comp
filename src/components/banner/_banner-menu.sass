@@ -1,0 +1,27 @@
+.banner-menu
+
+  &-link
+    display: flex
+    align-items: center
+    gap: 10px
+    font-size: 16px
+    font-weight: 500
+    color: $colorDark
+    .ico, i
+      size: 24px
+    span
+      position: relative
+    .notice
+      position: absolute
+      top: 0
+      left: calc(100% + 5px)
+      font-size: 10px
+      font-weight: 700
+      color: #f44336
+    &::after
+      position: relative
+      content: ''
+      margin-left: auto
+      size: 8px 14px
+      background-size: cover
+      background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=$colorDark)

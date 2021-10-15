@@ -1,0 +1,39 @@
+-
+  var items = [
+    {
+      icon: 'advantages1',
+      text: 'Бесплатная сборка'
+    },
+    {
+      icon: 'advantages2',
+      text: 'Рассрочка 4 мес./0% без переплат'
+    },
+    {
+      icon: 'advantages3',
+      text: 'Бесплатная доставка'
+    },
+    {
+      icon: 'advantages4',
+      text: 'Официальная гарантия'
+    },
+    {
+      icon: 'advantages5',
+      text: 'Лучшая цена'
+    },
+    {
+      icon: 'advantages6',
+      text: '11 лет на рынке'
+    },
+    {
+      icon: 'advantages7',
+      text: 'Профессиональная консультация'
+    }
+  ]
+
+.banner-advantages 
+  .row.justify-content-between.mt-5
+    each item in items
+      .col
+        .banner-advantages-item 
+          +svgColor(item.icon)
+          .text=item.text

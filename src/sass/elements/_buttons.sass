@@ -1,0 +1,184 @@
+// buttons
+button
+  -webkit-appearance: none
+  border: 0
+  box-shadow: none
+  cursor: pointer
+  background: none
+  padding: 0
+  &:focus
+    outline: none
+
+.btn
+
+  &-hamburger
+    .ico
+      font-size: 24px
+      stroke: $colorSoft
+
+  &-control
+    position: relative
+    &.cart
+      .counter
+        background-color: $colorPrimary
+    .counter
+      position: absolute
+      top: 0
+      right: 0
+      size: 25px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 10px
+      font-weight: 900
+      color: $colorDark
+      border-radius: 50%
+      background-color: $colorYellow
+      transform: translate(25%, -25%)
+    .ico, i
+      font-size: 32px
+      color: $colorDark
+
+  &-ct-primary-fill
+    padding: 10px 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    font-size: 12px
+    font-weight: 700
+    line-height: 12px
+    color: $colorSoft
+    border: 2px solid transparent
+    border-radius: 4px
+    background-color: $colorPrimary
+    .ico, i
+      font-size: 18px
+      color: $colorSoft
+    &:hover
+      background-color: #37bd8d
+    &:active
+      background-color: $colorPrimary
+      border-color: rgba(38, 99, 255, 0.5)
+    &:disabled
+      color: $colorGS40
+      background-color: $colorGS20
+      .ico, i
+        color: $colorGS40
+      &:hover
+        color: $colorGS40
+        background-color: inherit
+        .ico, i
+          color: $colorGS40
+
+  &-ct-primary-out
+    padding: 10px 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    font-size: 12px
+    font-weight: 700
+    line-height: 12px
+    color: $colorPrimary
+    border: 2px solid $colorPrimary
+    border-radius: 4px
+    .ico, i
+      font-size: 18px
+      color: $colorPrimary
+    &:hover
+      color: $colorSoft
+      background-color: #37bd8d
+      .ico, i
+        color: $colorSoft
+    &:active
+      background-color: $colorPrimary
+      border-color: rgba(38, 99, 255, 0.5)
+    &:disabled
+      color: $colorGS40
+      border-color: $colorGS40
+      .ico, i
+        color: $colorGS40
+      &:hover
+        color: $colorGS40
+        background-color: inherit
+        .ico, i
+          color: $colorGS40
+
+  &-ct-secondary-fill
+    padding: 10px 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    font-size: 12px
+    font-weight: 700
+    line-height: 12px
+    color: $colorSoft
+    border: 2px solid transparent
+    border-radius: 4px
+    background-color: $colorSecondary
+    .ico, i
+      font-size: 18px
+      color: $colorSoft
+    &:hover
+      background-color: #3582bf
+    &:active
+      border-color: rgba(38, 99, 255, 0.5)
+      background-color: $colorSecondary
+    &:disabled
+      color: $colorGS40
+      background-color: $colorGS20
+      .ico, i
+        color: $colorGS40
+      &:hover
+        color: $colorGS40
+        background-color: inherit
+        .ico, i
+          color: $colorGS40
+
+  &-ct-secondary-out
+    padding: 10px 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    font-size: 12px
+    font-weight: 700
+    line-height: 12px
+    border: 2px solid $colorSecondary
+    border-radius: 4px
+    background-color: $colorWhite
+    .ico, i
+      font-size: 18px
+      color: $colorSecondary
+    &:hover
+      color: $colorSoft
+      border-color: #3582bf
+      background-color: #3582bf
+      .ico, i
+        color: $colorSoft
+    &:active
+      background-color: $colorSecondary
+      border-color: rgba(38, 99, 255, 0.5)
+    &:disabled
+      color: $colorGS40
+      background-color: $colorWhite
+      border-color: $colorGS20
+      .ico, i
+        color: $colorGS40
+      &:hover
+        color: $colorGS40
+        background-color: $colorWhite
+        border-color: $colorGS20
+        .ico, i
+          color: $colorGS40
+
+  &-banner
+    padding: 15px 40px
+    font-size: 10px
+    font-weight: 900
+    color: $colorWhite
+    text-transform: uppercase
+    border-radius: 4px
+    background-color: $colorRed
