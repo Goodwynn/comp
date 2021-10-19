@@ -1,0 +1,39 @@
+.search-block
+  position: relative
+  &.open
+    .search-block-content
+      display: block
+
+  &-content
+    position: absolute
+    display: none
+    top: 100%
+    left: 0
+    padding: 15px 25px
+    width: 100%
+    border-radius: 0 0 4px 4px
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1)
+    background-color: $colorWhite
+    &-results
+      & > *:not(:last-child)
+        margin-bottom: 20px
+
+  &-link
+    display: block
+    font-size: 14px
+    font-weight: 500
+    color: $colorDark
+    span
+      color: $colorGS40
+
+  &-categories
+    display: flex
+    align-items: center
+    gap: 10px
+    font-size: 18px
+    font-weight: 700
+    color: $colorDark
+    .ico
+      size: 16px
+      fill: none
+      stroke: $colorDark

@@ -6,6 +6,7 @@
   button.addEventListener('click', () => {
     megamenu.classList.toggle('open');
     document.querySelector('body').classList.toggle('body-lock')
+    document.querySelector('.page').classList.toggle('blur')
   })
 
 })();

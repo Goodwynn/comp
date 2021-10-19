@@ -1,5 +1,5 @@
 .usermenu 
-  .usermenu-header.row.align-items-center.mb-5
+  .usermenu-header.row.align-items-center.justify-content-between.mb-5
     .col-auto 
       a(href="#").company-logo
         +svgMono('logo-mono')
@@ -7,11 +7,29 @@
       button.usermenu-close 
         +svgMono('close')
   .usermenu-content
-    .row.g-2.mb-3
+    .lang-toggle.mb-3
+      a(href="#") RU
+      .divider /
+      a(href="#").active UA
+    .row.mb-3
       .col-auto.border-end
-        button Вход
+        button 
+          +svgMono('person')
+          span Вход
       .col-auto
         button Регистрация
+    button.mb-3
+      +svgMono('btn-icon')
+      span Каталог товаров
+    button.mb-3
+      +svgMono('basket')
+      span Корзина
+    button.mb-3
+      +svgMono('scales')
+      span Сравнение
+    button.mb-3
+      +svgMono('heart')
+      span Избранное
     .ct-accordion 
       button.ct-accordion-title Информация
       .ct-accordion-content 
@@ -26,5 +44,51 @@
           a(href="#") О нас
           a(href="#") Политика конфиденциальности
           a(href="#") Контакты
-
+    .ct-accordion 
+      button.ct-accordion-title Наши сервисы 
+      .ct-accordion-content 
+        nav 
+          a(href="#") Акции
+          a(href="#") Кредит
+          a(href="#") Оплата и доставка
+          a(href="#") Гарантия
+          a(href="#") Частые вопросы
+          a(href="#") Новости
+          a(href="#") Блог
+          a(href="#") О нас
+          a(href="#") Политика конфиденциальности
+          a(href="#") Контакты
+    .usermenu-title Контакты
+    a(href="#").phone-small
+      span (067) 11-12-485 - Отдел продаж
+    a(href="#").phone-small
+      span (066) 484-39-22 - Отдел продаж
+    a(href="#").phone-small
+      span (063) 747-33-48 - Отдел продаж
+      +svgMono('viber')
+      +svgMono('teleg')
+    p.description-small Днепр
+      span Европейская, 8 (бывшая Миронова 8)
+    p.description-small Понедельник-Пятница 9:00-19:00
+    p.description-small Суббота-Воскресенье: с 9:00-16:00
+    .usermenu-title Следите за нами
+    .row.g-2 
+      .col-auto
+        a(href="#").btn-soc
+          +svgMono('instag')
+      .col-auto
+        a(href="#").btn-soc
+          +svgMono('fb')
+      .col-auto
+        a(href="#").btn-soc
+          +svgMono('viber')
+      .col-auto
+        a(href="#").btn-soc
+          +svgMono('teleg')
+      .col-auto
+        a(href="#").btn-soc
+          +svgMono('yt')
+      .col-auto
+        a(href="#").btn-soc
+          +svgMono('linked')
       

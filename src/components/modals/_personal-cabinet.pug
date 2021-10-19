@@ -1,0 +1,34 @@
+#personal-cabinet-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.personal-cabinet(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col-auto 
+          .micromodal-title Вход
+        .col-auto
+          .micromodal-close(aria-label='Close modal' data-micromodal-close)
+            +svgMono('close')
+      .micromodal-content
+        form(action="#").d-flex.flex-column
+          input(type="text" placeholder="Ваш номер телефона").ct-input.mb-2
+          input(type="password" placeholder="Пароль").ct-input
+          a(href="#").show-more.align-self-end.my-3
+            span Забыли пароль?
+          input(type="submit" value="ВОЙТИ").btn-ct-secondary-fill
+        .row.align-items-center.my-4 
+          .col
+            hr
+          .col-auto
+            .micromodal-notice или войти с помощью
+          .col
+            hr
+        .row
+          .col
+            button.btn-google
+              +svgMono('google')
+              span Google
+          .col 
+            button.btn-fb
+              +svgMono('fb')
+              span Facebook
+      .micromodal-footer.mt-4 Нет аккаунта? 
+        a(href="#") Зарегистрироваться

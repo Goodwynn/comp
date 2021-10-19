@@ -1,0 +1,55 @@
+-
+  var searchItems = [
+    {
+      img: '../img/search/search1.jpg',
+      text: 'Корпус 2E Gaming Spargo GX910, Black (2E-GX910)'
+    },
+    {
+      img: '../img/search/search2.jpg',
+      text: 'Корпус 2E Gaming Spargo GX910, Black (2E-GX910)'
+    },
+    {
+      img: '../img/search/search3.jpg',
+      text: 'Корпус 2E Gaming Spargo GX910, Black (2E-GX910)'
+    },
+    {
+      img: '../img/search/search4.jpg',
+      text: 'Корпус 2E Gaming Spargo GX910, Black (2E-GX910)'
+    },
+    {
+      img: '../img/search/search5.jpg',
+      text: 'Корпус 2E Gaming Spargo GX910, Black (2E-GX910)'
+    },
+    {
+      img: '../img/search/search6.jpg',
+      text: 'Корпус 2E Gaming Spargo GX910, Black (2E-GX910)'
+    }
+  ]
+
+.search-block 
+  .input-group 
+    input(type="text" placeholder="Поиск").ct-input
+    button.btn-ct-secondary-fill
+      +svgMono('search')
+  .search-block-content
+    .search-block-content-results
+      a(href="#").search-block-link Корпус 
+        span для телефона
+      a(href="#").search-block-link Корпус 
+        span для ноутбука
+      a(href="#").search-block-link Корпус 
+        span системного блока
+      .search-block-categories 
+        +svgMono('btn-icon')
+        span Категории
+      a(href="#").banner-menu-link
+        +svgMono('menu1')
+        span Комплектующие ПК
+          .notice NEW
+      a(href="#").banner-menu-link
+        +svgMono('menu2')
+        span Мониторы
+          .notice NEW
+    .search-block-content-offer.row.g-2.mt-3
+      each item in searchItems
+        include ../product/_search-card

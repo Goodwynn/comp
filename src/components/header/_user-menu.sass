@@ -5,10 +5,22 @@
   left: 0
   bottom: 0
   padding: 60px 30px
-  width: fit-content
+  max-width: 425px
+  width: 100%
   background-color: $colorDark
   transform: translateX(-100%)
   transition: 0.25s all
+  overflow-y: scroll
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+    background-color: $colorDark
+  &::-webkit-scrollbar
+    width: 12px
+    border-radius: 10px
+    background-color: $colorSoft
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background-color: $colorSoft
 
   &.open
     transform: translateX(0)
@@ -17,14 +29,30 @@
     .ico
       color: #d9d9d9
 
+  &-title
+    @extend .mb-3
+    @extend %f-18-600-gray
+
+  &-content
+    button
+      display: flex
+      align-items: center
+      grid-gap: 20px
+      .ico
+        size: 24px 
+        fill: none
+        stroke: #d9d9d9
+
   .company-logo
     .ico
       color: $colorWhite
 
-  a, button
+  .lang-toggle
+    a, .divider
+      font-size: 14px
+
+  a
     color: #d9d9d9
-    border-color: #d9d9d9
 
   button
-    font-size: 18px
-    font-weight: 600
+    @extend %f-18-600-gray

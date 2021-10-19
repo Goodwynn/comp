@@ -1,0 +1,50 @@
+.micromodal
+  display: none
+  &.is-open
+    display: block
+  &-overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 99
+    // background: rgba(0, 0, 0, 0.2)
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow-y: auto
+  &-container
+    width: 100%
+    background-color: $colorWhite
+    padding: 25px
+    max-height: calc(100vh - 40px)
+    border-radius: 4px
+    box-sizing: border-box
+    &.personal-cabinet
+      max-width: 330px
+  &-close
+    cursor: pointer
+    .ico
+      pointer-events: none
+      fill: $colorRed
+      stroke: $colorRed
+
+  &-title
+    font-size: 18px
+    font-weight: 600
+    color: $colorDark
+
+  &-notice
+    font-size: 10px
+    font-weight: 500
+    color: $colorGS20
+
+  &-footer
+    font-size: 10px
+    text-align: center
+    a
+      color: $colorSecondary
+
+  hr
+    background-color: $colorGS20

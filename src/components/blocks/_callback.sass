@@ -1,0 +1,57 @@
+.callback-block
+  position: relative
+  width: 100%
+  &:hover
+    .callback-block-content
+      display: block
+
+  &-btn
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px 20px
+    width: 100%
+    font-size: 16px
+    font-weight: 700
+    color: $colorDark
+    &:hover
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+  &-content
+    display: none
+    position: absolute
+    top: 100%
+    right: 0
+    padding: 15px
+    width: max-content
+    border-radius: 4px 0 4px 4px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    background-color: $colorWhite
+
+  &-phone
+    display: flex
+    align-items: center
+    gap: 15px
+    font-size: 16px
+    font-weight: 700
+    color: $colorDark
+    &:not(:last-child)
+      margin-bottom: 20px
+    .ico
+      font-size: 16px
+      fill: none
+      stroke: $colorDark
+      &:first-of-type
+        font-size: 22px
+
+  &-notice
+    font-size: 10px
+    font-weight: 500
+    color: $colorGS20
+
+  &-form
+    &-title
+      margin-bottom: 15px
+      font-size: 18px
+      font-weight: 600
+      color: $colorDarkGrey

@@ -24,7 +24,7 @@ header.header
                 .divider /
                 a(href="#").active UA
             .col-auto 
-              button.header-cabinet 
+              button.header-cabinet(data-micromodal-trigger="personal-cabinet-modal")
                 +svgMono('person')
   .header-functions.shadow.py-4
     .container
@@ -39,21 +39,15 @@ header.header
                 span КАТАЛОГ ТОВАРОВ
                 +svgMono('btn-icon')
         .col 
-          .input-group 
-            input(type="text" placeholder="Поиск").ct-input
-            button.btn-ct-secondary-out
-              +svgMono('search')
+          include ../blocks/_search
+          //- .input-group 
+          //-   input(type="text" placeholder="Поиск").ct-input
+          //-   button.btn-ct-secondary-out
+          //-     +svgMono('search')
         .col-3 
           .row.align-items-center
             .col-6
-              .btn-group.align-items-center
-                a(href="#").phone 050 065 87 96
-                button(data-bs-toggle="dropdown" aria-expanded="false")
-                  <i class="bi bi-chevron-down"></i>
-                ul.dropdown-menu
-                  a(href="#").phone 050 065 87 96
-                  a(href="#").phone 050 065 87 96
-                  a(href="#").phone 050 065 87 96
+              include ../blocks/_callback
             .col-6.border-start.border-2
               .row.justify-content-between
                 .col-auto

@@ -1,0 +1,28 @@
+.callback-block 
+  button.callback-block-btn
+    span 050 065 87 96
+    i.bi.bi-chevron-down
+  .callback-block-content 
+    a(href="tel:+").callback-block-phone
+      +svgMono('phone')
+      span (067) 11-12-485
+    a(href="tel:+").callback-block-phone
+      +svgMono('phone')
+      span (066) 484-39-22
+    a(href="tel:+").callback-block-phone
+      +svgMono('phone')
+      span (063) 747-33-48
+      +svgMono('viber')
+      +svgMono('teleg')
+    .row.align-items-center.g-2.my-3 
+      .col
+        hr 
+      .col-auto 
+        .callback-block-notice или
+      .col 
+        hr
+    form(action="#").callback-block-form.d-flex.flex-column
+      .callback-block-form-title Перезвонить мне
+      input(type="text" placeholder="Ваше имя").ct-input.mb-3
+      input(type="tel" placeholder="Ваш номер телефона").ct-input.mb-3
+      input(type="submit" value="ЗАКАЗАТЬ ЗВОНОК").btn-ct-secondary-fill
