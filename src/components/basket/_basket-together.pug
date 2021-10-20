@@ -1,0 +1,46 @@
+.basket-together.mt-5
+  .basket-together-title.mb-4 Вместе дешевле
+  .basket-together-slider
+    .swiper-button-prev
+    .swiper-button-next 
+    .swiper-container 
+      .swiper-wrapper 
+        -for(i=1; i<=2; i++)
+          .swiper-slide 
+            .row.align-items-center
+              .col 
+                .basket-together-card
+                  .row
+                    .col-4
+                      img(src="../img/prod/prod-img3.jpg", alt="") 
+                    .col-8
+                      a(href="#").basket-together-card-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                      .product-card-price-container.mt-3
+                        .product-card-price.default 3600
+                          span грн.
+                        .product-card-price.sale 3500
+                          span грн.
+              .col-auto
+                +svgMono('plus')
+              .col
+                .basket-together-card
+                  .row
+                    .col-4
+                      img(src="../img/prod/prod-img1.jpg", alt="") 
+                    .col-8
+                      a(href="#").basket-together-card-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                      .product-card-price-container.mt-3
+                        .product-card-price.default 3600
+                          span грн.
+                        .product-card-price.sale 3500
+                          span грн
+            .row.align-items-center.pt-3.mt-4.border-top 
+              .col-6 
+                .basket-together-number Код комлекта: 1234567
+              .col-auto.ms-auto.text-end
+                .basket-together-price 3600
+                  span грн. 
+                .basket-together-discount Экономия: 200
+                  span грн.
+              .col-auto
+                button.btn-ct-primary-fill КУПИТЬ КОМПЛЕКТ

@@ -1,0 +1,16 @@
+.basket-item
+  .row.align-items-center.g-2
+    .col-6
+      .row.align-items-center 
+        .col-auto 
+          img(src=item.img, alt="")
+        .col 
+          .basket-item-name!=item.text
+    .col-3 
+      include _basket-counter
+    .col-2
+      .basket-item-price=item.price
+        span грн.
+    .col-1.text-end
+      button.basket-item-remove
+        +svgMono('trash')

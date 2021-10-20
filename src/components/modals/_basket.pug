@@ -1,0 +1,111 @@
+-
+  var basketComplexItems = [
+    {
+      img: '../img/prod/prod-img1.jpg',
+      text: 'Монитор 23.8" Acer',
+      price: 3000
+    },
+    {
+      img: '../img/prod/prod-img3.jpg',
+      text: 'Корпус 2E Gaming Spargo GX910, Black (2E-GX910)',
+      price: 600
+    }
+  ]
+
+  var basketItems = [
+    {
+      img: '../img/prod/prod-img2.jpg',
+      text: 'Процессор Intel Core i5-10400F, Box (BX8070110400F)<br>(BX8070110400F)',
+      price: 4000
+    },
+    {
+      img: '../img/prod/prod-img2.jpg',
+      text: 'Процессор Intel Core i5-10400F, Box (BX8070110400F)<br>(BX8070110400F)',
+      price: 4000
+    }
+  ]
+
+  var basketWith = [
+    {
+      class: 'col-3',
+      img: '../img/prod/prod-img1.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: null,
+      review: 0,
+      price: '3500',
+      salePrice: null,
+      newCome: true
+    },
+    {
+      class: 'col-3',
+      img: '../img/prod/prod-img2.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-3',
+      img: '../img/prod/prod-img3.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-3',
+      img: '../img/prod/prod-img4.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    }
+  ]
+
+#basket-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col-auto 
+          .micromodal-title Корзина
+        .col-auto
+          .micromodal-close(aria-label='Close modal' data-micromodal-close)
+            +svgMono('close')
+      .micromodal-content
+        .basket-complex-group.mb-3
+          .basket-complex-title.mb-3 Название комплекта
+          each item in basketComplexItems
+            include ../basket/_basket-item-complex
+          .basket-complex-bottom.row.align-items-center.mt-4
+            .col-3.offset-6 
+              include ../basket/_basket-counter
+            .col-2
+              .basket-item-price 3600
+                span грн.
+            .col-1.text-end
+              button.basket-item-remove
+                +svgMono('trash')
+        .basket-simple-group
+          each item in basketItems 
+            include ../basket/_basket-item
+        .basket-confirm.mt-4
+          .row.align-items-center
+            .col-4 
+              button.btn-ct-secondary-out Продолжить покупки
+            .col-2.offset-4
+              .basket-item-price 7600
+                span грн.
+            .col-2 
+              button.btn-ct-primary-fill ОФОРМИТЬ ЗАКАЗ
+        include ../basket/_basket-together
+        .basket-similar.mt-5
+          .basket-similar-title.mb-4 С этим товаром покупают
+          .row.g-2
+            each item in basketWith 
+              include ../product/_product-card

@@ -9,11 +9,24 @@
     color: $colorWhite
 
   .product-card
-    background-color: $colorWhite
     &:hover
       border-radius: 4px
-      .product-card-short-information
-        display: none
+      background-color: $colorDark
+      .product-card
+        &-short-information
+          display: none
+        &-description
+          &-name
+            color: $colorSoft
+        &-reviews
+          color: $colorSoft
+        &-price
+          color: $colorSoft
+          &.default
+            color: $colorGS40
+        &-header
+          .ico
+            stroke: $colorYellow
 
   .show-more
     color: $colorWhite

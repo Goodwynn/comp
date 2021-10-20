@@ -1,0 +1,67 @@
+.basket-together
+
+  &-title
+    @extend %f-28-600
+
+  &-card
+    &-name
+      font-size: 16px
+      font-weight: 500
+      color: $colorDark
+    img
+      size: 160px
+      object-fit: contain
+
+  &-number
+    font-size: 14px
+    color: $colorGS40
+
+  &-price
+    font-size: 28px
+    font-weight: 700
+    color: $colorDark
+    span
+      font-size: 16px
+
+  &-discount
+    font-size: 14px
+    color: $colorPrimary
+    span
+      font-size: 8px
+
+  &-slider
+    position: relative
+    padding: 0 70px
+
+  .ico
+    font-size: 20px
+    fill: none
+    stroke: $colorGS40
+
+  .swiper
+    &-container
+      padding: 24px
+      border-radius: 4px
+      box-shadow: 0 2px 10px rgba(50, 50, 71, 0.14)
+    &-slide
+      opacity: 0
+      transition: 0.25s all
+      &-active
+        opacity: 1
+    &-button
+      &-next
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        size: 8px 14px
+        background-image: svg-load('../icons/svg-mono/chev-next.svg')
+        cursor: pointer
+      &-prev
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        size: 8px 14px
+        background-image: svg-load('../icons/svg-mono/chev-prev.svg')
+        cursor: pointer

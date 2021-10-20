@@ -40,10 +40,6 @@ header.header
                 +svgMono('btn-icon')
         .col 
           include ../blocks/_search
-          //- .input-group 
-          //-   input(type="text" placeholder="Поиск").ct-input
-          //-   button.btn-ct-secondary-out
-          //-     +svgMono('search')
         .col-3 
           .row.align-items-center
             .col-6
@@ -59,7 +55,7 @@ header.header
                     +svgMono('heart')
                     .counter 22
                 .col-auto
-                  a(href="#").btn-control.cart
+                  button.btn-control.cart(data-micromodal-trigger="basket-modal")
                     +svgMono('basket')
                     .counter 22
   include _megamenu

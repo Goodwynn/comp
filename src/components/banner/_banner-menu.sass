@@ -1,4 +1,5 @@
 .banner-menu
+  position: relative
 
   &-link
     display: flex
@@ -28,3 +29,14 @@
       size: 8px 14px
       background-size: cover
       background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=none, stroke=$colorDark)
+
+  .js-show-more
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 10px 0
+    width: 100%
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, $colorWhite 73%)
+    i
+      font-size: 18px
+      pointer-events: none
