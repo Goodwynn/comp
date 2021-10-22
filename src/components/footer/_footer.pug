@@ -1,7 +1,7 @@
 // FOOTER :: START
 footer.footer
   .container
-    .footer-top.row.pb-5
+    .footer-top.row.pb-5.d-none.d-lg-flex
       .col-3
         .footer-column-title Информация
         nav 
@@ -65,17 +65,21 @@ footer.footer
           input(type="text" placeholder="Укажите ваш email...").ct-input
           button(type="submit") 
             +svgMono('send')
-    .footer-bottom.row.align-items-center.justify-content-between.py-3.border-top.border-bottom
+    .footer-bottom.row.align-items-center.g-3.py-3.border-top.border-bottom.flex-column
       .col-auto
-        .row.align-items-center
-          .col-auto
-            a(href="#").company-logo
-              +svgMono('logo-mono')
-          .col-auto 
-            .footer-copyright 2008-2021 Интернет-магазин v-comp.com.UA 
-              br 
-              | Все права защищены
-      .col-auto 
+        a(href="#").company-logo
+          +svgMono('logo-mono')
+      .col-auto.order-2
+        .footer-copyright 2008-2021 Интернет-магазин v-comp.com.UA 
+          br 
+          | Все права защищены
+      .col-auto.d-lg-none
+        .footer-column-title Подписывайтесь на скидки
+        .input-group 
+          input(type="text" placeholder="Укажите ваш email...").ct-input
+          button(type="submit") 
+            +svgMono('send')
+      .col-auto.ms-lg-auto 
         .row.align-items-center.g-2
           .col-auto 
             +svgColor('mastercard')

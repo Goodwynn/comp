@@ -3,14 +3,18 @@
     init: function () {
       this.generate();
       this.show();
+      this.resize();
     },
     generate: function () {
       let bannerContent = document.querySelector('.banner .banner-content')
       let bannerMenu = document.querySelector('.banner .banner-menu')
+      
       let moreBtn = document.createElement('button')
       moreBtn.className = 'js-show-more'
       moreBtn.innerHTML = '<i class="bi bi-chevron-down"></i>'
-    
+      
+      moreBtn.remove()
+      
       let contentHeight = parseInt(bannerContent.clientHeight);
       let menuHeight = parseInt(bannerMenu.clientHeight);
     
@@ -24,10 +28,13 @@
       let bannerMenu = document.querySelector('.banner .banner-menu')
       bannerMenu.addEventListener('click', (e) => {
         if (e.target.className == 'js-show-more') {
-          e.target.style.display = "none"
+          e.target.remove()
           bannerMenu.style.height = "auto"
         }
       })
+    },
+    resize: function () {
+      window.addEventListener('resize', debounce(this.generate.bind(this), 250))
     }
   };
 })(window.APP);

@@ -31,9 +31,9 @@
   ]
 
 .banner-advantages 
-  .row.justify-content-between.mt-5
+  .row.justify-content-between.mt-3.mt-lg-5.flex-nowrap.overflow-auto
     each item in items
-      .col
+      .col-auto
         .banner-advantages-item 
           +svgColor(item.icon)
           .text=item.text

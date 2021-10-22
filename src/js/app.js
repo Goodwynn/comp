@@ -2,9 +2,9 @@ var APP = window.APP || {};
 APP.Plugins = APP.Plugins || {};
 APP.Components = APP.Components || {};
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0)
-};
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0)
+// };
 
 (function (APP) {
   APP.Initilizer = function () {
@@ -22,6 +22,7 @@ window.onbeforeunload = function () {
     };
 
     app.initComponents = function () {
+      APP.Components.ProductSales.init();
       APP.Components.BannerMenu.init();
       APP.Components.BannerSlider.init();
       APP.Components.BasketCounter.init();
@@ -33,13 +34,7 @@ window.onbeforeunload = function () {
     return app;
   };
 
-  // document.addEventListener('DOMContentLoaded', function () {
-  //   console.log('page loaded')
-  //   APP.Initilizer().init();
-  // })
-
   window.onload = function () {
-    console.log('page loaded')
     APP.Initilizer().init();
   }
 

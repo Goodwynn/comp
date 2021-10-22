@@ -1,9 +1,106 @@
+-
+  var items = [
+    {
+      svg: 'menu1',
+      text: 'Комплектующие ПК',
+      notice: 'NEW',
+      inner: [
+        {
+          text: 'Процессоры',
+          notice: 'NEW'
+        },
+        {
+          text: 'SSD накопители',
+          notice: 'NEW'
+        },
+        {
+          text: 'Видеокарты',
+          notice: 'NEW'
+        },
+        {
+          text: 'Смотреть все',
+        }
+      ]
+    },
+    {
+      svg: 'menu2',
+      text: 'Мониторы',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu3',
+      text: 'Компьютеры',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu4',
+      text: 'Ноутбуки',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu5',
+      text: 'Игровые консоли',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu6',
+      text: 'Комплектующие к ноутбукам',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu7',
+      text: 'Планшеты',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu8',
+      text: 'Принтеры и МФУ',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu9',
+      text: 'Акустические колонки',
+      notice: 'NEW'
+    },
+    {
+      svg: 'menu10',
+      text: 'Сетевое оборудование',
+      notice: 'NEW'
+    },
+    {
+      svg: 'heart',
+      text: 'Мониторы',
+      notice: 'NEW'
+    }
+  ]
+
+
 .megamenu
   .container
+    .row.justify-content-between.d-lg-none.pt-3
+      .col-auto
+        .megamenu-title Каталог 
+      .col-auto
+        button.catalog-btn 
+          +svgMono('close')
     .row
-      .col-3
-        include ../banner/_banner-menu
-      .col-9
+      .col-lg-3.col-12
+        nav.megamenu-menu
+          each item in items 
+            .ct-accordion
+              button.ct-accordion-title.py-3
+                +svgMono(item.svg)
+                span=item.text
+                  .notice=item.notice
+              .ct-accordion-content.px-3 
+                if (item.inner)
+                  each el in item.inner 
+                    a(href="#")
+                      span=el.text
+                        .notice=el.notice
+                      +svgMono('arrow-right')
+
+      .col-9.d-none.d-lg-flex
         .row.py-3
           .col-3
             a(href="#").megamenu-category-title Lorem ipsum dolor

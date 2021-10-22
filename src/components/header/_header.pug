@@ -2,13 +2,13 @@
 header.header
   .header-up
     .container
-      .row.justify-content-between.py-2
+      .row.align-items-center.justify-content-between.py-2.g-3.g-sm-0
         .col-auto
           .row.align-items-center
             .col-auto
               button.btn-hamburger.usermenu-btn
                 +svgMono('hamburger')
-            .col-auto
+            .col-auto.d-none.d-md-block
               nav.header-nav
                 a(href="#") Акции
                 a(href="#") Кредит
@@ -16,36 +16,53 @@ header.header
                 a(href="#") Помощь
                 a(href="#") Скупка Б/У
                 a(href="#") Контакты
-        .col-auto
+        .col-auto.d-sm-none 
+          a(href="#").company-logo-mobile
+            +svgMono('logo-mono')
+        .col-auto.d-sm-none 
+          a(href="tel:").phone-mobile 
+            +svgMono('phone')
+        .col-auto.d-none.d-sm-block 
           .row.align-items-center
             .col-auto
               .lang-toggle 
                 a(href="#") RU
                 .divider /
                 a(href="#").active UA
-            .col-auto 
+            .col-auto
               button.header-cabinet(data-micromodal-trigger="personal-cabinet-modal")
                 +svgMono('person')
-  .header-functions.shadow.py-4
+        .col-auto.d-sm-none
+          button.btn-ct-primary-fill.catalog-btn
+            span КАТАЛОГ ТОВАРОВ
+            +svgMono('btn-icon')
+        .col-auto.d-sm-none 
+          button.search-button-mobile
+            +svgMono('search')
+        .col-auto.d-sm-none 
+          button.btn-control.cart.mobile(data-micromodal-trigger="basket-modal")
+            +svgMono('basket')
+            .counter 22
+  .header-functions.shadow.py-4.d-none.d-sm-block
     .container
-      .row.justify-content-betweeen.align-items-center
-        .col-3 
-          .row.align-items-center
-            .col-6
+      .row.justify-content-betweeen.align-items-center.gx-2
+        .col-xxl-3.col-xl-4.col-lg-5.col-sm-6
+          .row.align-items-center.g-3.g-xxl-0.gx-xxl-2
+            .col-auto
               a(href="#").company-logo
                 +svgColor('logo')
-            .col-6
+            .col-auto
               button.btn-ct-primary-fill.catalog-btn
                 span КАТАЛОГ ТОВАРОВ
                 +svgMono('btn-icon')
-        .col 
+        .col.order-sm-3.mt-sm-3.mt-xl-0.order-xl-2
           include ../blocks/_search
-        .col-3 
-          .row.align-items-center
-            .col-6
+        .col-xxl-3.col-xl-3.offset-xl-0.order-xl-3.col-lg-5.offset-lg-2.order-sm-2.col-sm-6
+          .row.align-items-center.justify-content-sm-end.gx-xl-2.gx-xxl-5
+            .col-auto.mb-3.mb-md-0
               include ../blocks/_callback
-            .col-6.border-start.border-2
-              .row.justify-content-between
+            .col-auto.border-start.border-2
+              .row.justify-content-sm-end.gx-3
                 .col-auto
                   a(href="#").btn-control
                     +svgMono('scales')

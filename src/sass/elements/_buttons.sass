@@ -21,6 +21,9 @@ button
     &.cart
       .counter
         background-color: $colorPrimary
+    &.mobile
+      .ico
+        stroke: $colorWhite
     .counter
       position: absolute
       top: 0
@@ -179,6 +182,8 @@ button
     text-transform: uppercase
     border-radius: 4px
     background-color: $colorRed
+    +r($lg)
+      padding: 10px 40px
 
   &-soc
     display: flex

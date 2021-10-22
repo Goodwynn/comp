@@ -1,7 +1,7 @@
 div(class=item.class)
   .product-card.shadow
 
-    .product-card-header.row.justify-content-between.align-items-center
+    .product-card-header.row.justify-content-between.align-items-center.gx-2
       .col-auto
         if (item.newCome == true)
           .product-card-new-notice Новинка
@@ -42,7 +42,9 @@ div(class=item.class)
         else 
           .product-card-price=item.price
             span грн.
-      button.btn-ct-primary-fill КУПИТЬ
+      button.btn-ct-primary-fill 
+        span КУПИТЬ
+        +svgMono('basket')
 
     .product-card-short-information 
       hr

@@ -58,6 +58,10 @@
     align-items: center
     padding: 5px 12px 10px
 
+    .btn-ct-primary-fill
+      .ico
+        display: none
+
   &-price
     font-size: 18px
     font-weight: 700
@@ -130,3 +134,16 @@
       height: 1px
       background-color: $colorGS10
       opacity: 1
+
++r($sm)
+  .product-card
+
+    &-rating
+      gap: 5px
+
+    &-footer
+      .btn-ct-primary-fill
+        span
+          display: none
+        .ico
+          display: block

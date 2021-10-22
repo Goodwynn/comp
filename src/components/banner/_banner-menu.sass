@@ -40,3 +40,23 @@
     i
       font-size: 18px
       pointer-events: none
+
++r($lg)
+  .banner-menu
+    display: flex
+    justify-content: space-between
+    text-align: center
+    gap: 15px
+    overflow-x: scroll
+
+    &-link
+      flex-direction: column
+      border-radius: 4px
+      border: 1px solid $colorSecondary
+      color: $colorSecondary
+      .ico
+        stroke: $colorSecondary
+      &::after
+        display: none
+      .notice
+        display: none

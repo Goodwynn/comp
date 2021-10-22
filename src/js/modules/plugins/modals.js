@@ -14,6 +14,19 @@
           document.querySelector('.header-functions').classList.remove('blur')
         }
       })
+
+      this.events()
+    },
+    events: function () {
+      let closeBtn = document.querySelectorAll('.micromodal-close');
+
+      closeBtn.forEach(item => {
+        item.addEventListener('click', (e) => {
+          let modalName = e.target.closest('.micromodal').id
+          MicroModal.close(modalName)
+        })
+      })
+
     }
   };
 })(window.APP);

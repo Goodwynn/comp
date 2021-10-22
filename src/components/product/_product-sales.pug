@@ -1,7 +1,7 @@
 -
   var products = [
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/prod/prod-img1.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: null,
@@ -11,7 +11,7 @@
       newCome: true
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/prod/prod-img2.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -21,7 +21,7 @@
       newCome: false
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/prod/prod-img3.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -31,7 +31,7 @@
       newCome: false
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/prod/prod-img4.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -41,7 +41,7 @@
       newCome: false
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/prod/prod-img5.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -51,7 +51,7 @@
       newCome: false
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/prod/prod-img6.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -65,15 +65,32 @@
 section.product-sales 
   .container 
     h3.mb-4 Топ продаж
-    .row.g-3
-      each item in products 
-        include _product-card
-    a(href="#").show-more.ms-auto.my-4
-      span Смотреть все товары
-      +svgMono('arrow-right')
-    .row.g-3
-      each item in products 
-        include _product-card
-    a(href="#").show-more.ms-auto.my-4
-      span Смотреть все товары
-      +svgMono('arrow-right')
+    .product-sales-group
+      .product-sales-list.row.g-3
+        each item in products 
+          include _product-card
+      .product-sales-controls.row.justify-content-between.my-4
+        .col-auto
+          a(href="#").show-more.toggle
+            span Еще товары
+            span Скрыть
+            +svgMono('arrow-right')
+        .col-auto
+          a(href="#").show-more
+            span Смотреть все товары
+            +svgMono('arrow-right')
+    .product-sales-group
+      .product-sales-list.row.g-3
+        each item in products 
+          include _product-card
+      .product-sales-controls.row.justify-content-between.my-4
+        .col-auto
+          a(href="#").show-more.toggle
+            span Еще товары
+            span Скрыть
+            +svgMono('arrow-right')
+        .col-auto
+          a(href="#").show-more
+            span Смотреть все товары
+            +svgMono('arrow-right')
+

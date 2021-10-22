@@ -1,10 +1,10 @@
-.col-3
-  .news-card.shadow.pb-2
+.col-xxl-3.col-lg-5.col-8
+  .news-card.shadow.pb-2.d-flex.flex-column
     .news-card-image.mb-3
       img(src=item.img, alt=item.title)
     .news-card-title.mb-2.px-2=item.title 
     .news-card-text.mb-2.px-2=item.text 
-    .news-card-footer.row.justify-content-between.align-items-center.px-2
+    .news-card-footer.row.justify-content-between.align-items-center.mx-0.mt-auto
       .col-auto
         .news-card-date=item.date 
       .col-auto

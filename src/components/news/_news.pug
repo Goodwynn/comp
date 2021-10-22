@@ -26,10 +26,10 @@
     }
   ]
 
-section.news 
+section.news
   .container 
     h3.mb-4 Новости
-    .row.g-3
+    .row.gx-3.pb-3.flex-nowrap.overflow-auto
       each item in news 
         include _news-card
     a(href="#").show-more.mt-4.ms-auto

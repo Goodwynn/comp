@@ -35,3 +35,33 @@
         cursor: pointer
         &-active
           background-color: $colorSecondary
+
++r($lg)
+  .banner-slider
+
+    .swiper
+      &-container
+        height: 200px
+        margin-left: -12px
+        margin-right: -12px
+      &-slide
+        &-content
+          padding: 15px
+          top: 50%
+          left: auto
+          right: 0
+          transform: translateY(-50%)
+          text-align: right
+        &-title
+          font-size: 28px
+          line-height: 28px
+        &-description
+          font-size: 12px
+          line-height: 12px
+        img
+          size: 100%
+          object-fit: cover
+      &-pagination
+        bottom: 15px
+        left: auto
+        right: 15px

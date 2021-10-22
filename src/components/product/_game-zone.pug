@@ -1,32 +1,32 @@
 -
   var gamerProducts = [
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/game/game1.png',
       text: 'Клавиатуры'
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/game/game2.png',
       text: 'Мыши'
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/game/game3.png',
       text: 'Аксессуары'
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/game/game4.png',
       text: 'Игровые ноутбуки'
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/game/game5.png',
       text: 'Видеокарты'
     },
     {
-      class: 'col-2',
+      class: 'col-6 col-md-4 col-xl-2',
       img: '../img/game/game6.png',
       text: 'Мониторы'
     },
@@ -35,19 +35,34 @@
 section.game-zone 
   .container 
     .row.align-items-center.mb-4
-      .col-1 
+      .col-2.col-sm-1.col-md-1.col-xxl-1
         hr
-      .col-2
+      .col-8.col-sm-5.col-md-4.col-xxl-2
         .game-zone-title GAME ZONE
-      .col-9 
+      .col-2.col-sm-6.col-md-7.col-xxl-9
         hr
-    .row.g-3 
-      each item in products 
-        include _product-card
-    a(href="#").show-more.ms-auto.my-4
-      span Смотреть все товары
-      +svgMono('arrow-right')
+    .product-sales-group
+      .product-sales-list.row.g-3 
+        each item in products 
+          include _product-card
+      .product-sales-controls.row.justify-content-between.my-4
+        .col-auto
+          a(href="#").show-more.toggle
+            span Еще товары
+            span Скрыть
+            +svgMono('arrow-right')
+        .col-auto
+          a(href="#").show-more
+            span Смотреть все товары
+            +svgMono('arrow-right')
     h3.mb-4 Категории для геймеров
-    .row.g-3
-      each item in gamerProducts 
-        include _game-card
+    .product-sales-group
+      .product-sales-list.row.g-3
+        each item in gamerProducts 
+          include _game-card
+      .product-sales-controls.row.justify-content-between.my-4
+        .col-auto
+          a(href="#").show-more.toggle
+            span Еще товары
+            span Скрыть
+            +svgMono('arrow-right')
