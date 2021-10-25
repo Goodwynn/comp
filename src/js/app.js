@@ -19,6 +19,7 @@ APP.Components = APP.Components || {};
       APP.Plugins.Modal.init();
       APP.Plugins.Accordion.init();
       APP.Plugins.Menus.init();
+      APP.Plugins.Devtools.init();
     };
 
     app.initComponents = function () {

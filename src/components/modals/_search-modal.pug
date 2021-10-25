@@ -1,0 +1,11 @@
+#search-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col-auto 
+          .micromodal-title Поиск
+        .col-auto
+          .micromodal-close(aria-label='Close modal' data-micromodal-close)
+            +svgMono('close')
+      .micromodal-content
+        include ../blocks/_search

@@ -26,6 +26,7 @@
   &-close
     cursor: pointer
     .ico
+      pointer-events: none
       fill: $colorRed
       stroke: $colorRed
 
@@ -53,3 +54,13 @@
     &:hover
       .product-card-short-information
         display: none
+
+  .search-block
+    &-content
+      position: relative
+
++r($md)
+  .micromodal
+    &-container
+      padding: 25px 15px
+      max-height: 100vh

@@ -20,7 +20,7 @@ header.header
           a(href="#").company-logo-mobile
             +svgMono('logo-mono')
         .col-auto.d-sm-none 
-          a(href="tel:").phone-mobile 
+          button.phone-mobile(data-micromodal-trigger="contacts-modal")
             +svgMono('phone')
         .col-auto.d-none.d-sm-block 
           .row.align-items-center
@@ -37,7 +37,7 @@ header.header
             span КАТАЛОГ ТОВАРОВ
             +svgMono('btn-icon')
         .col-auto.d-sm-none 
-          button.search-button-mobile
+          button.search-button-mobile(data-micromodal-trigger="search-modal")
             +svgMono('search')
         .col-auto.d-sm-none 
           button.btn-control.cart.mobile(data-micromodal-trigger="basket-modal")

@@ -65,21 +65,21 @@ footer.footer
           input(type="text" placeholder="Укажите ваш email...").ct-input
           button(type="submit") 
             +svgMono('send')
-    .footer-bottom.row.align-items-center.g-3.py-3.border-top.border-bottom.flex-column
-      .col-auto
+    .footer-bottom.row.align-items-center.gy-3.gy-lg-0.py-3.border-top.border-bottom.flex-column.flex-lg-row
+      .order-1.col-auto
         a(href="#").company-logo
           +svgMono('logo-mono')
-      .col-auto.order-2
+      .order-4.order-lg-2.col-auto
         .footer-copyright 2008-2021 Интернет-магазин v-comp.com.UA 
           br 
           | Все права защищены
-      .col-auto.d-lg-none
+      .order-2.col-auto.d-lg-none
         .footer-column-title Подписывайтесь на скидки
         .input-group 
           input(type="text" placeholder="Укажите ваш email...").ct-input
           button(type="submit") 
             +svgMono('send')
-      .col-auto.ms-lg-auto 
+      .order-3.order-lg-2.col-auto.ms-lg-auto 
         .row.align-items-center.g-2
           .col-auto 
             +svgColor('mastercard')

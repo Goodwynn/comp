@@ -1,11 +1,11 @@
 .basket-item
   .row.align-items-center.justify-content-between.g-2
-    .col-6
+    .col-auto
       .row.align-items-center 
         .col-auto 
           img(src=item.img, alt="")
         .col 
           .basket-item-name!=item.text
-    .col-2
+    .col-auto.d-none.d-sm-block
       .basket-item-price=item.price
         span грн.
