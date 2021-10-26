@@ -1,0 +1,29 @@
+.category
+  &-title
+    @extend %f-28-600
+
+  .game-card
+    &-image
+      size: 240px
+      &-bg
+        size: 240px
+    &-title
+      color: $colorDarkGrey
+
++r($hd + 20)
+  .category
+
+    .game-card
+      &-image
+        size: 200px
+        &-bg
+          size: 200px
+
++r($sm)
+  .category
+
+    .game-card
+      &-image
+        size: 160px
+        &-bg
+          size: 160px

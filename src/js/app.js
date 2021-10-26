@@ -19,17 +19,21 @@ APP.Components = APP.Components || {};
       APP.Plugins.Modal.init();
       APP.Plugins.Accordion.init();
       APP.Plugins.Menus.init();
+      APP.Plugins.CustomSelect.init();
       APP.Plugins.Devtools.init();
     };
 
     app.initComponents = function () {
       APP.Components.ProductSales.init();
-      APP.Components.BannerMenu.init();
+      if (document.querySelector('.banner')) {
+        APP.Components.BannerMenu.init();
+      }
       APP.Components.BannerSlider.init();
       APP.Components.BasketCounter.init();
       APP.Components.BasketTogether.init();
       APP.Components.Search.init();
       APP.Components.GoogleSlider.init();
+      APP.Components.Filter.init();
     };
 
     return app;

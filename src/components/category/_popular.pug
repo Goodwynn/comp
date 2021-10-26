@@ -1,0 +1,77 @@
+-
+  var products = [
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img1.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: null,
+      review: 0,
+      price: '3500',
+      salePrice: null,
+      newCome: true
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img2.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img3.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img4.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img5.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img6.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    }
+  ]
+
+section.category-popular.mb-5
+  .container 
+    .category-title.mb-4 Популярные товары
+    .product-sales-group
+      .product-sales-list.row.align-items-center.g-3
+        each item in products 
+          include ../product/_product-card
+      .product-sales-controls.row.my-4
+        .col-auto.ms-auto
+          a(href="#").show-more.toggle
+            span Еще товары
+            span Скрыть
+            +svgMono('arrow-right')

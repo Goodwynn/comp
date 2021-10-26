@@ -2,11 +2,11 @@
   APP.Plugins.Accordion = {
     init: function () {
 
-      let accordion = document.querySelectorAll('.ct-accordion');
+      let accordion = document.querySelectorAll('.ct-accordion-title');
 
       accordion.forEach((item, index) => {
         item.addEventListener('click', () => {
-          item.classList.toggle('open')
+          item.parentNode.classList.toggle('open')
         })
       })
 

@@ -3,3 +3,7 @@ ProjectTitle: Comp
 PageList:
   - file: homepage.html
     ready: 100
+  - file: category.html
+    ready: 100
+  - file: subcategory.html
+    ready: 10

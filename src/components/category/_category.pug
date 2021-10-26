@@ -1,0 +1,71 @@
+-
+  var path = '../img/categories/';
+  var categories = [
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat8.png',
+      text: 'Материнские платы'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat6.png',
+      text: 'Процессоры'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat4.png',
+      text: 'Видеокарты'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat3.png',
+      text: 'Оперативная память'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat2.png',
+      text: 'SSD накопители'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat1.png',
+      text: 'Жесткие диски'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat12.png',
+      text: 'Оптические приводы'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat11.png',
+      text: 'Блоки питания'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat10.png',
+      text: 'Корпуса'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat9.png',
+      text: 'Сетевой фильтр'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat7.png',
+      text: 'Игровые устройства'
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: path + 'cat5.png',
+      text: 'Системы охлаждения'
+    }
+  ]
+
+section.category.mb-5
+  .container 
+    .category-title.mb-4 Компьютерные комплектующие
+    .row.gy-3
+      each item in categories 
+        include ../product/_game-card

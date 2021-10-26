@@ -1,1 +1,38 @@
+.filter-checkbox
+  &:not(:last-child)
+    margin-bottom: 10px
+  &.hidden
+    display: none
+  input
+    display: none
+    &:checked
+      & + label
+        &::before
+          border-color: $colorSecondary
 
+        &::after
+          display: block
+
+  label
+    position: relative
+    padding-left: 30px
+    @extend %f-12-500
+    cursor: pointer
+    &::before
+      position: absolute
+      content: ''
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      size: 20px
+      border: 1px solid $colorGS20
+    &::after
+      display: none
+      position: absolute
+      content: ''
+      top: 50%
+      left: 3px
+      transform: translateY(-50%)
+      size: 13px
+      background-size: cover
+      background-image: svg-load('../icons/svg-mono/check.svg', fill=$colorSecondary)

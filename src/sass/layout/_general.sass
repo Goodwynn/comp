@@ -103,6 +103,7 @@ body, html
     margin-bottom: 15px
     width: 100%
     text-align: left
+    cursor: pointer
     &::after
       position: absolute
       content: ""
@@ -146,5 +147,11 @@ body, html
     size: 100%
     background-color: rgba(0, 0, 0, 0.5)
 
-// .display-hidden
-//   display: none
+.view
+  &.active
+    .ico
+      border: 2px solid $colorSecondary
+  .ico
+    padding: 5px
+    size: 40px
+    color: $colorSecondary

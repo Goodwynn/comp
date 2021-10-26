@@ -1,0 +1,47 @@
+-
+  var filters = [
+    {
+      slug: 'lorem',
+      text: 'Lorem ipsum',
+      count: '123'
+    },
+    {
+      slug: 'dolor',
+      text: 'Dolor sit',
+      count: '34'
+    },
+    {
+      slug: 'amet',
+      text: 'Amet',
+      count: '56'
+    },
+    {
+      slug: 'consec',
+      text: 'Consectetur adipiscing',
+      count: '67'
+    }
+  ]
+
+.filter
+  .filter-price 
+    .filter-price-item
+
+  - for(i=1; i<=4; i++)
+    .ct-accordion 
+      .ct-accordion-title Название фильтра
+      .ct-accordion-content 
+        each item in filters 
+          .filter-checkbox 
+            input(type="checkbox" id=item.slug + i)
+            label(for=item.slug + i) 
+              span=item.text
+              | &#32;
+              span (#{item.count})
+        each item in filters 
+          .filter-checkbox 
+            input(type="checkbox" id=item.slug + i + i)
+            label(for=item.slug + i + i) 
+              span #{item.text}
+              | &#32;
+              span (#{item.count})
+        

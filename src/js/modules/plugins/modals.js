@@ -2,44 +2,54 @@
   APP.Plugins.Modal = {
     init: function () {
       this.effects();
-      // this.open();
-      // this.close();
+      this.openModal();
+      this.closeModal();
     },
-    open: function () {
-      let openBtn = document.querySelectorAll('[data-micromodal-trigger]')
+    openModal: function () {
+      
+      let openBtn = document.querySelectorAll('[data-modal-id]')
 
       openBtn.forEach(item => {
-        item.addEventListener('click', (e) => {
-        })
-      })
-
-    },
-    close: function () {
-      let closeBtn = document.querySelectorAll('.micromodal-close');
-
-      closeBtn.forEach(item => {
-        item.addEventListener('click', (e) => {
-          let modalName = e.target.closest('.micromodal').id
-          MicroModal.close(modalName)
-        })
-      })
-
-    },
-    effects: function () {
-      MicroModal.init({
-        onShow: (modal) => {
-          console.log(`${modal.id}`)
-          document.querySelector('.megamenu').classList.remove('open')
+        item.addEventListener('click', e => {
+          const modalName = item.getAttribute('data-modal-id')
+          MicroModal.show(modalName)
           document.querySelector('.page').classList.add('blur')
           document.querySelector('.header-up').classList.add('blur')
           document.querySelector('.header-functions').classList.add('blur')
-        },
-        onClose: (modal) => {
-          console.log(`${modal.id}`)
+        })
+      })
+      
+    },
+    closeModal: function () {
+
+      let closeBtn = document.querySelectorAll('[data-micromodal-close]')
+
+      closeBtn.forEach(item => {
+        item.addEventListener('click', e => {
+          const modalName = item.closest('.micromodal').id
+          MicroModal.close(modalName);
           document.querySelector('.page').classList.remove('blur')
           document.querySelector('.header-up').classList.remove('blur')
           document.querySelector('.header-functions').classList.remove('blur')
-        }
+        })
+      })
+
+      let modalContainer = document.querySelectorAll('.micromodal-container')
+
+      modalContainer.forEach(item => {
+        item.addEventListener('click', e => {
+          e.stopPropagation()
+        })
+      })
+      
+    },
+    effects: function () {
+      MicroModal.init({
+        disableScroll: false,
+        disableFocus: false,
+        awaitOpenAnimation: false,
+        awaitCloseAnimation: false,
+        debugMode: false,
       })
     }
   };

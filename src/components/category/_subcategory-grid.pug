@@ -1,0 +1,41 @@
+section.subcategory
+  .container 
+    .subcategory-title.mb-4 Материнские платы
+    .row.align-items-center.mb-4
+      .col-auto 
+        .row.align-items-center.gx-2
+          .col-auto 
+            button.filter-dismiss 
+              span Фильтр 1
+              +svgMono('close')
+          .col-auto 
+            button.filter-dismiss 
+              span Фильтр 2
+              +svgMono('close')
+          .col-auto 
+            button.filter-dismiss 
+              span Фильтр 3
+              +svgMono('close')
+          .col-auto
+            button.filter-dismiss-all Очистить фильтры 
+      .col-auto.ms-auto 
+        select.custom-select
+          option(value="1") По рейтингу
+          option(value="2") От дорогих к дешевым
+          option(value="3") От дешивых к дорогим
+          option(value="4") Популярные
+          option(value="5") Новинки
+      .col-auto
+        .row.align-items-center.g-2
+          .col-auto
+            button.view
+              +svgMono('line-icon')
+          .col-auto
+            button.view.active
+              +svgMono('grid-icon')
+    .row.align-items-start.mb-5
+      .col-2.pt-3.shadow 
+        include ../filter/_filter
+      .col-10 
+        include _grid-template
+          
