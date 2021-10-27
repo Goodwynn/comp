@@ -1,20 +1,71 @@
-(function (APP) {
+ (function (APP) {
   APP.Components.Filter = {
     init: function () {
       this.generate();
       this.show();
-      this.price();
+      // this.price();
+      this.pricev2();
+    },
+    pricev2: function () {
+      let priceContainer = document.querySelectorAll('.filter')
+
+      priceContainer.forEach(item => {
+        let priceFilter = item.querySelector('.filter-price-item')
+
+        let priceValues = [
+          item.querySelector('.filter-price-min'),
+          item.querySelector('.filter-price-max')
+        ]
+
+        noUiSlider.create(priceFilter, {
+          start: [0, 1000],
+          connect: true,
+          range: {
+            'min': [0],
+            'max': [1000]
+          },
+          step: 1
+        })
+
+        priceFilter.noUiSlider.on('update', (values, handle) => {
+          priceValues[handle].value = values[handle]
+        })
+
+        priceValues.forEach((item, handle) => {
+          item.addEventListener('change', () => {
+            priceFilter.noUiSlider.setHandle(handle, item.value)
+          })
+        })
+      })
+
     },
     price: function () {
       let priceFilter = document.querySelector('.filter-price-item')
+      let priceValues = [
+        document.querySelector('.filter-price-min'),
+        document.querySelector('.filter-price-max')
+      ]
 
       noUiSlider.create(priceFilter, {
-        start: 0,
+        start: [0, 1000],
+        connect: true,
         range: {
           'min': [0],
           'max': [1000]
-        }
+        },
+        step: 1
       })
+
+      priceFilter.noUiSlider.on('update', (values, handle) => {
+        priceValues[handle].value = values[handle]
+      })
+
+      priceValues.forEach((item, handle) => {
+        item.addEventListener('change', () => {
+          priceFilter.noUiSlider.setHandle(handle, item.value)
+        })
+      })
+
     },
     generate: function () {
       let filterGroup = document.querySelectorAll('.filter .ct-accordion .ct-accordion-content ');

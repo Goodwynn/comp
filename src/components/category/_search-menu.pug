@@ -1,0 +1,99 @@
+-
+  var results = [
+    {
+      category: {
+        icon: 'menu2',
+        name: 'Мониторы'
+      },
+      items: [
+        {
+          name: 'Мониторы',
+          count: '25'
+        },
+        {
+          name: 'Асессуары для мониторов',
+          count: '3'
+        },
+        {
+          name: 'Материнские платы',
+          count: '1'
+        },
+        {
+          name: 'Видеокарты',
+          count: '2'
+        }
+      ]
+    },
+    {
+      category: {
+        icon: 'menu1',
+        name: 'Комплектующие для ПК'
+      },
+      items: [
+        {
+          name: 'Материнские платы',
+          count: '1'
+        },
+        {
+          name: 'Видеокарты',
+          count: '2'
+        },
+        {
+          name: 'Оперативная память',
+          count: '12'
+        },
+        {
+          name: 'Материнские платы',
+          count: '123'
+        },
+        {
+          name: 'Видеокарты',
+          count: '123'
+        },
+        {
+          name: 'Оперативная память',
+          count: '123'
+        }
+      ]
+    },
+    {
+      category: {
+        icon: 'menu8',
+        name: 'Принтеры и МФУ'
+      },
+      items: [
+        {
+          name: 'Материнские платы',
+          count: '1'
+        },
+        {
+          name: 'Видеокарты',
+          count: '2'
+        },
+        {
+          name: 'Оперативная память',
+          count: '12'
+        },
+        {
+          name: 'Материнские платы',
+          count: '123'
+        },
+      ]
+    }
+  ]
+
+.search-menu.py-3.px-2.mb-3.shadow 
+  a(href="#").search-menu-link.all.mb-4 Все результаты
+    | &#32;
+    span (28)
+  each item in results
+    .search-menu-group 
+      .search-menu-title.row.align-items-center.gx-1.mb-2
+        .col-auto.search-menu-icon 
+          +svgMono(item.category.icon)
+        .col-auto.search-menu-name #{item.category.name}
+      .search-menu-content 
+        each link in item.items 
+          a(href="#").search-menu-link.mb-2 #{link.name}
+            | &#32;
+            span (#{link.count})

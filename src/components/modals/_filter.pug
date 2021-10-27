@@ -1,11 +1,11 @@
-#search-modal.micromodal.micromodal-slide(aria-hidden='true')
+#filter-modal.micromodal.micromodal-slide(aria-hidden='true')
   .micromodal-overlay(tabindex='-1')
     .micromodal-container(role='dialog' aria-modal='true')
       .micromodal-header.row.justify-content-between.mb-4
         .col-auto 
-          .micromodal-title Поиск
+          .micromodal-title Фильтры
         .col-auto
-          .micromodal-close(aria-label='Close modal' data-micromodal-close)
+          button.micromodal-close(aria-label='Close modal' data-micromodal-close)
             +svgMono('close')
       .micromodal-content
-        include ../blocks/_search
+        include ../filter/_filter-modal

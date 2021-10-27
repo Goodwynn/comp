@@ -1,7 +1,6 @@
 -
   var products = [
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img7.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: null,
@@ -11,7 +10,6 @@
       newCome: true
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img8.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -21,7 +19,6 @@
       newCome: false
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img9.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -31,7 +28,6 @@
       newCome: false
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img10.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -41,7 +37,6 @@
       newCome: false
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img11.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -51,7 +46,6 @@
       newCome: false
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img12.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -61,7 +55,6 @@
       newCome: false
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img13.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -71,7 +64,6 @@
       newCome: false
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img14.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -81,7 +73,6 @@
       newCome: false
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img15.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -91,7 +82,6 @@
       newCome: false
     },
     {
-      class: 'col-6 col-xl-4 col-xxl',
       img: '../img/prod/prod-img16.jpg',
       name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
       rating: 4,
@@ -99,12 +89,9 @@
       price: '3600',
       salePrice: '3500',
       newCome: false
-    },
-
+    }
   ]
 
-.row.align-items-center.gx-3.gx-xxl-4.gy-3(data-view-layout="grid")
+.row.flex-column.gy-3(data-view-layout="line")
   each item in products 
-    include ../product/_product-card
-  each item in products 
-    include ../product/_product-card
+    include ../product/_product-line

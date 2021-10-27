@@ -104,6 +104,7 @@ body, html
     width: 100%
     text-align: left
     cursor: pointer
+    user-select: none
     &::after
       position: absolute
       content: ""
@@ -155,3 +156,38 @@ body, html
     padding: 5px
     size: 40px
     color: $colorSecondary
+
+.pagination
+  margin: -10px auto
+  display: flex
+  align-items: center
+  justify-content: center
+  &-link
+    padding: 10px 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 15px
+    font-size: 16px
+    font-weight: 500
+    color: $colorSecondary
+    .ico
+      font-size: 18px
+    &:hover,
+    &.active
+      background-color: $colorSoft
+    &:first-child
+      margin-right: 40px
+    &:last-child
+      margin-left: 40px
+  +r($md)
+    &-link
+      padding: 5px 20px
+      &:first-child
+        margin-right: 0px
+        span
+          display: none
+      &:last-child
+        margin-left: 0px
+        span
+          display: none

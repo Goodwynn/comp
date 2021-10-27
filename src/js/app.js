@@ -34,6 +34,7 @@ APP.Components = APP.Components || {};
       APP.Components.Search.init();
       APP.Components.GoogleSlider.init();
       APP.Components.Filter.init();
+      APP.Components.Subcategory.init();
     };
 
     return app;
