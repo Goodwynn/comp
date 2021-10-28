@@ -20,7 +20,7 @@ header.header
           a(href="#").company-logo-mobile
             +svgMono('logo-mono')
         .col-auto.d-sm-none 
-          button.phone-mobile(data-modal-id="contacts-modal")
+          button.phone-mobile(data-micromodal-trigger="contacts-modal")
             +svgMono('phone')
         .col-auto.d-none.d-sm-block 
           .row.align-items-center
@@ -30,17 +30,17 @@ header.header
                 .divider /
                 a(href="#").active UA
             .col-auto
-              button.header-cabinet(data-modal-id="personal-cabinet-modal")
+              button.header-cabinet(data-micromodal-trigger="personal-cabinet-modal")
                 +svgMono('person')
         .col-auto.d-sm-none
           button.btn-ct-primary-fill.catalog-btn
             span КАТАЛОГ ТОВАРОВ
             +svgMono('btn-icon')
         .col-auto.d-sm-none 
-          button.search-button-mobile(data-modal-id="search-modal")
+          button.search-button-mobile(data-micromodal-trigger="search-modal")
             +svgMono('search')
         .col-auto.d-sm-none 
-          button.btn-control.cart.mobile(data-modal-id="basket-modal")
+          button.btn-control.cart.mobile(data-micromodal-trigger="basket-modal")
             +svgMono('basket')
             .counter 22
   .header-functions.shadow.py-4.d-none.d-sm-block
@@ -72,7 +72,7 @@ header.header
                     +svgMono('heart')
                     .counter 22
                 .col-auto
-                  button.btn-control.cart(data-modal-id="basket-modal")
+                  button.btn-control.cart(data-micromodal-trigger="basket-modal")
                     +svgMono('basket')
                     .counter 22
   include _megamenu

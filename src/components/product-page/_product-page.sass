@@ -1,0 +1,28 @@
+.product-page
+
+  &-title
+    // @extend %f-28-600
+
+  &-tabs
+    position: relative
+
+    &-nav
+      position: sticky
+      top: 1px
+      display: flex
+      border-bottom: 1px solid $colorGS10
+
+    &-link
+      display: block
+      padding: 15px
+      font-size: 14px
+      font-weight: 500
+      color: $colorDarkGrey
+      border: 1px solid transparent
+      transform: translateY(1px)
+      &.active
+        border-color: transparent transparent $colorSecondary
+        color: $colorSecondary
+
+  .product-card-rating
+    padding: 0

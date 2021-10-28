@@ -1,11 +1,11 @@
 #personal-cabinet-modal.micromodal.micromodal-slide(aria-hidden='true')
-  .micromodal-overlay(tabindex='-1')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
     .micromodal-container.personal-cabinet(role='dialog' aria-modal='true')
       .micromodal-header.row.justify-content-between.mb-4
         .col-auto 
           .micromodal-title Вход
         .col-auto
-          .micromodal-close(aria-label='Close modal' data-micromodal-close)
+          button.micromodal-close
             +svgMono('close')
       .micromodal-content
         form(action="#").d-flex.flex-column

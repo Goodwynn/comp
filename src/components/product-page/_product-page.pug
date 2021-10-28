@@ -1,0 +1,32 @@
+section.product-page
+  .container 
+    .row.align-items-center.justify-content-between
+      .col-auto 
+        .product-page-title Ноутбук Vinga Iron S140 Grey (S140-P50464GWP)
+      .col-auto 
+        .product-page-vcode Код товара: 1234
+    .product-card-rating.my-2
+      .product-card-stars
+        - for (i=1; i<=5; i++)
+          if (4 >= i )
+            .star.active
+              +svgMono('star')
+          else 
+            .star
+              +svgMono('star')
+      .product-card-reviews Отзывов: 
+        span 4
+    .product-page-tabs 
+      nav.product-page-tabs-nav
+        a(href="#").product-page-tabs-link.active Все о товаре
+        a(href="#").product-page-tabs-link Характеристики
+        a(href="#").product-page-tabs-link Отзывы
+        a(href="#").product-page-tabs-link Кредит
+      .product-page-tabs-content 
+        .product-page-tab 
+          .row.align-items-start
+            .col-6
+              include _product-specs 
+              include _product-description
+            .col-6
+              include ../reviews/_product-page-reviews

@@ -1,7 +1,21 @@
 .micromodal
-  display: none
-  &.is-open
-    display: block
+  &-slide
+    display: none
+    &.is-open
+      display: block
+
+    &[aria-hidden="false"]
+      .micromodal-overlay
+        animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1)
+      .micromodal-container
+        animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1)
+
+    &[aria-hidden="true"]
+      .micromodal-overlay
+        animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1)
+      .micromodal-container
+        animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1)
+
   &-overlay
     position: fixed
     top: 0
@@ -12,6 +26,7 @@
     display: flex
     justify-content: center
     align-items: center
+    will-change: transform
   &-container
     width: 100%
     background-color: $colorWhite
@@ -21,6 +36,7 @@
     border-radius: 4px
     box-sizing: border-box
     overflow-y: auto
+    will-change: transform
     &.personal-cabinet
       max-width: 330px
   &-close
@@ -57,6 +73,38 @@
   .search-block
     &-content
       position: relative
+
+/**************************\
+ Demo Animation Style
+ *************************
+
+@keyframes mmfadeIn
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@keyframes mmfadeOut
+  from
+    opacity: 1
+
+  to
+    opacity: 0
+
+@keyframes mmslideIn
+  from
+    transform: translateY(15%)
+
+  to
+    transform: translateY(0)
+
+@keyframes mmslideOut
+  from
+    transform: translateY(0)
+
+  to
+    transform: translateY(-10%)
 
 +r($md)
   .micromodal

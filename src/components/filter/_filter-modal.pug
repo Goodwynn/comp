@@ -39,6 +39,8 @@
           +svgMono('close')
       .col-auto
         button.filter-dismiss-all Очистить фильтры
+  if (outClass == 'search-page')
+    include ../category/_search-menu
   .filter-price.mb-4
     .filter-price-title.mb-3 По цене
     .row.gx-2.mb-4 

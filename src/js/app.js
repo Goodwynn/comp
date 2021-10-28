@@ -20,21 +20,26 @@ APP.Components = APP.Components || {};
       APP.Plugins.Accordion.init();
       APP.Plugins.Menus.init();
       APP.Plugins.CustomSelect.init();
-      APP.Plugins.Devtools.init();
+      APP.Plugins.Tabs.init();
+      // APP.Plugins.Devtools.init();
     };
 
     app.initComponents = function () {
-      APP.Components.ProductSales.init();
       if (document.querySelector('.banner')) {
         APP.Components.BannerMenu.init();
+        APP.Components.BannerSlider.init();
       }
-      APP.Components.BannerSlider.init();
+      if (document.querySelector('.subcategory-page') || document.querySelector('.search-page')) {
+        APP.Components.SearchFilter.init();
+        APP.Components.Filter.init();
+        APP.Components.Subcategory.init();
+      }
+      APP.Components.ProductSales.init();
       APP.Components.BasketCounter.init();
       APP.Components.BasketTogether.init();
       APP.Components.Search.init();
       APP.Components.GoogleSlider.init();
-      APP.Components.Filter.init();
-      APP.Components.Subcategory.init();
+      APP.Components.ProductPageReview.init();
     };
 
     return app;

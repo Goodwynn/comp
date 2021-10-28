@@ -82,12 +82,12 @@
     }
   ]
 
-.search-menu.py-3.px-2.mb-3.shadow 
+.search-menu.py-xxl-3.px-xxl-2.mb-3.shadow
   a(href="#").search-menu-link.all.mb-4 Все результаты
     | &#32;
     span (28)
   each item in results
-    .search-menu-group 
+    .search-menu-group.mt-3
       .search-menu-title.row.align-items-center.gx-1.mb-2
         .col-auto.search-menu-icon 
           +svgMono(item.category.icon)

@@ -10,7 +10,7 @@
 
       productGroup.forEach(item => {
 
-        const productLineHeight = item.querySelector('.product-sales-list').clientHeight
+        // const productLineHeight = item.querySelector('.product-sales-list').clientHeight
         const productListItems = []
         const productToggle = item.querySelector('.show-more.toggle')
         let elementHeight = 0
@@ -20,11 +20,14 @@
         })
 
         productListItems.forEach(item => {
+          item.classList.remove('d-none')
+          item.classList.remove('hidden')
           if (item.clientHeight >= elementHeight) {
             elementHeight = item.clientHeight
           }
         })
-
+        
+        const productLineHeight = item.querySelector('.product-sales-list').clientHeight
         let rows = Math.round(productLineHeight / elementHeight)
         
         productListItems.forEach((item, index) => {
@@ -64,7 +67,21 @@
       })
     },
     resize: function () {
-      window.addEventListener('resize', debounce(this.calcHeight.bind(this), 250))
+      // window.addEventListener('resize', debounce(this.calcHeight.bind(this), 250))
+      let wWidth = window.innerWidth;
+      window.onresize = () => {
+        if (wWidth != window.innerWidth) {
+          this.calcHeight()
+          this.calcHeight()
+
+          const openToggle = document.querySelectorAll('.show-more.toggle.open')
+  
+          openToggle.forEach(item => {
+            item.classList.remove('open')
+          })
+          wWidth = window.innerWidth
+        }
+      }
     }
   };
 })(window.APP);

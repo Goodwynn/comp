@@ -2,7 +2,7 @@
   APP.Plugins.Modal = {
     init: function () {
       this.effects();
-      this.openModal();
+      // this.openModal();
       this.closeModal();
     },
     openModal: function () {
@@ -20,7 +20,7 @@
       })
       
     },
-    closeModal: function () {
+    closeModalOld: function () {
 
       let closeBtn = document.querySelectorAll('[data-micromodal-close]')
 
@@ -43,13 +43,35 @@
       })
       
     },
+    closeModal: function () {
+      let closeBtn = document.querySelectorAll('.micromodal-close')
+
+      closeBtn.forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault()
+          const modalOverlay = item.closest('.micromodal-overlay')
+          modalOverlay.click()
+        })
+      })
+
+    },
     effects: function () {
       MicroModal.init({
-        disableScroll: false,
-        disableFocus: false,
+        disableScroll: true,
+        disableFocus: true,
         awaitOpenAnimation: false,
         awaitCloseAnimation: false,
         debugMode: false,
+        onShow: modal => {
+          document.querySelector('.page').classList.add('blur')
+          document.querySelector('.header-up').classList.add('blur')
+          document.querySelector('.header-functions').classList.add('blur')
+        },
+        onClose: modal => {
+          document.querySelector('.page').classList.remove('blur')
+          document.querySelector('.header-up').classList.remove('blur')
+          document.querySelector('.header-functions').classList.remove('blur')
+        }
       })
     }
   };

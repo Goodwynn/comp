@@ -8,4 +8,6 @@ PageList:
   - file: subcategory.html
     ready: 100
   - file: search.html
+    ready: 100
+  - file: product-page.html
     ready: 10
