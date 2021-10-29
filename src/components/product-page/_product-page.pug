@@ -1,3 +1,67 @@
+-
+  var similar = [
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img1.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: null,
+      review: 0,
+      price: '3500',
+      salePrice: null,
+      newCome: true
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img2.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img3.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img4.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img5.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    },
+    {
+      class: 'col-6 col-md-4 col-xl-2',
+      img: '../img/prod/prod-img6.jpg',
+      name: 'Монитор 23.8" Acer K240YB, Black (UM.QE0EE.B01)',
+      rating: 4,
+      review: 4,
+      price: '3600',
+      salePrice: '3500',
+      newCome: false
+    }
+  ]
+
 section.product-page
   .container 
     .row.align-items-center.justify-content-between
@@ -5,7 +69,7 @@ section.product-page
         .product-page-title Ноутбук Vinga Iron S140 Grey (S140-P50464GWP)
       .col-auto 
         .product-page-vcode Код товара: 1234
-    .product-card-rating.my-2
+    .product-card-rating.my-2.p-0
       .product-card-stars
         - for (i=1; i<=5; i++)
           if (4 >= i )
@@ -17,8 +81,8 @@ section.product-page
       .product-card-reviews Отзывов: 
         span 4
     .product-page-tabs 
-      nav.product-page-tabs-nav
-        a(href="#").product-page-tabs-link.active Все о товаре
+      nav.product-page-tabs-nav.mb-4
+        a(href="#").product-page-tabs-link Все о товаре
         a(href="#").product-page-tabs-link Характеристики
         a(href="#").product-page-tabs-link Отзывы
         a(href="#").product-page-tabs-link Кредит
@@ -26,7 +90,25 @@ section.product-page
         .product-page-tab 
           .row.align-items-start
             .col-6
+              include _product-images
               include _product-specs 
               include _product-description
-            .col-6
+            .col-6 
+              include _product-controls
+              include _product-information
               include ../reviews/_product-page-reviews
+          include ../basket/_basket-together
+          .product-page-similar.mt-5
+            .product-page-similar-title.mb-4 Вместе с этим товаром покупают
+            .product-sales-group
+              .product-sales-list.row.g-3
+                each item in similar 
+                  include ../product/_product-card
+              .product-sales-controls.row.justify-content-between.my-4
+                .col-auto
+                  a(href="#").show-more.toggle
+                    span Еще товары
+                    span Скрыть
+                    +svgMono('arrow-right')
+          include _product-credit
+        .product-page-tab

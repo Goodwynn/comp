@@ -2,7 +2,7 @@
   position: relative
 
   &-link
-    display: flex
+    display: none
     align-items: center
     gap: 10px
     font-size: 16px
@@ -13,22 +13,6 @@
     .ico
       fill: none
       stroke: $colorDark
-    span
-      position: relative
-    .notice
-      position: absolute
-      top: 0
-      left: calc(100% + 5px)
-      font-size: 10px
-      font-weight: 700
-      color: #f44336
-    &::after
-      position: relative
-      content: ''
-      margin-left: auto
-      size: 8px 14px
-      background-size: cover
-      background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=none, stroke=$colorDark)
 
   .js-show-more
     position: absolute
@@ -50,7 +34,9 @@
     overflow-x: scroll
 
     &-link
+      display: flex
       flex-direction: column
+      height: 100%
       border-radius: 4px
       border: 1px solid $colorSecondary
       color: $colorSecondary
@@ -60,3 +46,6 @@
         display: none
       .notice
         display: none
+
+    .ct-accordion
+      display: none

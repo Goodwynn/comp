@@ -1,0 +1,29 @@
+.product-information
+  border-radius: 4px
+
+  &-title
+    @extend %f-18-600
+
+  &-text
+    font-size: 14px
+    font-weight: 500
+    color: $colorDarkGrey
+
+  .ico
+    size: 30px
+    fill: $colorWhite
+    stroke: $colorSecondary
+
+  i
+    .ico
+      stroke: inherit
+
+  .row
+    &:not(:last-child)
+      @extend .mb-3
+
+  a, span
+    @extend .product-information-text
+    display: block
+    &:last-child
+      color: $colorSecondary

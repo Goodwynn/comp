@@ -1,0 +1,40 @@
+.product-credit 
+  .product-credit-title.mb-5 Кредит
+  - for(i=1; i<=3; i++ )
+    .product-credit-item.border-bottom.pb-4.mb-4
+      .row.mb-3
+        .col-2 
+          .product-credit-item-title Кредитор
+        .col-2 
+          .product-credit-item-title Условия кредита
+        .col-2
+          .product-credit-item-title Срок кредита
+        .col-2 
+          .product-credit-item-title Первый взнос
+        .col-2 
+          .product-credit-item-title Ежемесячно
+      .row
+        .col-2
+          .row.align-items-center.gx-2.mb-3
+            .col-auto
+              img(src="../img/bank.png", alt="")
+            .col-auto
+              div ПриватБанк
+          button.show-more Читать условия
+        .col-2
+          select.custom-select 
+            option(value="1") Оплата частями
+            option(value="2") Оплата частями2
+            option(value="3") Оплата частями3
+        .col-2 
+          select.custom-select
+            option(value="1") 10 месяцев
+            option(value="2") 11 месяцев
+            option(value="3") 12 месяцев
+        .col-2
+          .py-2.border.border-white 0 грн
+        .col-2 
+          .py-2.border.border-white 2 400 грн
+        .col-2
+          button.btn-ct-primary-fill КУПИТЬ В КРЕДИТ
+        

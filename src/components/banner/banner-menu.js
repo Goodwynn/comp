@@ -9,7 +9,7 @@
       
       let bannerContent = document.querySelector('.banner .banner-content')
       let bannerMenu = document.querySelector('.banner .banner-menu')
-      let menuBtn = document.querySelector('.banner .banner-menu button')
+      let menuBtn = document.querySelector('.banner .banner-menu .js-show-more')
       
       if (menuBtn) {
         menuBtn.remove()

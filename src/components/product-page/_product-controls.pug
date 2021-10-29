@@ -1,0 +1,55 @@
+.product-controls.border-bottom.pb-4.mb-4
+  .row.justify-content-between.align-items-center.mb-4
+    .col-auto
+      .product-controls-availible.row.p-2.align-items-center.gx-3
+        .col-auto
+          +svgColor('circle-check')
+        .col-auto
+          span В наличии
+    .col-auto
+      .row.align-items.center.gx-2 
+        .col-auto
+          a(href="#") 
+            +svgMono('scales')
+        .col-auto
+          a(href="#") 
+            +svgMono('heart')
+  .row.align-items-center.gx-3
+    .col-auto
+      .product-card-price-container
+        .product-card-price.default 27 900
+          span грн.
+        .product-card-price.sale 27 300
+          span грн.
+    .col-auto
+      button.btn-ct-primary-fill КУПИТЬ
+    .col-auto
+      button.btn-ct-primary-out КУПИТЬ В КРЕДИТ
+
+.product-controls.border-bottom.pb-4.mb-4
+  .row.justify-content-between.align-items-center.mb-4
+    .col-auto
+      .row.align-items-center
+        .col-auto
+          .product-controls-availible.not.row.p-2.align-items-center.gx-3
+            .col-auto
+              +svgMono('circle-minus')
+            .col-auto
+              span В наличии
+        .col-auto 
+          button.btn-ct-secondary-fill СООБЩИТЬ, КОГДА ПОЯВИТСЯ
+    .col-auto
+      .row.align-items.center.gx-2 
+        .col-auto
+          a(href="#") 
+            +svgMono('scales')
+        .col-auto
+          a(href="#") 
+            +svgMono('heart')
+  .row.align-items-center.gx-3
+    .col-auto
+      .product-card-price-container
+        .product-card-price.default.disabled 27 900
+          span грн.
+        .product-card-price.sale.disabled 27 300
+          span грн.

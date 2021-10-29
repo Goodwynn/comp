@@ -91,3 +91,10 @@
   .product-reviews-title.mb-4 Отзывы (45)
   each item in reviews
     include _product-page-review
+  .row.align-items-center.justify-content-between
+    .col-auto 
+      button.btn-ct-secondary-fill ДОБАВИТЬ ОТЗЫВ
+    .col-auto 
+      button.show-more.light
+        span Смотреть все отзывы
+        +svgMono('arrow-right')

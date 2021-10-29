@@ -1,16 +1,17 @@
 (function (APP) {
   APP.Components.ProductSales = {
+    data: {
+      productGroup: document.querySelectorAll('.product-sales-group')
+    },
     init: function () {
       this.calcHeight(); 
       this.toggler();
       this.resize();
     },
     calcHeight: function () {
-      const productGroup = document.querySelectorAll('.product-sales-group')
 
-      productGroup.forEach(item => {
+      this.data.productGroup.forEach(item => {
 
-        // const productLineHeight = item.querySelector('.product-sales-list').clientHeight
         const productListItems = []
         const productToggle = item.querySelector('.show-more.toggle')
         let elementHeight = 0
@@ -49,9 +50,8 @@
       })
     },
     toggler: function () {
-      const productGroup = document.querySelectorAll('.product-sales-group')
       
-      productGroup.forEach(item => {
+      this.data.productGroup.forEach(item => {
 
         const productToggle = item.querySelector('.show-more.toggle')
         
@@ -71,7 +71,6 @@
       let wWidth = window.innerWidth;
       window.onresize = () => {
         if (wWidth != window.innerWidth) {
-          this.calcHeight()
           this.calcHeight()
 
           const openToggle = document.querySelectorAll('.show-more.toggle.open')

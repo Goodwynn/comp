@@ -3,7 +3,24 @@
     {
       svg: 'menu1',
       text: 'Комплектующие ПК',
-      notice: 'NEW'
+      notice: 'NEW',
+      inner: [
+        {
+          text: 'Процессоры',
+          notice: 'NEW'
+        },
+        {
+          text: 'SSD накопители',
+          notice: 'NEW'
+        },
+        {
+          text: 'Видеокарты',
+          notice: 'NEW'
+        },
+        {
+          text: 'Смотреть все',
+        }
+      ]
     },
     {
       svg: 'menu2',
@@ -57,9 +74,22 @@
     }
   ]
 
+//- .banner-menu-link
 nav.banner-menu
   each item in items 
-    a(href="#").banner-menu-link.p-3
-      +svgMono(item.svg)
-      span=item.text
-        .notice=item.notice
+    .banner-menu-item
+      a(href="#").banner-menu-link.p-3
+        +svgMono(item.svg)
+        span=item.text
+      .ct-accordion
+        button.ct-accordion-title.py-3
+          +svgMono(item.svg)
+          span=item.text
+            .notice=item.notice
+        .ct-accordion-content.px-3 
+          if (item.inner)
+            each el in item.inner 
+              a(href="#")
+                span=el.text
+                  .notice=el.notice
+                +svgMono('arrow-right')

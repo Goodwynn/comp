@@ -1,0 +1,120 @@
+-
+  var delivery = [
+    {
+      company: {
+        icon: 'self-delivery',
+        name: 'Самовывоз из магазина (Днепропетровск)'
+      },
+      when: 'Отправим сегодня',
+      price: {
+        default: 'Бесплатно',
+      }
+    },
+    {
+      company: {
+        icon: 'justin',
+        name: 'Самовывоз из Justin'
+      },
+      when: 'Отправим сегодня',
+      price: {
+        default: 'По тарифам перевозчика',
+        special: 'Или бесплатно от 5000 грн'
+      }
+    },
+    {
+      company: {
+        icon: 'ukrpost',
+        name: 'Самовывоз  УКРПОШТА'
+      },
+      when: 'Отправим сегодня',
+      price: {
+        default: 'По тарифам перевозчика',
+        special: 'Или бесплатно от 5000 грн'
+      }
+    },
+    {
+      company: {
+        icon: 'newpost',
+        name: 'Самовывоз из Новой Почты'
+      },
+      when: 'Отправим сегодня',
+      price: {
+        default: 'По тарифам перевозчика',
+        special: 'Или бесплатно от 5000 грн'
+      }
+    },
+    {
+      company: {
+        icon: 'courier',
+        name: 'Курьер по вашему адресу'
+      },
+      when: 'Отправим завтра',
+      price: {
+        default: 'По тарифам перевозчика',
+        special: 'Бесплатно от 3000 грн'
+      }
+    }
+  ]
+
+  var payment = [
+    {
+      icon: 'cash',
+      description: 'Оплата при получении товара, Google Pay, картой онлайн'
+    },
+    {
+      icon: 'installments',
+      description: 'Рассрочка 0% на 4 мес.'
+    },
+    {
+      icon: 'credit',
+      description: 'Кредит, с условиями вы можете ознакомится <a href="#">здесь</a>'
+    }
+  ]
+
+  var warranty = [
+    {
+      icon: 'shield',
+      description: '36 месяцев'
+    },
+    {
+      icon: 'change',
+      description: 'Обмен/возврат товара в течение 14 дней'
+    }
+  ]
+
+.product-information.p-3.mb-4.shadow 
+  .product-information-title.mb-3 Доставка
+  each item in delivery
+    .row.align-items-start.justify-content-between.gx-3 
+      .col-4
+        .row.align-items-center.gx-2 
+          .col-auto
+            i 
+              +svgColor(item.company.icon)
+          .col
+            .product-information-text #{item.company.name} 
+      .col-4.text-center 
+        .product-information-text #{item.when}
+      .col-4.text-end
+        span #{item.price.default}
+        if (item.price.special)
+          span #{item.price.special}
+
+.product-information.p-3.mb-4.shadow 
+  .product-information-title.mb-3 Оплата
+  each item in payment 
+    .row.align-items-center.gx-3
+      .col-auto
+        +svgMono(item.icon)
+      .col-auto
+        .product-information-text #{item.description}
+
+.product-information.p-3.mb-4.shadow 
+  .product-information-title.mb-3 Гарантия  
+  each item in warranty 
+    .row.align-items-center.gx-3
+      .col-auto
+        +svgMono(item.icon)
+      .col-auto
+        .product-information-text #{item.description}
+

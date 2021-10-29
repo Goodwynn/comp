@@ -1,16 +1,26 @@
 .product-page
 
   &-title
-    // @extend %f-28-600
+    @extend %f-32-600
+
+  &-vcode
+    font-size: 14px
+    font-weight: 400
+    color: $colorGS40
+
+  &-similar
+    &-title
+      @extend %f-28-600
 
   &-tabs
-    position: relative
 
     &-nav
       position: sticky
-      top: 1px
+      top: 0px
+      z-index: 2
       display: flex
       border-bottom: 1px solid $colorGS10
+      background-color: $colorWhite
 
     &-link
       display: block
@@ -24,5 +34,7 @@
         border-color: transparent transparent $colorSecondary
         color: $colorSecondary
 
-  .product-card-rating
-    padding: 0
+  &-tab
+    display: none
+    &.active
+      display: block

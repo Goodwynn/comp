@@ -34,12 +34,16 @@ APP.Components = APP.Components || {};
         APP.Components.Filter.init();
         APP.Components.Subcategory.init();
       }
+      if (document.querySelector('.product-page-layout')) {
+        APP.Components.ProductImages.init();
+        APP.Components.ProductDescription.init();
+        APP.Components.ProductPageReview.init();
+      }
       APP.Components.ProductSales.init();
       APP.Components.BasketCounter.init();
       APP.Components.BasketTogether.init();
       APP.Components.Search.init();
       APP.Components.GoogleSlider.init();
-      APP.Components.ProductPageReview.init();
     };
 
     return app;

@@ -1,0 +1,93 @@
+.ct-accordion
+
+  .megamenu &,
+  .banner-menu &
+    &.open
+      .ct-accordion-title
+        &::after
+          transform: translateY(-50%) rotate(90deg)
+    &-title
+      display: flex
+      align-items: center
+      gap: 10px
+      font-size: 16px
+      font-weight: 700
+      color: $colorDark
+      margin-bottom: 0
+      .ico, i
+        size: 24px
+      .ico
+        fill: none
+        stroke: $colorDark
+      span
+        position: relative
+      .notice
+        position: absolute
+        top: 0
+        left: calc(100% + 5px)
+        font-size: 10px
+        font-weight: 700
+        color: #f44336
+      &::after
+        position: absolute
+        content: ''
+        top: 50%
+        right: 5px
+        transform: translateY(-50%)
+        size: 8px 14px
+        background-size: cover
+        background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=none, stroke=$colorDark)
+    &-content
+      a
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 14px
+        font-weight: 500
+        color: $colorDarkGrey
+        span
+          position: relative
+        .notice
+          position: absolute
+          top: 0
+          left: calc(100% + 5px)
+          font-size: 10px
+          font-weight: 700
+          color: #f44336
+        .ico
+          fill: none
+          stroke: $colorDarkGrey
+
+  &.open
+    .ct-accordion-title
+      &::after
+        transform: translateY(-50%) rotate(180deg)
+    .ct-accordion-content
+      display: block
+
+  &-title
+    position: relative
+    display: block
+    margin-bottom: 15px
+    width: 100%
+    text-align: left
+    cursor: pointer
+    user-select: none
+    &::after
+      position: absolute
+      content: ""
+      top: 50%
+      right: 0
+      size: 14px 8px
+      transform: translateY(-50%)
+      background-size: cover
+      background-image: svg-load('../icons/svg-mono/arrow-down.svg', fill="none", stroke=$colorWhite)
+      transition: 0.25s all
+
+  &-content
+    display: none
+    margin-bottom: 15px
+    a
+      display: block
+      &:not(:last-child)
+        margin-bottom: 10px

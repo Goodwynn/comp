@@ -1,0 +1,27 @@
+-
+  var images = [
+    {
+      img: '../img/prod-page/thumb1.jpg'
+    },
+    {
+      img: '../img/prod-page/thumb2.jpg'
+    },
+    {
+      img: '../img/prod-page/thumb3.jpg'
+    }
+  ]
+
+.product-images.mb-4
+  .row.gx-2
+    .col-3 
+      .swiper-container.thumbs-swiper 
+        .swiper-wrapper 
+          each item in images
+            .swiper-slide
+              img(src=item.img, alt="")
+    .col-9 
+      .swiper-container.main-swiper 
+        .swiper-wrapper 
+          each item in images
+            .swiper-slide
+              img(src=item.img, alt="")
