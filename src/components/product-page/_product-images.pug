@@ -13,15 +13,15 @@
 
 .product-images.mb-4
   .row.gx-2
-    .col-3 
+    .col.col-lg-3.order-2.order-lg-1
       .swiper-container.thumbs-swiper 
         .swiper-wrapper 
           each item in images
             .swiper-slide
               img(src=item.img, alt="")
-    .col-9 
+    .col.col-lg-9.order-1.order-lg-2
       .swiper-container.main-swiper 
         .swiper-wrapper 
           each item in images
             .swiper-slide
-              img(src=item.img, alt="")
+              img(src=item.img, alt="" data-micromodal-trigger="gallery-modal")

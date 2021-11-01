@@ -3,15 +3,31 @@
     @extend %f-28-600
 
   &-item
-    border-color: $colorGS10
+    border-color: transparent transparent $colorGS10 transparent !important
     &-title
       font-size: 14px
       font-weight: 700
       color: $colorDarkGrey
 
+  &-text
+    @extend %f-12-500
+
+  &-description
+    font-size: 14px
+    font-weight: 400
+    color: $colorDarkGrey
+
   .btn-ct-primary-fill
     width: 100%
 
   .custom-select
+    &-container
+      min-width: 130px
     &-opener
       padding: 10px 12px
+
++r($lg)
+  .product-credit
+
+    &-item
+      border-color: transparent $colorGS10 !important

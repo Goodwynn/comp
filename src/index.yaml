@@ -10,4 +10,8 @@ PageList:
   - file: search.html
     ready: 100
   - file: product-page.html
+    ready: 100
+  - file: news-list.html
+    ready: 100
+  - file: news-page.html
     ready: 10

@@ -1,0 +1,40 @@
+.product-mini.d-none.d-md-block
+  .row.align-items-center.mb-4 
+    .col-auto 
+      img(src="../img/prod-page/thumb1.jpg", alt="").product-mini-image
+    .col 
+      .product-mini-name Ноутбук Vinga Iron S140 Grey (S140-P50464GWP)
+  .row.align-items-center.justify-content-between.mb-4
+    .col-auto
+      .product-card-price-container
+        .product-card-price.default 27 900
+          span грн.
+        .product-card-price.sale 27 300
+          span грн.
+    .col-auto 
+      .product-controls-availible.row.p-2.align-items-center.gx-3
+        .col-auto
+          +svgColor('circle-check')
+        .col-auto
+          span В наличии
+    .col-auto
+      .row.align-items.center.gx-2 
+        .col-auto
+          a(href="#") 
+            +svgMono('scales')
+        .col-auto
+          a(href="#") 
+            +svgMono('heart')
+  button.btn-ct-primary-fill.mb-3 КУПИТЬ
+  button.btn-ct-primary-out КУПИТЬ В КРЕДИТ
+
+.product-mini-fixed.d-md-none.fixed-bottom.p-3
+  .row.align-items-center.justify-content-between
+    .col-auto
+      .product-card-price-container
+        .product-card-price.default 27 900
+          span грн.
+        .product-card-price.sale 27 300
+          span грн.
+    .col-auto
+      button.btn-ct-primary-fill КУПИТЬ

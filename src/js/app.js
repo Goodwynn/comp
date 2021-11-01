@@ -38,6 +38,7 @@ APP.Components = APP.Components || {};
         APP.Components.ProductImages.init();
         APP.Components.ProductDescription.init();
         APP.Components.ProductPageReview.init();
+        APP.Components.GalleryModal.init();
       }
       APP.Components.ProductSales.init();
       APP.Components.BasketCounter.init();

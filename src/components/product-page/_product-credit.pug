@@ -1,40 +1,36 @@
-.product-credit 
-  .product-credit-title.mb-5 Кредит
-  - for(i=1; i<=3; i++ )
-    .product-credit-item.border-bottom.pb-4.mb-4
-      .row.mb-3
-        .col-2 
-          .product-credit-item-title Кредитор
-        .col-2 
-          .product-credit-item-title Условия кредита
-        .col-2
-          .product-credit-item-title Срок кредита
-        .col-2 
-          .product-credit-item-title Первый взнос
-        .col-2 
-          .product-credit-item-title Ежемесячно
-      .row
-        .col-2
-          .row.align-items-center.gx-2.mb-3
-            .col-auto
-              img(src="../img/bank.png", alt="")
-            .col-auto
-              div ПриватБанк
-          button.show-more Читать условия
-        .col-2
-          select.custom-select 
-            option(value="1") Оплата частями
-            option(value="2") Оплата частями2
-            option(value="3") Оплата частями3
-        .col-2 
-          select.custom-select
-            option(value="1") 10 месяцев
-            option(value="2") 11 месяцев
-            option(value="3") 12 месяцев
-        .col-2
-          .py-2.border.border-white 0 грн
-        .col-2 
-          .py-2.border.border-white 2 400 грн
-        .col-2
-          button.btn-ct-primary-fill КУПИТЬ В КРЕДИТ
+.product-credit
+  .product-credit-title.mb-3.mb-lg-5 Кредит
+  .row.flex-nowrap.flex-lg-wrap.overflow-auto.mb-5.mb-lg-0
+    - for(i=1; i<=3; i++ )
+      .product-credit-item.col-8.col-sm-4.col-lg-12.border.py-3.py-lg-0.pb-lg-4.mb-lg-4
+        .row.flex-column.flex-lg-row
+          .col-lg-2.mb-3.mb-lg-0
+            .product-credit-item-title.mb-3 Кредитор
+            .row.align-items-center.gx-2.mb-3
+              .col-auto
+                img(src="../img/bank.png", alt="")
+              .col-auto
+                .product-credit-text ПриватБанк
+            button.show-more(data-micromodal-trigger="credit-info") Читать условия
+          .col-lg-2.mb-3.mb-lg-0
+            .product-credit-item-title.mb-3 Условия кредита
+            select.custom-select 
+              option(value="1") Оплата частями
+              option(value="2") Оплата частями2
+              option(value="3") Оплата частями3
+          .col-lg-2.mb-3.mb-lg-0 
+            .product-credit-item-title.mb-3 Срок кредита
+            select.custom-select
+              option(value="1") 10 месяцев
+              option(value="2") 11 месяцев
+              option(value="3") 12 месяцев
+          .col-lg-2.mb-3.mb-lg-0
+            .product-credit-item-title.mb-3 Первый взнос
+            .product-credit-text.py-lg-2.border.border-white 0 грн
+          .col-lg-2.mb-3.mb-lg-0 
+            .product-credit-item-title.mb-3 Ежемесячно
+            .product-credit-text.py-lg-2.border.border-white 2 400 грн
+          .col-lg-2.mb-3.mb-lg-0
+            .product-credit-item-title.mb-3.invisible.d-none.d-lg-block Кнопка
+            button.btn-ct-primary-fill КУПИТЬ В КРЕДИТ
         

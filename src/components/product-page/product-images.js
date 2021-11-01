@@ -14,8 +14,12 @@
         watchOverflow: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        direction: 'vertical',
-        mousewheel: true
+        breakpoints: {
+          992: {
+            direction: 'vertical',
+            mousewheel: true,
+          }
+        }
       });
 
       let mainSwiper = new Swiper('.main-swiper', {

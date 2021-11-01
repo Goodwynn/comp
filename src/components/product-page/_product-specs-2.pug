@@ -1,0 +1,52 @@
+-
+  var specs = [
+    {
+      name: 'Класс',
+      val: 'Для работы и дома'
+    },
+    {
+      name: 'Диагональ экрана',
+      val: '14"'
+    },
+    {
+      name: 'Разрешение экрана',
+      val: '1920x1080'
+    },
+    {
+      name: 'Процессор',
+      val: 'Intel Pentium Silver'
+    },
+    {
+      name: 'Модель процессора',
+      val: 'Intel Pentium Silver N5000'
+    },
+    {
+      name: 'Частота процессора',
+      val: '1.1 - 2.7 ГГц'
+    },
+    {
+      name: 'Объем оперативной памяти',
+      val: '4 Gb'
+    },
+    {
+      name: 'Частота процессора',
+      val: '1.1 - 2.7 ГГц'
+    },
+    {
+      name: 'Объем оперативной памяти',
+      val: '4 Gb'
+    },
+    {
+      name: 'Частота процессора',
+      val: '1.1 - 2.7 ГГц'
+    }
+  ]
+
+.product-specifications
+  .product-specifications-title.mb-4 Характеристики
+  each item in specs 
+    .product-specifications-row.row.py-2.mx-0
+      .col-6 
+        span #{item.name}
+      .col-6  
+        span #{item.val}

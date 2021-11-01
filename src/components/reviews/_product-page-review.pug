@@ -1,19 +1,26 @@
 .product-review.p-2.mb-4.shadow
   .row.g-2 
-    .col-auto
+    .d-none.d-sm-block.col-auto
       img(src=item.authorImg, alt=item.authorName)
     .col
       .row.justify-content-between.align-items-center.mb-3
-        .col-auto
+        .col-12.col-sm-auto.mb-3.mb-sm-0
           .row.align-items-center 
+            .col-auto.d-sm-none
+              img(src=item.authorImg, alt=item.authorName)
             .col-auto
               .product-review-author=item.authorName
-            .col-auto
+              .d-sm-none
+                if (item.buyCheck)
+                  .product-review-buy-badge 
+                    +svgMono('basket')
+                    span уже купил(а)
+            .d-none.d-sm-block.col-auto
               if (item.buyCheck)
                 .product-review-buy-badge 
                   +svgMono('basket')
                   span уже купил(а)
-            .col-auto 
+            .d-none.d-sm-block.col-auto 
               .product-card-stars
                 - for (i=1; i<=5; i++)
                   if (item.rating >= i )
@@ -24,6 +31,14 @@
                       +svgMono('star')
         .col-auto
           .product-review-date=item.date
+          .product-card-stars.d-sm-none.mt-2
+            - for (i=1; i<=5; i++)
+              if (item.rating >= i )
+                .star.active
+                  +svgMono('star')
+              else 
+                .star
+                  +svgMono('star')
       .row.flex-column 
         .col
           .product-review-text.mb-2=item.review.text
@@ -37,7 +52,7 @@
         .col-auto 
           .row 
             .col-auto 
-              button 
+              button
                 +svgMono('comment')
                 span Ответить
             .col-auto

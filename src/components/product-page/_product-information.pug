@@ -85,17 +85,17 @@
 .product-information.p-3.mb-4.shadow 
   .product-information-title.mb-3 Доставка
   each item in delivery
-    .row.align-items-start.justify-content-between.gx-3 
-      .col-4
+    .row.align-items-start.justify-content-between.gx-3.flex-column.flex-sm-row
+      .col-12.col-sm-4
         .row.align-items-center.gx-2 
           .col-auto
             i 
               +svgColor(item.company.icon)
           .col
             .product-information-text #{item.company.name} 
-      .col-4.text-center 
+      .col-auto.col-sm-4.text-center.ms-5.ms-sm-0
         .product-information-text #{item.when}
-      .col-4.text-end
+      .col-auto.col-sm-4.text-sm-end.ms-5.ms-sm-0
         span #{item.price.default}
         if (item.price.special)
           span #{item.price.special}
@@ -106,7 +106,7 @@
     .row.align-items-center.gx-3
       .col-auto
         +svgMono(item.icon)
-      .col-auto
+      .col
         .product-information-text #{item.description}
 
 .product-information.p-3.mb-4.shadow 
@@ -115,6 +115,6 @@
     .row.align-items-center.gx-3
       .col-auto
         +svgMono(item.icon)
-      .col-auto
+      .col
         .product-information-text #{item.description}
 

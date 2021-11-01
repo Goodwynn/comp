@@ -1,0 +1,41 @@
+#post-review.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container(style="max-width: 500px" role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col-auto 
+          .micromodal-title Сообщить о появлении
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content 
+        form(action="#") 
+          .star-radio.mb-4
+            input(type="radio" name="rate1" id="rate1")
+            label(for="rate1") 
+              +svgMono('star')
+            input(type="radio" name="rate1" id="rate2")
+            label(for="rate2") 
+              +svgMono('star')
+            input(type="radio" name="rate1" id="rate3")
+            label(for="rate3") 
+              +svgMono('star')
+            input(type="radio" name="rate1" id="rate4")
+            label(for="rate4") 
+              +svgMono('star')
+            input(type="radio" name="rate1" id="rate5")
+            label(for="rate5") 
+              +svgMono('star')
+          input(type="text" placeholder="Имя").ct-input.mb-3
+          input(type="email" placeholder="Email").ct-input.mb-3
+          input(type="text" placeholder="Достоинства").ct-input.mb-3
+          input(type="text" placeholder="Недостатки").ct-input.mb-3
+          textarea(placeholder="Комментарий").ct-input.mb-3
+          .filter-checkbox.mb-4
+            input(type="checkbox" id="notice-on-email")
+            label(for="notice-on-email") Уведомлять об ответах по электронной почте
+          .row.align-items-center.justify-content-between 
+            .col-auto
+              button.btn-ct-secondary-out ОТМЕНИТЬ 
+            .col-auto
+              button.btn-ct-secondary-fill ДОБАВИТЬ ОТЗЫВ 
+          

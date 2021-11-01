@@ -6,7 +6,22 @@
           +svgColor('circle-check')
         .col-auto
           span В наличии
+    .d-none.d-sm-block.col-auto
+      .row.align-items-center.gx-2 
+        .col-auto
+          a(href="#") 
+            +svgMono('scales')
+        .col-auto
+          a(href="#") 
+            +svgMono('heart')
+  .row.align-items-center.justify-content-between.justify-content-sm-start.gx-3
     .col-auto
+      .product-card-price-container
+        .product-card-price.default 27 900
+          span грн.
+        .product-card-price.sale 27 300
+          span грн.
+    .d-sm-none.col-auto 
       .row.align-items.center.gx-2 
         .col-auto
           a(href="#") 
@@ -14,21 +29,17 @@
         .col-auto
           a(href="#") 
             +svgMono('heart')
-  .row.align-items-center.gx-3
-    .col-auto
-      .product-card-price-container
-        .product-card-price.default 27 900
-          span грн.
-        .product-card-price.sale 27 300
-          span грн.
-    .col-auto
-      button.btn-ct-primary-fill КУПИТЬ
-    .col-auto
-      button.btn-ct-primary-out КУПИТЬ В КРЕДИТ
+    .d-sm-none.w-100.mb-3
+    .col-12.col-sm-auto.mb-3.mb-sm-0
+      button.w-100.w-sm-auto.btn-ct-primary-fill КУПИТЬ
+    .col-12.col-sm-auto
+      button.w-100.w-sm-auto.btn-ct-primary-out КУПИТЬ В КРЕДИТ
+
+//- 
 
 .product-controls.border-bottom.pb-4.mb-4
   .row.justify-content-between.align-items-center.mb-4
-    .col-auto
+    .col-12.col-sm-auto
       .row.align-items-center
         .col-auto
           .product-controls-availible.not.row.p-2.align-items-center.gx-3
@@ -36,9 +47,9 @@
               +svgMono('circle-minus')
             .col-auto
               span В наличии
-        .col-auto 
-          button.btn-ct-secondary-fill СООБЩИТЬ, КОГДА ПОЯВИТСЯ
-    .col-auto
+        .col-12.col-sm-auto.mt-3.mt-sm-0
+          button.w-100.w-sm-auto.btn-ct-secondary-fill(data-micromodal-trigger="inform-on-arrive") СООБЩИТЬ, КОГДА ПОЯВИТСЯ
+    .d-none.d-sm-block.col-auto
       .row.align-items.center.gx-2 
         .col-auto
           a(href="#") 
@@ -46,10 +57,18 @@
         .col-auto
           a(href="#") 
             +svgMono('heart')
-  .row.align-items-center.gx-3
+  .row.align-items-center.justify-content-between.justify-content-sm-start.gx-3
     .col-auto
       .product-card-price-container
         .product-card-price.default.disabled 27 900
           span грн.
         .product-card-price.sale.disabled 27 300
           span грн.
+    .d-sm-none.col-auto 
+      .row.align-items.center.gx-2 
+        .col-auto
+          a(href="#") 
+            +svgMono('scales')
+        .col-auto
+          a(href="#") 
+            +svgMono('heart')

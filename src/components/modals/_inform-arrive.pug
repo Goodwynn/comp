@@ -1,0 +1,18 @@
+#inform-on-arrive.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container(style="max-width: 500px" role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col-auto 
+          .micromodal-title Сообщить о появлении
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content 
+        div(style="font-size: 12px; font-weght: 500; color: #333333").mb-3 Укажите ваш email, и мы сообщим вам, когда товар появится в наличии.
+        form(action="#") 
+          input(type="email" placeholder="Email").ct-input.mb-4
+          .row.aling-items-center.justify-content-between 
+            .col-auto 
+              button.btn-ct-secondary-out ОТМЕНИТЬ
+            .col-auto 
+              button.btn-ct-secondary-fill ОТПРАВИТЬ
