@@ -14,4 +14,13 @@ PageList:
   - file: news-list.html
     ready: 100
   - file: news-page.html
+    ready: 100
+  - file: 404.html
+    ready: 100
+  - file: 500.html
+    ready: 100
+  - file: order-checkout.html
+    ready: 100
+  - file: thx-page.html
     ready: 10
+     

@@ -1,0 +1,33 @@
+.order-list-item
+  &:last-child
+    @extend .border-bottom
+
+  &-title
+    font-size: 12px
+    font-weight: 500
+    color: $colorGS40
+
+  &-name
+    font-size: 14px
+    font-weight: 400
+    color: $colorDarkGrey
+
+  .edit
+    font-size: 12px
+    font-weight: 500
+    color: $colorSecondary
+    .ico
+      display: none
+      fill: none
+      stroke: $colorSecondary
+
+  img
+    size: 70px
+
++r($sm)
+  .order-list-item
+    .edit
+      span
+        display: none
+      .ico
+        display: block

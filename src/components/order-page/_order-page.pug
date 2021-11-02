@@ -1,0 +1,19 @@
+section.order-page.py-5
+  .container 
+    .order-page-title.mb-4 Оформление заказа
+    .row.gx-3 
+      .col-lg-8 
+        include _order-list
+        include _order-contacts
+        include _order-delivery
+        include _order-client
+        include _order-payment
+        include _order-comment
+      .col-lg-4 
+        include _order-summary
+    .order-summary-mini.d-sm-none.row.align-items-center.justify-content-between.position-fixed.bottom-0.w-100.py-3
+      .col-auto 
+        .order-summary-final 7 200
+          span грн.
+      .col-auto
+        button.btn-ct-primary-fill ПОДТВЕРДИТЬ ЗАКАЗ

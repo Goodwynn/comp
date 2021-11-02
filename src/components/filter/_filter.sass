@@ -7,9 +7,7 @@
     display: flex
     align-items: center
     gap: 10px
-    font-size: 12px
-    font-weight: 500
-    color: $colorDarkGrey
+    @extend %f-12-500
     border-radius: 20px
     border: 1px solid $colorGS10
     .ico
@@ -18,9 +16,7 @@
       background-color: $colorSoft
       border-color: $colorSoft
     &-all
-      font-size: 12px
-      font-weight: 500
-      color: $colorSecondary
+      @extend %f-12-500-sec
 
   &-controls
     position: sticky
@@ -41,9 +37,7 @@
         margin-left: auto
         display: block
         width: fit-content
-        font-size: 12px
-        font-weight: 700
-        color: $colorSecondary
+        @extend %f-12-700-sec
   .btn-ct-secondary-fill,
   .btn-ct-secondary-out
     width: 100%

@@ -7,9 +7,7 @@
     background-color: $colorDark
     a
       display: block
-      font-size: 10px
-      font-weight: 700
-      color: $colorSoft
+      @extend %f-10-700-soft
       text-transform: uppercase
 
   &-functions
@@ -31,9 +29,7 @@
     padding: 10px 8px
 
   .phone
-    font-size: 18px
-    font-weight: 700
-    color: $colorDark
+    @extend %f-18-700-dark
     &-mobile
       .ico
         font-size: 25px

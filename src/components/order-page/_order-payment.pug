@@ -1,0 +1,55 @@
+.order-payment
+  .order-payment-title.mb-3 Способ оплаты
+  .row.gx-3
+    .col-lg-6
+      //- 
+      .order-radio.p-3
+        input(type="radio" name="payment-way" id="cash").order-radio-input
+        label(for="cash").order-radio-header 
+          .order-radio-title Наличными при получении
+      //- 
+      .order-radio.p-3
+        input(type="radio" name="payment-way" id="card").order-radio-input
+        label(for="card").order-radio-header 
+          .order-radio-title Оплата картой
+        .order-radio-content.mt-2
+          button.btn-gpay
+            span Оплатить через
+            +svgColor('gpay')
+          .row.align-items-center.g-2.my-2
+            .col 
+              hr
+            .col-auto 
+              .callback-block-notice или 
+            .col 
+              hr
+          .order-radio-title.mb-2 Данные карты
+          .row.g-2
+            .col-12 
+              input(type="text" placeholder="Номер карты").ct-input
+            .col-4
+              input(type="text" placeholder="ММ").ct-input
+            .col-4
+              input(type="text" placeholder="ГГ").ct-input
+            .col-4
+              input(type="text" placeholder="CVV").ct-input
+      //- 
+      .order-radio.p-3
+        input(type="radio" name="payment-way" id="check").order-radio-input
+        label(for="check").order-radio-header 
+          .order-radio-title Безналичный рассчет
+        .order-radio-content.mt-2
+          //- 
+          .order-radio-inner 
+            input(type="radio" name="person-type" id="phisic")
+            label(for="phisic").order-radio-header
+              .order-radio-title Физическое лицо
+          //- 
+          .order-radio-inner.mt-2
+            input(type="radio" name="person-type" id="lawer")
+            label(for="lawer").order-radio-header
+              .order-radio-title Юридическое лицо
+            .order-radio-content.mt-2
+              input(type="text" placeholder="Название организации").ct-input.mb-2
+              input(type="text" placeholder="ЕРДПО").ct-input 
+

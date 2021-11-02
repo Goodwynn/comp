@@ -1,0 +1,16 @@
+-
+  var items = [
+    {
+      img: '../img/prod/prod-img2.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F)(BX8070110400F)'
+    },
+    {
+      img: '../img/prod/prod-img17.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F)(BX8070110400F)'
+    }
+  ]
+
+.order-list.mb-4
+  .order-list-title.mb-3 Ваш заказ
+  each item in items 
+    include _order-list-item

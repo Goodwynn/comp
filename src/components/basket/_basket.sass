@@ -5,9 +5,7 @@
       border: 2px solid $colorSecondary
       border-radius: 4px
     &-title
-      font-size: 14px
-      font-weight: 700
-      color: $colorSecondary
+      @extend %f-14-700-sec
 
   &-similar
     &-title
@@ -15,15 +13,11 @@
 
   &-confirm
     &-price
-      font-size: 28px
-      font-weight: 700
-      color: $colorDark
+      @extend %f-28-700
       span
         font-size: 16px
       &-title
-        font-size: 18px
-        font-weight: 700
-        color: $colorDarkGrey
+        @extend %f-18-700
 
     .btn-ct-secondary-out,
     .btn-ct-primary-fill

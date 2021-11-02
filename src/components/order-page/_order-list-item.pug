@@ -1,0 +1,26 @@
+.order-list-item.p-3.border-top
+  .row.align-items-center.g-2 
+    .col-auto
+      img(src=item.img, alt="")
+    .col.col-xl 
+      .order-list-item-name #{item.name} 
+    .col-xl.order-4
+      .row.justify-content-around 
+        .col-auto 
+          .order-list-item-title.text-center.mb-2 Количество
+          .order-list-item-value.text-center 1
+        .col-auto
+          .order-list-item-title.text-center.mb-2 Цена
+          .product-card-price-container
+              .product-card-price.default 3600 
+                span грн.
+              .product-card-price.sale 3600 
+                span грн.
+        .col-auto 
+          .order-list-item-title.text-center.mb-2 Сумма
+          .product-card-price 3600 
+            span грн.
+    .col-auto.col-xl-auto.order-3
+      button.edit 
+        span Редактировать
+        +svgMono('pencil')

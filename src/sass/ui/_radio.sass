@@ -16,3 +16,72 @@
     .ico
       size: 28px
       fill: $colorYellow
+
+.order-radio
+
+  &.active
+    border-radius: 4px
+    border: 1px solid $colorSecondary
+
+  &-header
+    padding-left: 30px
+    position: relative
+    display: block
+    cursor: pointer
+    &::before
+      position: absolute
+      content: ''
+      size: 20px
+      top: 0px
+      left: 0
+      border-radius: 50%
+      border: 1px solid $colorGS20
+    &::after
+      display: none
+      position: absolute
+      content: ''
+      size: 10px
+      top: 5px
+      left: 5px
+      border-radius: 50%
+      background-color: $colorSecondary
+
+  &-content
+    display: none
+    padding-left: 30px
+    &-text
+      font-size: 12px
+      font-weight: 500
+      color: $colorDarkGrey
+
+  &-title
+    font-size: 12px
+    font-weight: 700
+    color: $colorDarkGrey
+
+  &-text
+    font-size: 12px
+    font-weight: 500
+    color: $colorGS60
+
+  &-price
+    font-size: 12px
+    font-weight: 500
+    color: $colorDark
+    &.free
+      color: $colorPrimary
+    span
+      font-size: 8px
+
+  input[type="radio"]
+    position: absolute
+    size: 0.1px
+    visibility: hidden
+    &:checked
+      & + .order-radio-header
+        &::before
+          border-color: $colorSecondary
+        &::after
+          display: block
+        & + .order-radio-content
+          display: block

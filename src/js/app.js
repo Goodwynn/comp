@@ -40,6 +40,9 @@ APP.Components = APP.Components || {};
         APP.Components.ProductPageReview.init();
         APP.Components.GalleryModal.init();
       }
+      if (document.querySelector('.order-page-layout')) {
+        APP.Components.OrderPage.init();
+      }
       APP.Components.ProductSales.init();
       APP.Components.BasketCounter.init();
       APP.Components.BasketTogether.init();

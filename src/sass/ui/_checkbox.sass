@@ -42,3 +42,52 @@
     display: none
   label
     @extend %f-12-500
+
+.order-client
+  &-content
+    display: none
+    padding-left: 40px
+    &-title
+      font-size: 14px
+      font-weight: 500
+      color: $colorDarkGrey
+
+  input[type="checkbox"]
+    position: absolute
+    size: 0.1px
+    visibility: hidden
+    &:checked
+      & + label
+        &::before
+          background-color: $colorPrimary
+        &::after
+          left: calc(30px - 12px)
+        & + .order-client-content
+          display: block
+
+  label
+    position: relative
+    padding-left: 40px
+    font-size: 12px
+    font-weight: 700
+    color: $colorDarkGrey
+    &::before
+      position: absolute
+      content: ''
+      size: 32px 16px
+      top: 50%
+      left: 0
+      border-radius: 100px
+      transform: translateY(-50%)
+      background-color: $colorSecondary
+      transition: 0.25s all
+    &::after
+      position: absolute
+      content: ''
+      size: 12px
+      top: calc(50%)
+      left: 2px
+      transform: translateY(-50%)
+      border-radius: 50%
+      background-color: $colorWhite
+      transition: 0.25s all

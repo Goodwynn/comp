@@ -159,3 +159,35 @@ body, html
         margin-left: 0px
         span
           display: none
+
+.error-page
+  margin: 100px 0
+  &-name
+    font-size: 140px
+    font-weight: 700
+    color: $colorSecondary
+  &-title
+    @extend %f-18-600
+  &-text
+    font-size: 14px
+    font-weight: 400
+    color: $colorDarkGrey
+
+.thx-page
+  margin: 100px 0
+  &-image
+    .ico
+      size: 82px
+      fill: none
+  &-title
+    @extend %f-28-600
+  &-subtitle
+    font-size: 14px
+    font-weight: 900
+    color: $colorDarkGrey
+  &-text
+    font-size: 14px
+    font-weight: 400
+    color: $colorDarkGrey
+  +r($sm)
+    margin: 24px 0
