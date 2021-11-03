@@ -1,0 +1,60 @@
+.shop-history
+  &-title
+    @extend %f-28-600
+    span
+      font-size: 16px
+
+  &-order
+    &-status
+      font-size: 14px
+      font-weight: 500
+      &.routed
+        color: $colorSecondary
+      &.delivered
+        color: $colorPrimary
+    &-price
+      @extend %f-14-500
+      span
+        font-size: 8px
+    &-images
+      img
+        size: 40px
+      .more-indicator
+        size: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 16px
+        font-weight: 500
+        color: $colorGS100
+        border: 2px solid $colorDark
+
+  &-part
+    &-title
+      @extend %f-14-500-gs60
+    &-subtitle
+      @extend %f-12-500-gs60
+    &-text
+      @extend %f-12-500
+
+  .ct-accordion
+    &-content
+      img
+        size: 70px
+
+  .order-list-item-text
+    font-size: 14px
+
+  .product-card
+    &-price
+      font-size: 14px
+      span
+        font-size: 8px
+      &.sale
+        font-size: 14px
+        span
+          font-size: 8px
+      &.default
+        font-size: 8px
+        span
+          font-size: 8px

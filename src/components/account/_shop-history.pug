@@ -1,0 +1,165 @@
+-
+  var items = [
+    {
+      number: '#36487',
+      date: '12.08.2021',
+      status: 'В пути',
+      delivery: {
+        type: 'Самовывоз из Новой почты',
+        from: 'г. Днепр, Отделение №73, бульвар Кобзаря, д. 4',
+        who: 'Иванов Иван Иванович',
+        tel: '+380670099009',
+        track: '20400209140000'
+      },
+      payment: {
+        type: 'Картой',
+        status: 'Оплачено'
+      },
+      goods: [
+        {
+          img: '../img/prod/prod-img1.jpg',
+          name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+          count: 1,
+          price: 3600,
+          salePrice: 3500,
+        },
+        {
+          img: '../img/prod/prod-img2.jpg',
+          name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+          count: 1,
+          price: 3600,
+        },
+      ],
+    },
+    {
+      number: '#36489',
+      date: '18.08.2021',
+      status: 'Доставлена',
+      delivery: {
+        type: 'Самовывоз из Новой почты',
+        from: 'г. Днепр, Отделение №73, бульвар Кобзаря, д. 4',
+        who: 'Иванов Иван Иванович',
+        tel: '+380670099009',
+        track: '20400209140000'
+      },
+      payment: {
+        type: 'Картой',
+        status: 'Оплачено'
+      },
+      goods: [
+        {
+          img: '../img/prod/prod-img2.jpg',
+          name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+          count: 1,
+          price: 3600,
+          salePrice: 3500,
+        },
+        {
+          img: '../img/prod/prod-img1.jpg',
+          name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+          count: 2,
+          price: 3600,
+          salePrice: 3500,
+        },
+      ],
+    },
+  ]
+
+.shop-history 
+  .shop-history-title.mb-4 История заказов
+  each item in items
+    .ct-accordion.p-3.mb-3.shadow
+      .ct-accordion-title
+        .row.align-items-center.justify-content-between.me-4
+          .col-auto
+            .shop-history-part-subtitle #{item.number} от #{item.date}
+            if ( item.status == 'В пути')
+              .shop-history-order-status.routed #{item.status}
+            else 
+              .shop-history-order-status.delivered #{item.status}
+          .show-history-part-price.col-auto.text-end
+            .shop-history-part-subtitle Сумма
+            - let fullPrice = 0
+            each good in item.goods 
+              if (good.salePrice != null)
+                - fullPrice += good.salePrice * good.count
+              else
+                - fullPrice += good.price * good.count
+            .shop-history-order-price #{fullPrice} 
+              span грн.
+          .show-history-part-items.col-auto
+            .shop-history-order-images.row.align-items-center.gx-2
+              each good in item.goods
+                .col-auto
+                  img(src=good.img, alt=good.name)
+              .col-auto
+                .more-indicator +3
+      .ct-accordion-content.mt-4
+        .row 
+          .col-7 
+            .shop-history-part-title.mb-3 Товары
+            each good in item.goods
+              .shop-history-item.border-top.border-bottom
+                .row.align-items-center.p-2
+                  .col-auto
+                    img(src=good.img, alt=good.name)
+                  .col
+                    .shop-history-part-text #{good.name}
+                  .col
+                    .row.justify-content-around 
+                      .col-4.text-center
+                        .order-list-item-title.mb-2 Количество
+                        .order-list-item-text #{good.count}
+                      .col-4.text-center
+                        .order-list-item-title.mb-2 Цена
+                        .product-card-price-container
+                          if (good.salePrice != null )
+                            .product-card-price.default=good.price
+                              span грн.
+                            .product-card-price.sale=good.salePrice 
+                              span грн.
+                          else 
+                            .product-card-price=good.price
+                              span грн.
+                      .col-4.text-center
+                        .order-list-item-title.mb-2 Сумма
+                        if (good.salePrice != null )
+                          .product-card-price #{good.salePrice * good.count}
+                            span грн.
+                        else 
+                          .product-card-price #{good.price * good.count}
+                            span грн.
+            //- 
+            .shop-history-item 
+              .row.align-items-center.justify-content-between
+                .col-auto
+                  .shop-history-part-title Итого
+                .col-auto
+                  .shop-history-title #{fullPrice}
+                    span грн.
+          .col-2 
+            .shop-history-part-title.mb-3 Данные о доставке
+            .shop-history-part-subtitle.mt-2 Способ доставки
+            .shop-history-part-text #{item.delivery.type}
+            .shop-history-part-subtitle.mt-2 Отделение
+            .shop-history-part-text #{item.delivery.from}
+            .shop-history-part-subtitle.mt-2 ФИО получателя
+            .shop-history-part-text #{item.delivery.who}
+            .shop-history-part-subtitle.mt-2 Телефон получателя
+            .shop-history-part-text #{item.delivery.tel}
+            .shop-history-part-subtitle.mt-2 Номер ТТН
+            .shop-history-part-text #{item.delivery.track}
+          .col-2 
+            .shop-history-part-title.mb-3 Данные об оплате
+            .shop-history-part-subtitle.mt-2 Способ оплаты
+            .shop-history-part-text #{item.payment.type}
+            .shop-history-part-subtitle.mt-2 Статус
+            if (item.payment.status == 'Оплачено')
+              .shop-history-order-status.delivered #{item.payment.status}
+            else 
+              .shop-history-order-status.routed #{item.payment.status}
+        .row.align-items-center.justify-content-between.mt-4
+          .col-auto
+            button.btn-ct-secondary-out ОСТАВИТЬ ОТЗЫВ
+          .col-auto
+            button.show-more Оформить возврат

@@ -1,0 +1,25 @@
+.account
+  &-tabs
+    &-nav
+      &-link
+        @extend .p-3
+        display: flex
+        gap: 30px
+        border-bottom: 1px solid $colorGS10
+        .ico
+          size: 24px
+          fill: none
+          stroke: $colorDark
+        span
+          @extend %f-16-500-dark
+        &.active
+          background-color: $colorSoft
+          .ico
+            stroke: $colorSecondary
+          span
+            color: $colorSecondary
+    &-content
+      &-item
+        display: none
+        &.active
+          display: block

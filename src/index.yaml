@@ -22,5 +22,7 @@ PageList:
   - file: order-checkout.html
     ready: 100
   - file: thx-page.html
+    ready: 100
+  - file: account.html
     ready: 10
      

@@ -1,0 +1,109 @@
+-
+  var reviews = [
+    {
+      img: '../img/prod/prod-img2.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+      text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
+      rating: 4,
+      likes: 12,
+      date: '07.04.2021',
+      answers: [
+        {
+          name: 'Представитель бренда',
+          text: 'Здравствуйте! Рады, что техника Lorem Ipsum пришлась Вам по душе. Благодарим за оставленный отзыв и желаем успешной эксплуатации на долгое время!',
+          date: '08.04.2021'
+        },
+        {
+          name: 'Представитель бренда',
+          text: 'Здравствуйте! Рады, что техника Lorem Ipsum пришлась Вам по душе. Благодарим за оставленный отзыв и желаем успешной эксплуатации на долгое время!',
+          date: '12.04.2021'
+        }
+      ]
+    },
+    {
+      img: '../img/prod/prod-img1.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+      text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
+      rating: 4,
+      likes: 12,
+      date: '07.04.2021',
+      answers: [
+        {
+          name: 'Представитель бренда',
+          text: 'Здравствуйте! Рады, что техника Lorem Ipsum пришлась Вам по душе. Благодарим за оставленный отзыв и желаем успешной эксплуатации на долгое время!',
+          date: '08.04.2021'
+        },
+        {
+          name: 'Представитель бренда',
+          text: 'Здравствуйте! Рады, что техника Lorem Ipsum пришлась Вам по душе. Благодарим за оставленный отзыв и желаем успешной эксплуатации на долгое время!',
+          date: '12.04.2021'
+        }
+      ]
+    },
+  ]
+
+.user-reviews 
+  .user-reviews-title.mb-4 Мои отзывы
+  .user-reviews-list
+    each item in reviews 
+      .ct-accordion.p-3.mb-3.shadow 
+        .ct-accordion-title
+          .row.align-items-center
+            .col-auto 
+              img(src=item.img, alt=item.name)
+            .col-auto 
+              .user-reviews-name #{item.name}
+        .ct-accordion-content.mt-3
+          .row.align-items-center.justify-content-between
+            .col-auto
+               .product-card-stars
+                - for (i=1; i<=5; i++)
+                  if (item.rating >= i )
+                    .star.active
+                      +svgMono('star')
+                  else 
+                    .star
+                      +svgMono('star')
+            .col-auto
+              .product-review-date #{item.date}
+          .product-review-text.mb-2 #{item.text}
+          .row.align-items-center.justify-content-between
+            .col-auto
+              button.product-review-answer-toggler
+                span #{item.answers.length} 
+                  if (item.answers.length == 1) 
+                    span ответ
+                  else if (item.answers.length > 1 && item.answers.length <= 4)
+                    span ответа
+                  else 
+                    span ответов 
+                i.bi.bi-chevron-down
+            .col-auto
+              button.product-review-like
+                +svgMono('like')
+                span #{item.likes}
+          each answer in item.answers
+            .product-review-answer.row.align-items-center.justify-content-between.ms-5.mt-2.border-start.d-none
+              .col-auto
+                .product-review-answer-author=answer.name
+              .col-auto
+                .product-review-answer-date=answer.date
+              .col-12.mt-2 
+                .product-review-answer-text=answer.text
+  .row.justify-content-center 
+    .col-auto.my-4
+      button.btn-posts-more
+        span Показать больше товаров
+        +svgMono('reload')
+  .pagination
+    a(href="#").pagination-link
+      +svgMono('arrow-left')
+      span Назад
+    a(href="#").pagination-link 1
+    a(href="#").pagination-link 2
+    a(href="#").pagination-link 3
+    a(href="#").pagination-link ...
+    a(href="#").pagination-link 34
+    a(href="#").pagination-link 
+      span Вперед
+      +svgMono('arrow-right')

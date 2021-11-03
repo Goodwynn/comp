@@ -1,0 +1,32 @@
+section.account 
+  .container 
+    .row.my-4.gx-3
+      .account-nav-container.d-none.d-lg-block.col-lg-3 
+        nav.account-tabs-nav 
+          a(href="#").account-tabs-nav-link
+            +svgMono('basket')
+            span История заказов
+          a(href="#").account-tabs-nav-link
+            +svgMono('heart')
+            span Список желаний
+          a(href="#").account-tabs-nav-link
+            +svgMono('eye')
+            span Просмотренные товары
+          a(href="#").account-tabs-nav-link
+            +svgMono('comment')
+            span Мои отзывы
+          a(href="#").account-tabs-nav-link
+            +svgMono('person')
+            span Личные данные
+      .col-lg-9
+        .account-tabs-content 
+          .account-tabs-content-item
+            include _shop-history
+          .account-tabs-content-item
+            include _wishlist
+          .account-tabs-content-item
+            include _showed-items
+          .account-tabs-content-item
+            include _user-reviews
+          .account-tabs-content-item
+            include _personal-data

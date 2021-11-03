@@ -1,10 +1,10 @@
 (function (APP) {
   APP.Components.ProductPageReview = {
-    init: function () {
-      this.toggle()
+    init: function (item) {
+      this.toggle(item)
     },
-    toggle: function () {
-      const productReview = document.querySelectorAll('.product-review')
+    toggle: function (item) {
+      const productReview = document.querySelectorAll(item)
 
       productReview.forEach(item => {
         const toggleBtn = item.querySelector('.product-review-answer-toggler')

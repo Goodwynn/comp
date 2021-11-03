@@ -1,0 +1,39 @@
+.personal-data
+  &-title
+    @extend %f-28-600
+  &-avatar
+    text-align: center
+    &-image
+      size: 50px
+      border-radius: 50%
+      overflow: hidden
+      &.default
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $colorGS20
+        span
+          font-size: 24px
+          font-weight: 500
+          color: $colorWhite
+    button
+      @extend %f-12-500-sec
+
+  &-content
+    border-bottom: 1px solid $colorGS10
+    &-title
+      @extend %f-14-700
+    &-text
+      @extend %f-14-500
+
+    button
+      @extend %f-14-500-sec
+      .ico
+        font-size: 14px
+        fill: none
+        stroke: $colorSecondary
+
+  &-controls
+    button
+      display: block
+      @extend %f-12-500-sec

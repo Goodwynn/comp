@@ -9,9 +9,15 @@
       & + label
         &::before
           border-color: $colorSecondary
-
         &::after
           display: block
+    &:disabled
+      & + label
+        color: $colorGS40
+        &::before
+          border-color: $colorGS20
+        &::after
+          background-image: svg-load('../icons/svg-mono/check.svg', fill=$colorGS20)
 
   label
     position: relative

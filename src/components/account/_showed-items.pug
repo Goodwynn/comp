@@ -1,0 +1,151 @@
+-
+  var items = [
+    {
+      newCome: true,
+      img: '../img/prod/prod-img2.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+      rating: 3,
+      review: 5,
+      price: 3600,
+      salePrice: 3500,
+    },
+    {
+      newCome: true,
+      img: '../img/prod/prod-img1.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+      rating: 3,
+      review: 5,
+      price: 3600,
+      salePrice: 3500,
+    },
+    {
+      newCome: true,
+      img: '../img/prod/prod-img3.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+      rating: 3,
+      review: 5,
+      price: 3600,
+    },
+    {
+      img: '../img/prod/prod-img4.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+      rating: 3,
+      review: 5,
+      price: 3600,
+      salePrice: 3500,
+    },
+    {
+      img: '../img/prod/prod-img5.jpg',
+      name: 'Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)',
+      rating: 3,
+      review: 5,
+      price: 3600,
+    },
+  ]
+
+.showed-items 
+  .showed-items-title.mb-4 Просмотренные товары
+  .showed-items-list 
+    .row.flex-column.g-3
+      each item in items
+        .col
+          .product-line.shadow
+            if (item.newCome == true)
+              .product-card-new-notice Новинка
+            .row.align-items-center 
+              .col-4.col-lg-2 
+                img(src=item.img, alt=item.name)
+              .col-8.col-lg-10 
+                //- header row 
+                .product-line-header.row.align-items-center.justify-content-between.g-2
+                  .col-7.col-sm-auto 
+                    a(href="#").product-card-description-name #{item.name}
+                  .d-sm-none.col-auto.product-line-buttons
+                    .row.align-items-center.gx-2
+                      .col-auto
+                        a(href="#")
+                          +svgMono('scales')
+                      .col-auto
+                        a(href="#") 
+                          +svgMono('heart')
+                  .col-auto 
+                    span Код товара: 1231324156
+                //- content row
+                .row.align-items-center.justify-content-between
+                  .col-12.col-lg-8 
+                    //- rating and wishlist/compare btn
+                    .row.align-items-center.justify-content-between.justify-content-lg-start.my-3
+                      .col-auto
+                        .product-card-rating 
+                          if (item.rating != null)
+                            .product-card-stars
+                              - for (i=1; i<=5; i++)
+                                if (item.rating >= i )
+                                  .star.active
+                                    +svgMono('star')
+                                else 
+                                  .star
+                                    +svgMono('star')
+                          .product-card-reviews Отзывов: 
+                            span=item.review
+                      .d-none.d-md-block.col-auto.product-line-buttons
+                        .row.align-items-center.gx-2
+                          .col-auto
+                            a(href="#")
+                              +svgMono('scales')
+                          .col-auto
+                            a(href="#") 
+                              +svgMono('heart')
+                    //- information 
+                    .d-none.d-lg-block.product-line-information-title.mb-2 Характеристики
+                    .d-none.d-lg-flex.row.align-items-center.gy-2.product-line-information 
+                      .col-3
+                        p Диагональ: 21,5“
+                      .col-3 
+                        p Частота: 60 Гц
+                      .col-3 
+                        p Частота: 60 Гц
+                      .col-3 
+                        p Частота: 60 Гц
+                      .col-3 
+                        p Тип матрицы: IPS
+                      .col-3 
+                        p Разрешение: FullHD
+                      .col-3 
+                        p Разрешение: FullHD
+                      .col-3 
+                        p Разрешение: -
+                  .col-12.col-lg-4 
+                    //- price and btn
+                    .row.align-items-center.justify-content-between.justify-content-lg-end
+                      .col-auto 
+                        .product-card-price-container
+                          if (item.salePrice != null )
+                            .product-card-price.default=item.price
+                              span грн.
+                            .product-card-price.sale=item.salePrice 
+                              span грн.
+                          else 
+                            .product-card-price=item.price
+                              span грн.
+                      .col-auto
+                        button.btn-ct-primary-fill 
+                          span КУПИТЬ
+                          +svgMono('basket')
+    .row.justify-content-center 
+      .col-auto.my-4
+        button.btn-posts-more
+          span Показать больше товаров
+          +svgMono('reload')
+    .pagination
+      a(href="#").pagination-link
+        +svgMono('arrow-left')
+        span Назад
+      a(href="#").pagination-link 1
+      a(href="#").pagination-link 2
+      a(href="#").pagination-link 3
+      a(href="#").pagination-link ...
+      a(href="#").pagination-link 34
+      a(href="#").pagination-link 
+        span Вперед
+        +svgMono('arrow-right')

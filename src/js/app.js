@@ -20,7 +20,7 @@ APP.Components = APP.Components || {};
       APP.Plugins.Accordion.init();
       APP.Plugins.Menus.init();
       APP.Plugins.CustomSelect.init();
-      APP.Plugins.Tabs.init();
+      // APP.Plugins.Tabs.init();
       // APP.Plugins.Devtools.init();
     };
 
@@ -37,11 +37,15 @@ APP.Components = APP.Components || {};
       if (document.querySelector('.product-page-layout')) {
         APP.Components.ProductImages.init();
         APP.Components.ProductDescription.init();
-        APP.Components.ProductPageReview.init();
+        APP.Components.ProductPageReview.init('.product-review');
         APP.Components.GalleryModal.init();
       }
       if (document.querySelector('.order-page-layout')) {
         APP.Components.OrderPage.init();
+      }
+      if (document.querySelector('.account-page')) {
+        APP.Components.Account.init();
+        APP.Components.ProductPageReview.init('.user-reviews-list .ct-accordion');
       }
       APP.Components.ProductSales.init();
       APP.Components.BasketCounter.init();
