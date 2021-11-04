@@ -46,6 +46,7 @@ APP.Components = APP.Components || {};
       if (document.querySelector('.account-page')) {
         APP.Components.Account.init();
         APP.Components.ProductPageReview.init('.user-reviews-list .ct-accordion');
+        APP.Components.OrderPage.change();
       }
       APP.Components.ProductSales.init();
       APP.Components.BasketCounter.init();

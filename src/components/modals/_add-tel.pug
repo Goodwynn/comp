@@ -1,0 +1,16 @@
+#add-tel-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Изменение номера телефона
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content 
+        .micromodal-content-text.mb-3 Введите номер для того, чтобы мы связались с вами. Или 
+          a(href="#") свяжитесь с нами.
+        form(action="#") 
+          input(type="text" placeholder="Номер телефона").ct-input.mb-2
+          textarea(placeholder="Комментарий").ct-input
+          button.btn-ct-secondary-fill.ms-auto СОХРАНИТЬ

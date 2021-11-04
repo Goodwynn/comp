@@ -1,0 +1,13 @@
+#change-delivery-complete-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Изменение основного способа доставки
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content.text-center
+        +svgColor('circle-check')
+        .thx-page-title Электронная почта была успешно изменена
+        .thx-page-text Ваш адрес электронной почты был успешно изменен.

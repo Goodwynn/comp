@@ -36,7 +36,7 @@
 
       if ( window.innerWidth < 992 ) {
         accountMenu.remove()
-        document.querySelector('.usermenu-content').prepend(accountMenu)
+        document.querySelector('.usermenu-login-accordion .ct-accordion-content').prepend(accountMenu)
       } else {
         accountMenu.remove()
         document.querySelector('.account-nav-container').prepend(accountMenu)

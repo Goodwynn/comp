@@ -33,13 +33,30 @@
     @extend .mb-3
     @extend %f-18-600-gray
 
+  &-login
+    &-accordion
+      .ct-accordion-title
+        .ico
+          size: 24px
+          fill: none
+          stroke: $colorWhite
+    &-user
+      font-size: 18px
+      font-weight: 600
+      color: $colorWhite
+    &-out
+      span
+        font-size: 12px
+        font-weight: 500
+        color: $colorGS20
+
   &-content
     button
       display: flex
       align-items: center
       grid-gap: 20px
       .ico
-        size: 24px 
+        size: 24px
         fill: none
         stroke: #d9d9d9
 

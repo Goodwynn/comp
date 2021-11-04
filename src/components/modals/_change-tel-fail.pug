@@ -1,0 +1,14 @@
+#change-tel-fail-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Изменение номера телефона
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content.text-center
+        +svgColor('circle-close')
+        .thx-page-title Что-то пошло не так
+        .thx-page-text Произошла ошибка. Ваш адрес электронной почты не был изменен. Попробуйте позже или 
+          a(href="#") свяжитесь с нами.

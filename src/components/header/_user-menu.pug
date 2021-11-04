@@ -11,6 +11,17 @@
       a(href="#") RU
       .divider /
       a(href="#").active UA
+    if (outClass == 'account-page')
+      .ct-accordion.usermenu-login-accordion 
+        .ct-accordion-title
+          .row.align-items-center 
+            .col-auto 
+              +svgMono('person')
+            .col
+              .usermenu-login-user ivanov@gmail.com
+              button.usermenu-login-out 
+                span Выйти
+        .ct-accordion-content
     .row.mb-3
       .col-auto.border-end
         button 

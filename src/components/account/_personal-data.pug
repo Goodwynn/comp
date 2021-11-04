@@ -3,7 +3,7 @@
   .row
     .col-lg-6
       .row 
-        .col-3
+        .col-sm-3.mb-5.mb-sm-0
           .personal-data-avatar
             .personal-data-avatar-image.default.mx-auto.mb-2
               span И
@@ -12,49 +12,49 @@
             .personal-data-avatar-image.mx-auto.mb-2
               img(src="../img/avatar.jpg", alt="")
             button Изменить фото
-        .col-9 
+        .col-sm-9 
           .personal-data-content.pb-3
             .row.aling-items-start.gx-2.mb-2
-              .col-6
+              .col-4.col-sm-6
                 .personal-data-content-title ФИО
               .col 
                 .personal-data-content-text Иванов Иван Иванович
               .col-auto 
-                button 
+                button(data-micromodal-trigger="change-username") 
                   +svgMono('pencil')
             .row.aling-items-start.gx-2.mb-2
-              .col-6
+              .col-4.col-sm-6
                 .personal-data-content-title ФИО
-              .col 
-                button Добавить
+              .col
+                button(data-micromodal-trigger="add-username-modal") Добавить
             .row.aling-items-start.gx-2.mb-2 
-              .col-6 
+              .col-4.col-sm-6
                 .personal-data-content-title Телефон
               .col
                 .personal-data-content-text +38 067 009 90 09
               .col-auto 
-                button 
+                button(data-micromodal-trigger="change-tel-modal")
                   +svgMono('pencil')
             .row.aling-items-start.gx-2.mb-2
-              .col-6
+              .col-4.col-sm-6
                 .personal-data-content-title Телефон
               .col 
-                button Добавить
+                button(data-micromodal-trigger="add-tel-modal") Добавить
             .row.aling-items-start.gx-2.mb-2 
-              .col-6 
+              .col-4.col-sm-6
                 .personal-data-content-title Email
               .col
                 .personal-data-content-text ivanov@gmail.com
               .col-auto 
-                button 
+                button(data-micromodal-trigger="change-email-modal") 
                   +svgMono('pencil')
             .row.aling-items-start.gx-2.mb-2
-              .col-6
+              .col-4.col-sm-6
                 .personal-data-content-title Email
               .col 
-                button Добавить
+                button(data-micromodal-trigger="add-email-modal") Добавить
             .row.aling-items-start.gx-2.mb-2 
-              .col-6 
+              .col-4.col-sm-6
                 .personal-data-content-title Основной способ доставки
               .col
                 .personal-data-content-text Доставка Новой почтой
@@ -62,15 +62,15 @@
                 .personal-data-content-text Отделение № 70
                 .personal-data-content-text ул. Сафонова, 45
               .col-auto 
-                button 
+                button(data-micromodal-trigger="change-delivery-modal")
                   +svgMono('pencil')
             .row.aling-items-start.gx-2
-              .col-6
+              .col-4.col-sm-6
                 .personal-data-content-title Основной способ доставки
               .col 
                 button Добавить
           include _personal-data-social
           include _personal-data-subscribe
           .personal-data-controls.mt-3
-            button.mb-2 Изменить пароль
+            button(data-micromodal-trigger="change-pass-modal").mb-2 Изменить пароль
             button Выход

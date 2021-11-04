@@ -1,0 +1,99 @@
+#change-tel-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Изменение номера телефона
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content 
+        form(action="#") 
+          .form-step
+            .micromodal-content-text Вы хотите изменить номер телефона?
+            .micromodal-content-text.mb-3 Ваш текущий номер: 
+              span(style="font-size: 16px; font-weight: 500; color: #060f42") +380670099009
+            .row.justify-content-between
+              .col-auto
+                button.btn-ct-secondary-out(onclick="onErrorTel()") ОТМЕНИТЬ
+              .col-auto
+                button.btn-ct-secondary-fill(onclick="stepChange(this)") ИЗМЕНИТЬ
+          .form-step.d-none
+            .micromodal-content-text На текущий номер телефона было выслано сообщение с кодом для подтверждения. Введите этот код ниже.
+            input(type="text" placeholder="Код").ct-input.mb-2
+            .row.align-items-center.justify-content-between 
+              .col-auto 
+                button(style="font-size: 12px; font-weight: 500; color: #01579b") Нет доступа к текущему номеру?
+              .col-auto 
+                button.btn-ct-secondary-fill(onclick="stepChange(this)") ОТПРАВИТЬ
+          .form-step.d-none
+            .micromodal-content-text.mb-2 Укажите новый номер телефона
+            input(type="text" placeholder="Новый номер телефона").ct-input.mb-2
+            .row.justify-content-between.align-items-center 
+              .col-auto
+                button.btn-ct-secondary-out(onclick="onErrorTel()") ОТМЕНИТЬ
+              .col-auto
+                button.btn-ct-secondary-fill(onclick="stepChange(this)") СОХРАНИТЬ
+          .form-step.d-none
+            .micromodal-content-text.mb-2 На новый номер телефона было выслано сообщение с кодом для подтверждения. Введите этот код ниже.
+            input(type="text" placeholder="Код").ct-input.mb-2
+            .row.align-items-center.justify-content-between 
+              .col-auto
+                button.btn-ct-secondary-out(onclick="onErrorTel()") ОТМЕНИТЬ
+              .col-auto
+                button.btn-ct-secondary-fill(onclick="onSaveTel()") ОТПРАВИТЬ
+
+
+script.
+  function stepChange (e) {
+    e.closest('.form-step').classList.add('d-none');
+    e.closest('.form-step').nextElementSibling.classList.remove('d-none');
+  };
+  function onSaveTel () {
+    document.querySelector('#change-tel-modal .micromodal-close').click()
+    Array.from(document.querySelectorAll('#change-tel-modal form .form-step')).forEach((item, index) => {
+      if (index != 0) {
+        item.classList.add('d-none');
+      } else {
+        item.classList.remove('d-none')
+      }
+    });
+    MicroModal.show('change-tel-complete-modal', {
+      disableScroll: true,
+      disableFocus: true,
+      onShow: modal => {
+        document.querySelector('.page').classList.add('blur')
+        document.querySelector('.header-up').classList.add('blur')
+        document.querySelector('.header-functions').classList.add('blur')
+      },
+      onClose: modal => {
+        document.querySelector('.page').classList.remove('blur')
+        document.querySelector('.header-up').classList.remove('blur')
+        document.querySelector('.header-functions').classList.remove('blur')
+      }
+    })
+  };
+  function onErrorTel () {
+    document.querySelector('#change-tel-modal .micromodal-close').click();
+    Array.from(document.querySelectorAll('#change-tel-modal form .form-step')).forEach((item, index) => {
+      if (index != 0) {
+        item.classList.add('d-none');
+      } else {
+        item.classList.remove('d-none')
+      }
+    });
+    MicroModal.show('change-tel-fail-modal', {
+      disableScroll: true,
+      disableFocus: true,
+      onShow: modal => {
+        document.querySelector('.page').classList.add('blur')
+        document.querySelector('.header-up').classList.add('blur')
+        document.querySelector('.header-functions').classList.add('blur')
+      },
+      onClose: modal => {
+        document.querySelector('.page').classList.remove('blur')
+        document.querySelector('.header-up').classList.remove('blur')
+        document.querySelector('.header-functions').classList.remove('blur')
+      }
+    })
+  }

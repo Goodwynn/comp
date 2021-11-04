@@ -1,84 +1,82 @@
 .order-delivery
   .order-delivery-title.mb-3 Способ доставки
-  .row.gx-3
-    .col-lg-6
-      select.custom-select
-        option(value="" checked) Ваш город
-        option(value="1") Ваш город 1
-        option(value="2") Ваш город 2
-        option(value="3") Ваш город 3
-        option(value="4") Ваш город 4
+  select.custom-select
+    option(value="" checked) Ваш город
+    option(value="1") Ваш город 1
+    option(value="2") Ваш город 2
+    option(value="3") Ваш город 3
+    option(value="4") Ваш город 4
+  //- 
+  .order-radio.p-3.mt-3
+    input(type="radio" name="delivery-way" id="self-delivery").order-radio-input
+    label(for="self-delivery").order-radio-header
+      .row.justify-content-between
+        .col-sm-6.mb-2.mb-sm-0
+          .order-radio-title Самовывоз из магазина
+        .col-sm-6.mb-2.mb-sm-0
+          .order-radio-price.free.text-sm-end Бесплатно
+        .col-sm-6
+          .order-radio-text Забери сегодня
+    .order-radio-content.mt-2
+      .order-radio-content-text.mb-2 Магазин находится по адресу г. Днепр, ул. Европейская, 8 
+      img(src="../img/map.jpg", alt="")
+  //- 
+  .order-radio.p-3
+    input(type="radio" name="delivery-way" id="courier").order-radio-input
+    label(for="courier").order-radio-header
+      .row.justify-content-between  
+        .col-sm-6.mb-2.mb-sm-0
+          .order-radio-title Доставка курьером
+        .col-sm-6.mb-2.mb-sm-0
+          .order-radio-price.text-sm-end от 150 
+            span грн.
+        .col-sm-6
+          .order-radio-text Доставим завтра
+    .order-radio-content.mt-2 
+      .order-radio-text.mb-2 Введите ваш адрес
+      .row.g-2.flex-column.flex-sm-row
+        .col-sm-6
+          input(type="text" placeholder="Улица").ct-input
+        .col-sm-3
+          input(type="text" placeholder="Дом").ct-input
+        .col-sm-3
+          input(type="text" placeholder="Квартира").ct-input
+  //- 
+  .order-radio.p-3 
+    input(type="radio" name="delivery-way" id="new-post").order-radio-input
+    label(for="new-post").order-radio-header
+      .row.justify-content-between 
+        .col-sm-6.mb-2.mb-sm-0
+          .order-radio-title Доставка Новой Почтой
+        .col-sm-6.mb-2.mb-sm-0
+          .order-radio-price.text-sm-end По тарифам перевозчика
+        .col-sm-6
+          .order-radio-text Доставим 4 августа
+    .order-radio-content.mt-2
       //- 
-      .order-radio.p-3.mt-3
-        input(type="radio" name="delivery-way" id="self-delivery").order-radio-input
-        label(for="self-delivery").order-radio-header
-          .row.justify-content-between
-            .col-sm-6.mb-2.mb-sm-0
-              .order-radio-title Самовывоз из магазина
-            .col-sm-6.mb-2.mb-sm-0
-              .order-radio-price.free.text-sm-end Бесплатно
-            .col-sm-6
-              .order-radio-text Забери сегодня
+      .order-radio-inner 
+        input(type="radio" name="new-post" id="new-post-department")
+        label(for="new-post-department").order-radio-header
+          .order-radio-title Доставка в отделение
         .order-radio-content.mt-2
-          .order-radio-content-text.mb-2 Магазин находится по адресу г. Днепр, ул. Европейская, 8 
-          img(src="../img/map.jpg", alt="")
+          .order-radio-content-text.mb-2 Выберите подходящее отделение
+          select.custom-select 
+            option(value="1") 1
+            option(value="2") 2
+            option(value="3") 3
+            option(value="4") 4
+            option(value="5") 5
       //- 
-      .order-radio.p-3
-        input(type="radio" name="delivery-way" id="courier").order-radio-input
-        label(for="courier").order-radio-header
-          .row.justify-content-between  
-            .col-sm-6.mb-2.mb-sm-0
-              .order-radio-title Доставка курьером
-            .col-sm-6.mb-2.mb-sm-0
-              .order-radio-price.text-sm-end от 150 
-                span грн.
-            .col-sm-6
-              .order-radio-text Доставим завтра
+      .order-radio-inner.mt-2
+        input(type="radio" name="new-post" id="new-post-courier")
+        label(for="new-post-courier").order-radio-header
+          .order-radio-title Доставка курьером
         .order-radio-content.mt-2 
-          .order-radio-text.mb-2 Введите ваш адрес
-          .row.g-2.flex-column.flex-sm-row
+          .order-radio-content-text.mb-2 Введите ваш адрес
+          .row.g-2
             .col-sm-6
               input(type="text" placeholder="Улица").ct-input
-            .col-sm-3
+            .col-sm-3 
               input(type="text" placeholder="Дом").ct-input
-            .col-sm-3
+            .col-sm-3 
               input(type="text" placeholder="Квартира").ct-input
-      //- 
-      .order-radio.p-3 
-        input(type="radio" name="delivery-way" id="new-post").order-radio-input
-        label(for="new-post").order-radio-header
-          .row.justify-content-between 
-            .col-sm-6.mb-2.mb-sm-0
-              .order-radio-title Доставка Новой Почтой
-            .col-sm-6.mb-2.mb-sm-0
-              .order-radio-price.text-sm-end По тарифам перевозчика
-            .col-sm-6
-              .order-radio-text Доставим 4 августа
-        .order-radio-content.mt-2
-          //- 
-          .order-radio-inner 
-            input(type="radio" name="new-post" id="new-post-department")
-            label(for="new-post-department").order-radio-header
-              .order-radio-title Доставка в отделение
-            .order-radio-content.mt-2
-              .order-radio-content-text.mb-2 Выберите подходящее отделение
-              select.custom-select 
-                option(value="1") 1
-                option(value="2") 2
-                option(value="3") 3
-                option(value="4") 4
-                option(value="5") 5
-          //- 
-          .order-radio-inner.mt-2
-            input(type="radio" name="new-post" id="new-post-courier")
-            label(for="new-post-courier").order-radio-header
-              .order-radio-title Доставка курьером
-            .order-radio-content.mt-2 
-              .order-radio-content-text.mb-2 Введите ваш адрес
-              .row.g-2
-                .col-sm-6
-                  input(type="text" placeholder="Улица").ct-input
-                .col-sm-3 
-                  input(type="text" placeholder="Дом").ct-input
-                .col-sm-3 
-                  input(type="text" placeholder="Квартира").ct-input

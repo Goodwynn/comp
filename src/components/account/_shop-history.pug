@@ -70,14 +70,14 @@
   each item in items
     .ct-accordion.p-3.mb-3.shadow
       .ct-accordion-title
-        .row.align-items-center.justify-content-between.me-4
+        .row.align-items-sm-center.justify-content-between.me-4.flex-column.flex-sm-row.gy-3.gy-sm-0
           .col-auto
             .shop-history-part-subtitle #{item.number} от #{item.date}
             if ( item.status == 'В пути')
               .shop-history-order-status.routed #{item.status}
             else 
               .shop-history-order-status.delivered #{item.status}
-          .show-history-part-price.col-auto.text-end
+          .show-history-part-price.col-auto.text-sm-end
             .shop-history-part-subtitle Сумма
             - let fullPrice = 0
             each good in item.goods 
@@ -96,16 +96,16 @@
                 .more-indicator +3
       .ct-accordion-content.mt-4
         .row 
-          .col-7 
+          .col-12.col-md-7.mb-2.mb-md-0
             .shop-history-part-title.mb-3 Товары
             each good in item.goods
               .shop-history-item.border-top.border-bottom
-                .row.align-items-center.p-2
+                .row.align-items-center.p-2.g-3
                   .col-auto
                     img(src=good.img, alt=good.name)
                   .col
                     .shop-history-part-text #{good.name}
-                  .col
+                  .col-12.col-lg
                     .row.justify-content-around 
                       .col-4.text-center
                         .order-list-item-title.mb-2 Количество
@@ -129,15 +129,14 @@
                         else 
                           .product-card-price #{good.price * good.count}
                             span грн.
-            //- 
-            .shop-history-item 
+            .shop-history-item.d-none.d-md-block
               .row.align-items-center.justify-content-between
                 .col-auto
                   .shop-history-part-title Итого
                 .col-auto
                   .shop-history-title #{fullPrice}
                     span грн.
-          .col-2 
+          .col-12.col-md 
             .shop-history-part-title.mb-3 Данные о доставке
             .shop-history-part-subtitle.mt-2 Способ доставки
             .shop-history-part-text #{item.delivery.type}
@@ -149,7 +148,7 @@
             .shop-history-part-text #{item.delivery.tel}
             .shop-history-part-subtitle.mt-2 Номер ТТН
             .shop-history-part-text #{item.delivery.track}
-          .col-2 
+          .col-12.col-md
             .shop-history-part-title.mb-3 Данные об оплате
             .shop-history-part-subtitle.mt-2 Способ оплаты
             .shop-history-part-text #{item.payment.type}
@@ -158,8 +157,16 @@
               .shop-history-order-status.delivered #{item.payment.status}
             else 
               .shop-history-order-status.routed #{item.payment.status}
-        .row.align-items-center.justify-content-between.mt-4
-          .col-auto
-            button.btn-ct-secondary-out ОСТАВИТЬ ОТЗЫВ
-          .col-auto
-            button.show-more Оформить возврат
+        .row.align-items-center.justify-content-between.mt-4.g-2.g-md-0
+          .col-12 
+            .shop-history-item.d-md-none
+              .row.align-items-center.justify-content-between
+                .col-auto
+                  .shop-history-part-title Итого
+                .col-auto
+                  .shop-history-title #{fullPrice}
+                    span грн.
+          .col-12.col-md-auto
+            button.btn-ct-secondary-out.w-100(data-micromodal-trigger="add-review-modal") ОСТАВИТЬ ОТЗЫВ
+          .col-12.col-md-auto
+            button.show-more(data-micromodal-trigger="add-return-modal") Оформить возврат

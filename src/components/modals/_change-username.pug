@@ -1,0 +1,13 @@
+#change-username-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Изменение ФИО
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content 
+        form(action="#") 
+          input(type="text" placeholder="Иванов Иван Иванович").ct-input.mb-2
+          button.btn-ct-secondary-fill.ms-auto СОХРАНИТЬ

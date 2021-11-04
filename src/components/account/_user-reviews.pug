@@ -51,7 +51,7 @@
           .row.align-items-center
             .col-auto 
               img(src=item.img, alt=item.name)
-            .col-auto 
+            .col
               .user-reviews-name #{item.name}
         .ct-accordion-content.mt-3
           .row.align-items-center.justify-content-between
@@ -83,7 +83,7 @@
                 +svgMono('like')
                 span #{item.likes}
           each answer in item.answers
-            .product-review-answer.row.align-items-center.justify-content-between.ms-5.mt-2.border-start.d-none
+            .product-review-answer.row.align-items-center.justify-content-between.ms-2.ms-sm-5.mt-2.border-start.d-none
               .col-auto
                 .product-review-answer-author=answer.name
               .col-auto

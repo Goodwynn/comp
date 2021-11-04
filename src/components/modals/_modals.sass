@@ -27,6 +27,7 @@
     justify-content: center
     align-items: center
     will-change: transform
+
   &-container
     width: 100%
     background-color: $colorWhite
@@ -39,6 +40,19 @@
     will-change: transform
     &.personal-cabinet
       max-width: 330px
+    &.account-modal
+      max-width: 500px
+
+  &-content
+    &-text
+      font-size: 12px
+      font-weght: 500
+      color: #333333
+    &.text-center
+      .ico
+        margin-bottom: 24px
+        font-size: 56px
+        fill: none
 
   &-gallery
     position: relative

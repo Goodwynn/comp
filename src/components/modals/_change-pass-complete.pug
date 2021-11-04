@@ -1,0 +1,13 @@
+#change-pass-complete-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Изменение пароля
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content.text-center
+        +svgColor('circle-check')
+        .thx-page-title Пароль был успешно изменен
+        .thx-page-text Ваш пароль для входа в аккаунт был успешно изменен.

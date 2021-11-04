@@ -1,0 +1,58 @@
+#reset-pass-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Восстановление пароля
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content 
+        form(action="#") 
+          .form-step
+            .micromodal-content-text.mb-2 Введите ваш номер телефона. На него будет выслан код для подтверждения.
+            input(type="text" placeholder="Ваш номер телефона").ct-input.mb-2
+            button.btn-ct-secondary-fill.ms-auto(onclick="stepChange(this)") СОХРАНИТЬ
+          .form-step.d-none
+            .micromodal-content-text.mb-2 Введите код из СМС
+            input(type="text" placeholder="Код").ct-input.mb-2
+            .row.align-items-center.justify-content-between 
+              .col-auto
+                .micromodal-content-text Не пришел код? 
+                  a(href="#") Отправить еще раз
+              .col-auto
+                button.btn-ct-secondary-fill.ms-auto(onclick="stepChange(this)") ОТПРАВИТЬ
+          .form-step.d-none
+            .micromodal-content-text.mb-2 Придумайте новый пароль
+            input(type="text" placeholder="Новый пароль").ct-input.mb-2
+            button.btn-ct-secondary-fill.ms-auto(onclick="onSave()") СОХРАНИТЬ
+
+script.
+ function stepChange(e) {
+   e.closest('.form-step').classList.add('d-none');
+   e.closest('.form-step').nextElementSibling.classList.remove('d-none');
+ };
+ function onSave () {
+   document.querySelector('#reset-pass-modal .micromodal-close').click()
+    Array.from(document.querySelectorAll('#reset-pass-modal form .form-step')).forEach((item, index) => {
+      if (index != 0) {
+        item.classList.add('d-none');
+      } else {
+        item.classList.remove('d-none')
+      }
+    });
+    MicroModal.show('change-pass-complete-modal', {
+      disableScroll: true,
+      disableFocus: true,
+      onShow: modal => {
+        document.querySelector('.page').classList.add('blur')
+        document.querySelector('.header-up').classList.add('blur')
+        document.querySelector('.header-functions').classList.add('blur')
+      },
+      onClose: modal => {
+        document.querySelector('.page').classList.remove('blur')
+        document.querySelector('.header-up').classList.remove('blur')
+        document.querySelector('.header-functions').classList.remove('blur')
+      }
+    })
+  };

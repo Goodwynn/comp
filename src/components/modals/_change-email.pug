@@ -1,0 +1,55 @@
+#change-email-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Изменение электронной почты
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content 
+        .micromodal-content-text.mb-3 Введите адрес элекронной почты. На вашу почту будет выслано письмо со ссылкой для подтверждения.
+        form(action="#") 
+          input(type="text" placeholder="Новая электронная почта").ct-input.mb-2
+          input(type="text" placeholder="Код из смс").ct-input.mb-2
+          .row.justify-content-between
+            .col-auto
+              button.btn-ct-secondary-out(onclick="onErrorMail()") ОТМЕНИТЬ
+            .col-auto
+              button.btn-ct-secondary-fill(onclick="onSaveMail()") СОХРАНИТЬ
+
+script.
+  function onSaveMail () {
+    document.querySelector('#change-email-modal .micromodal-close').click()
+    MicroModal.show('change-email-complete-modal', {
+      disableScroll: true,
+      disableFocus: true,
+      onShow: modal => {
+        document.querySelector('.page').classList.add('blur')
+        document.querySelector('.header-up').classList.add('blur')
+        document.querySelector('.header-functions').classList.add('blur')
+      },
+      onClose: modal => {
+        document.querySelector('.page').classList.remove('blur')
+        document.querySelector('.header-up').classList.remove('blur')
+        document.querySelector('.header-functions').classList.remove('blur')
+      }
+    })
+  };
+  function onErrorMail () {
+    document.querySelector('#change-email-modal .micromodal-close').click()
+    MicroModal.show('change-email-fail-modal', {
+      disableScroll: true,
+      disableFocus: true,
+      onShow: modal => {
+        document.querySelector('.page').classList.add('blur')
+        document.querySelector('.header-up').classList.add('blur')
+        document.querySelector('.header-functions').classList.add('blur')
+      },
+      onClose: modal => {
+        document.querySelector('.page').classList.remove('blur')
+        document.querySelector('.header-up').classList.remove('blur')
+        document.querySelector('.header-functions').classList.remove('blur')
+      }
+    })
+  }

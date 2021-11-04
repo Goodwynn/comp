@@ -45,17 +45,17 @@
 
 .wishlist 
   .wishlist-title.mb-4 Список желаний
-  .wishlist-controls.row.mb-4
-    .col-auto 
+  .wishlist-controls.row.mb-4.g-3
+    .col-sm-auto 
       button 
         +svgMono('share')
         span Поделиться в Facebook
-    .col-auto 
+    .col-sm-auto 
       button 
         +svgMono('link')
         span Копировать ссылку
-    .col-auto 
-      button 
+    .col-sm-auto 
+      button(data-micromodal-trigger="send-wishlist-modal") 
         +svgMono('mail')
         span Отправить другу
   .wishlist-list 
@@ -70,7 +70,7 @@
                 img(src=item.img, alt=item.name)
               .col-8.col-lg-10 
                 //- header row 
-                .product-line-header.row.align-items-center.justify-content-between.g-2
+                .product-line-header.row.align-items-sm-center.justify-content-between.g-sm-2.gx-2
                   .col-7.col-sm-auto 
                     a(href="#").product-card-description-name #{item.name}
                   .d-sm-none.col-auto.product-line-buttons
@@ -87,7 +87,7 @@
                 .row.align-items-center.justify-content-between
                   .col-12.col-lg-8 
                     //- rating and wishlist/compare btn
-                    .row.align-items-center.justify-content-between.justify-content-lg-start.my-3
+                    .row.align-items-center.justify-content-between.justify-content-lg-start.my-sm-3.my-1
                       .col-auto
                         .product-card-rating 
                           if (item.rating != null)
@@ -145,4 +145,4 @@
                         button.btn-ct-primary-fill 
                           span КУПИТЬ
                           +svgMono('basket')
-                  button.show-more.ms-auto Удалить из списка
+                  button.show-more.ms-auto.mt-2.mt-sm-0 Удалить из списка

@@ -49,3 +49,17 @@
 
   .border-start.border-2
     border-color: $colorDark !important
+
+  .account-tabs-nav
+    &-link
+      @extend .p-0
+      @extend .py-2
+      display: flex
+      border-bottom: none
+      gap: 15px
+      .ico
+        stroke: $colorWhite
+      span
+        color: $colorWhite
+      &.active
+        background-color: transparent

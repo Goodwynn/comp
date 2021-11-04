@@ -24,5 +24,5 @@ PageList:
   - file: thx-page.html
     ready: 100
   - file: account.html
-    ready: 10
+    ready: 100
      

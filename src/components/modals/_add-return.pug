@@ -1,0 +1,14 @@
+#add-return-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Оформить возврат
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content
+        .micromodal-content-text.mb-2 Укажите ваш номер телефона и укажите причину возврата.
+        input(type="text" placeholder="Ваш телефон").ct-input.mb-2
+        textarea(placeholder="Причина возврата").ct-input.mb-2
+        button.btn-ct-secondary-fill.ms-auto ОТПРАВИТЬ

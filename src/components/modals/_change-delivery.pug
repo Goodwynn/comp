@@ -1,0 +1,31 @@
+#change-delivery-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Изменение основного способа доставки
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content  
+        include ../order-page/_order-delivery
+        button.btn-ct-secondary-fill.ms-auto.mt-2(onclick="onSaveDelivery()") СОХРАНИТЬ
+
+script.
+  function onSaveDelivery () {
+    document.querySelector('#change-delivery-modal .micromodal-close').click()
+    MicroModal.show('change-email-complete-modal', {
+      disableScroll: true,
+      disableFocus: true,
+      onShow: modal => {
+        document.querySelector('.page').classList.add('blur')
+        document.querySelector('.header-up').classList.add('blur')
+        document.querySelector('.header-functions').classList.add('blur')
+      },
+      onClose: modal => {
+        document.querySelector('.page').classList.remove('blur')
+        document.querySelector('.header-up').classList.remove('blur')
+        document.querySelector('.header-functions').classList.remove('blur')
+      }
+    })
+  }
