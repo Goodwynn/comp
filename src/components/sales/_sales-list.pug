@@ -1,0 +1,36 @@
+-
+  var items = [
+    {
+      img: '../img/sales/sale1.jpg',
+      title: 'Покупай мониторы ASUS - получай скидки до 28%',
+    },
+    {
+      img: '../img/sales/sale2.jpg',
+      title: 'Приведи друга - получи скидку!'
+    },
+    {
+      img: '../img/sales/sale3.jpg',
+      title: 'Акция!  Cкидка 40% на игровые клавиатуры',
+    },
+    {
+      img: '../img/sales/sale4.jpg',
+      title: 'Скидка 30% на монитор Dell E2016HV'
+    }
+  ]
+
+section.sales-list.mb-4 
+  .container 
+    .sales-list-title.mb-4 Акции
+    .row.row-cols-1.row-cols-sm-2.row-cols-md-4.g-3
+      each item in items 
+        .col
+          .sales-list-item
+            img(src=item.img, alt=item.title).mb-3
+            .sales-list-item-title.mb-2 #{item.title}
+            .sales-list-item-end.px-3.py-2.border.rounded-pill.mb-2 
+              span До конца акции
+              span 14 дней
+            a(href="#") Смотреть подробнее
+  
+          
+

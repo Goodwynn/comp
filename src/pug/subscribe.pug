@@ -1,0 +1,31 @@
+---
+title: Subcribe
+outClass: subscribe-page
+---
+extends shared/_layout
+block content
+
+  section.subscribe 
+    .container 
+      form(action="#") 
+        .subscribe-title.mb-4 Настройка рассылок
+        .subscribe-subtitle.mb-4 Жаль, что вы больше не заинтересованы в нашей рассылке.
+        .row.flex-column.align-items-center.g-3.mb-4
+          .col-auto
+            .filter-checkbox 
+              input(type="checkbox" id="system-message" disabled checked)
+              label(for="system-message") Системные оповещения
+            .filter-checkbox 
+              input(type="checkbox" id="company-news")
+              label(for="company-news") Новости компании
+            .filter-checkbox 
+              input(type="checkbox" id="sales-news")
+              label(for="sales-news") Акции
+            .filter-checkbox 
+              input(type="checkbox" id="industry-news")
+              label(for="industry-news") Новости индустрии
+        .subscribe-subtitle.mb-4 Мы будем благодарны, если вы оставите 
+          strong короткий отзыв 
+          | о нашей рассылке. Это позволит нам стать лучшими для вас.
+        textarea(placeholder="Комментарий").ct-input.mb-4
+        input(type="submit" value="ПОДТВЕРДИТЬ").btn-ct-secondary-fill.ms-auto

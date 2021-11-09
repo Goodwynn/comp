@@ -25,4 +25,32 @@ PageList:
     ready: 100
   - file: account.html
     ready: 100
+  # - file: compare.html
+  #   ready: 0
+  - file: sale.html
+    ready: 100
+  - file: sales.html
+    ready: 100
+  - file: contacts.html
+    ready: 100
+  - file: subscribe.html
+    ready: 100
+  - file: mail-confirm.html
+    ready: 100
+  - file: mail-change.html
+    ready: 100
+  - file: mail-finish.html
+    ready: 100
+  - file: mail-order.html
+    ready: 100
+  - file: mail-shipping.html
+    ready: 100
+  - file: mail-delivered.html
+    ready: 100
+  - file: mail-thx.html
+    ready: 100
+  - file: mail-basket.html
+    ready: 100
+  - file: mail-top.html
+    ready: 100
      

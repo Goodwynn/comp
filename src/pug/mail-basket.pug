@@ -1,0 +1,51 @@
+---
+title: Mail-shipping
+outClass: mail
+---
+extends shared/_mail
+block content
+
+  section.mail 
+    .container 
+      .mail-title.mb-4.mt-5 Незавершенный заказ
+      .mail-notice.mb-4 У вас в корзине остались товары. Не желаете сделать заказ?
+      button.btn-ct-secondary-fill.mx-auto.mb-4 Продолжить покупки
+      .mail-order.mb-5 
+        .row.align-items-center.justify-content-between 
+          .col-auto
+            .mail-order-title Заказ №454
+          .col-auto
+            .mail-order-date 25.08.2021
+        .row.flex-column 
+          .col 
+            .row.align-items-center.py-2.border-bottom
+              .col-auto 
+                img(src="../img/prod/prod-img1.jpg", alt="item" width=90 height=90)
+              .col.text-start
+                .mail-order-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                .mail-order-code Код товара: 1231324156  
+                .row.justify-content-between.align-items-center.mt-3
+                  .col-auto 
+                    .mail-order-count Количество: 1 шт
+                  .col-auto 
+                    .product-card-price 3500 
+                      span грн.
+            .row.align-items-center.py-2
+              .col-auto 
+                img(src="../img/prod/prod-img2.jpg", alt="item" width=90 height=90)
+              .col.text-start
+                .mail-order-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                .mail-order-code Код товара: 1231324156  
+                .row.justify-content-between.align-items-center.mt-3
+                  .col-auto 
+                    .mail-order-count Количество: 1 шт
+                  .col-auto 
+                    .product-card-price 3500 
+                      span грн.         
+            
+      .row.justify-content-center.py-2.border-top
+        .col-auto.border-end
+          a(href="#").mail-link Каталог товаров
+        .col-auto
+          a(href="#").mail-link Личный кабинет
+      

@@ -1,0 +1,61 @@
+section.subcategory
+  .container 
+    .row.align-items-center.justify-content-between.mb-4.gx-2
+      .col-auto 
+        button.d-xxl-none.btn-ct-secondary-fill(data-micromodal-trigger="filter-modal")
+          +svgMono('filter')
+        .d-none.d-xxl-flex.row.align-items-center.gx-2
+          .col-auto 
+            button.filter-dismiss 
+              span Фильтр 1
+              +svgMono('close')
+          .col-auto 
+            button.filter-dismiss 
+              span Фильтр 2
+              +svgMono('close')
+          .col-auto 
+            button.filter-dismiss 
+              span Фильтр 3
+              +svgMono('close')
+          .col-auto
+            button.filter-dismiss-all Очистить фильтры 
+      .col-auto.ms-md-auto 
+        select.custom-select
+          option(value="1") По рейтингу
+          option(value="2") От дорогих к дешевым
+          option(value="3") От дешивых к дорогим
+          option(value="4") Популярные
+          option(value="5") Новинки
+      .col-auto
+        .row.align-items-center.gx-2
+          .col-auto
+            button.view(data-view="line")
+              +svgMono('line-icon')
+          .col-auto
+            button.view.active(data-view="grid")
+              +svgMono('grid-icon')
+    .row.align-items-start.mb-5.gx-3
+      .d-none.d-xxl-block.col-xxl-2
+        include _search-menu
+        include ../filter/_filter
+      .col-xxl-10
+        include _grid-template
+        include _row-template
+        .row.justify-content-center 
+          .col-auto.my-5 
+            button.btn-posts-more
+              span Показать больше товаров
+              +svgMono('reload')
+        .pagination
+          a(href="#").pagination-link
+            +svgMono('arrow-left')
+            span Назад
+          a(href="#").pagination-link 1
+          a(href="#").pagination-link 2
+          a(href="#").pagination-link 3
+          a(href="#").pagination-link ...
+          a(href="#").pagination-link 34
+          a(href="#").pagination-link 
+            span Вперед
+            +svgMono('arrow-right')
+          

@@ -1,0 +1,29 @@
+---
+title: Mail-change
+outClass: mail
+---
+extends shared/_mail
+block content
+
+  section.mail 
+    .container 
+      .mail-title.mb-4.mt-5 Подтверждение электронной почты
+      .row.justify-content-center.mb-4
+        .col-auto
+          .footer-mail-bottom-text Текущий адрес
+          a(href="#") ivanov@gmail.com
+        .col-auto
+          .footer-mail-bottom-text Новый адрес
+          a(href="#") ivanov22@gmail.com
+
+      button.btn-ct-secondary-fill.mx-auto.mb-4 Подтвердить почту
+      .mail-description.mb-4 Или 
+        a(href="#") перейдите по ссылке
+      .mail-notice.mb-4 Если вы не делали запрос на подтверждение электронной почты, просим  проинорировать это письмо или 
+        a(href="#") связаться с нами 
+      .row.justify-content-center.py-2.border-top
+        .col-auto.border-end
+          a(href="#") Каталог товаров
+        .col-auto
+          a(href="#") Личный кабинет
+      

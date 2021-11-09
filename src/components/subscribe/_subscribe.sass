@@ -1,0 +1,25 @@
+.subscribe
+
+  &-title
+    @extend %f-28-600
+    text-align: center
+
+  &-subtitle
+    @extend %f-14-400
+    text-align: center
+
+  form
+    max-width: 500px
+    margin: 120px auto
+
+  textarea
+    min-height: 100px
+
++r($sm)
+  .subscribe
+
+    form
+      margin: 24px auto
+
+    input[type="submit"]
+      width: 100%

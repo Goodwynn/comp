@@ -1,0 +1,42 @@
+.contacts
+
+  &-title
+    @extend %f-28-600
+
+  &-data
+    height: 100%
+    background-color: $colorDark
+
+  &-subtitle
+    font-size: 16px
+    font-weight: 400
+    color: $colorSoft
+    &-mobile
+      font-size: 16px
+      font-weight: 700
+      color: $colorSoft
+
+    &-dark
+      @extend %f-14-400-gs60
+
+  .ico
+    size: 25px
+    fill: none
+    stroke: $colorWhite
+
+  a
+    display: block
+    color: $colorWhite
+    &[href^="mailto"]
+      font-size: 16px
+      font-weight: 700
+    &[href^="tel"]
+      font-size: 14px
+      font-weight: 500
+    .ico
+      size: 15px
+    *:not(:last-child)
+      margin-right: 10px
+
+  img
+    size: 100%

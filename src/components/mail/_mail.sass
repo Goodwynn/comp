@@ -1,0 +1,68 @@
+.mail
+  text-align: center
+  &-title
+    font-size: 28px
+    font-weight: 600
+    color: $colorDark
+  &-description
+    font-size: 14px
+    font-weight: 400
+    color: $colorDarkGrey
+  &-notice
+    font-size: 12px
+    font-weight: 400
+    color: $colorDarkGrey
+  &-link
+    font-size: 12px
+    font-weight: 500
+
+  &-order
+    &-title
+      @extend %f-18-600-dark
+    &-date,
+    &-delivery
+      @extend %f-14-500
+    &-name
+      @extend %f-12-500
+    &-code
+      @extend %f-10-500-gs20
+    &-count
+      @extend %f-12-500-gs60
+    &-total
+      @extend %f-14-700-dark
+    &-adress
+      @extend %f-12-700-sec
+    &-notice
+      background-color: $colorSoft
+
+  .border-end
+    border-color: $colorSecondary !important
+
+  .ico
+    font-size: 26px
+
+  .rate
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    min-width: 53px
+    span
+      margin-top: 10px
+      font-size: 10px
+      font-weight: 500
+      color: $colorDarkGrey
+    &-1
+      color: #ed5a1c
+    &-2
+      color: #ffa41b
+    &-3
+      color: #fff61b
+    &-4
+      color: #d1e749
+    &-5
+      color: #70c652
+
+  a
+    color: $colorSecondary

@@ -1,0 +1,65 @@
+---
+title: Mail-shipping
+outClass: mail
+---
+extends shared/_mail
+block content
+
+  section.mail 
+    .container 
+      .mail-title.mb-4.mt-5 Топ товаров этой недели
+      .mail-order.mb-5 
+        .row.flex-column 
+          .col 
+            .row.align-items-center.py-2.border-bottom
+              .col-auto 
+                img(src="../img/prod/prod-img1.jpg", alt="item" width=90 height=90)
+              .col.text-start
+                .mail-order-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                .mail-order-code Код товара: 1231324156  
+                .row.justify-content-between.align-items-center.mt-3
+                  .col-auto 
+                    .product-card-price-container
+                      .product-card-price.default 3600
+                        span грн.
+                      .product-card-price.sale 3500
+                        span грн.       
+                  .col-auto 
+                    button.btn-ct-primary-fill КУПИТЬ
+            .row.align-items-center.py-2.border-bottom
+              .col-auto 
+                img(src="../img/prod/prod-img3.jpg", alt="item" width=90 height=90)
+              .col.text-start
+                .mail-order-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                .mail-order-code Код товара: 1231324156  
+                .row.justify-content-between.align-items-center.mt-3
+                  .col-auto 
+                    .product-card-price-container
+                      .product-card-price.default 3600
+                        span грн.
+                      .product-card-price.sale 3500
+                        span грн.       
+                  .col-auto 
+                    button.btn-ct-primary-fill КУПИТЬ
+            .row.align-items-center.py-2
+              .col-auto 
+                img(src="../img/prod/prod-img2.jpg", alt="item" width=90 height=90)
+              .col.text-start
+                .mail-order-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                .mail-order-code Код товара: 1231324156  
+                .row.justify-content-between.align-items-center.mt-3
+                  .col-auto 
+                    .product-card-price-container
+                      .product-card-price.default 3600
+                        span грн.
+                      .product-card-price.sale 3500
+                        span грн.       
+                  .col-auto 
+                    button.btn-ct-primary-fill КУПИТЬ
+            
+      .row.justify-content-center.py-2.border-top
+        .col-auto.border-end
+          a(href="#").mail-link Каталог товаров
+        .col-auto
+          a(href="#").mail-link Личный кабинет
+      

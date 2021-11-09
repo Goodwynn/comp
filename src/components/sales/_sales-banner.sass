@@ -1,0 +1,32 @@
+.sales-banner
+
+  &-title
+    font-size: 28px
+    font-weight: 600
+    color: $colorDarkGrey
+
+  &-subtitle
+    @extend %f-16-400-gs60
+
+  &-description
+    @extend %f-16-500
+
+  &-timer
+    &-counter
+      display: flex
+      align-items: center
+      gap: 10px
+      span
+        @extend %f-32-600
+
+      .seconds
+        color: $colorRed
+
+  .ico
+    size: 24px
+    fill: none
+    stroke: $colorGS60
+
++r($xl)
+  .sales-banner
+    

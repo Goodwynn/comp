@@ -29,10 +29,14 @@ APP.Components = APP.Components || {};
         APP.Components.BannerMenu.init();
         APP.Components.BannerSlider.init();
       }
-      if (document.querySelector('.subcategory-page') || document.querySelector('.search-page')) {
+      if (document.querySelector('.subcategory-page') || document.querySelector('.search-page') || document.querySelector('.sale-page'))  {
         APP.Components.SearchFilter.init();
         APP.Components.Filter.init();
         APP.Components.Subcategory.init();
+        APP.Components.SalesCounter.init();
+      }
+      if (document.querySelector('.sales-page')) {
+        APP.Components.SalesSlider.init();
       }
       if (document.querySelector('.product-page-layout')) {
         APP.Components.ProductImages.init();

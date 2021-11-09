@@ -1,0 +1,17 @@
+section.sales-slider.py-5 
+  .container 
+    .swiper-container 
+      .swiper-wrapper 
+        - for(i=1; i<=3; i++)
+          .swiper-slide
+            .row.align-items-center.justify-content-between.flex-column.flex-lg-row.g-3
+              .col-auto.col-lg
+                .sales-slider-title.mb-4 Скидки на игровые ноутбуки до 40%!
+                .sales-slider-subtitle.mb-5 Суперцены на геймерские ноутбуки! Успей приобрести себе!
+                .sales-slider-end.py-2.px-3.rounded-pill
+                  span До конца акции
+                  span 14 дней
+              .col-auto
+                img(src="../img/sales/sale5.jpg", alt="sales").rounded
+
+

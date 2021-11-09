@@ -1,0 +1,18 @@
+---
+title: Mail-finish
+outClass: mail
+---
+extends shared/_mail
+block content
+
+  section.mail 
+    .container 
+      .mail-title.mb-4.mt-5 Поздравляем вас с регистрацией!
+      .mail-notice.mb-4 Позвдравляем вас с успешной регистрацией в нашем интернет-магазине.
+      button.btn-ct-secondary-fill.mx-auto.mb-5 Перейти в личный кабинет
+      .row.justify-content-center.py-2.border-top
+        .col-auto.border-end
+          a(href="#").mail-link Каталог товаров
+        .col-auto
+          a(href="#").mail-link Личный кабинет
+      

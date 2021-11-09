@@ -1,0 +1,91 @@
+---
+title: Mail-shipping
+outClass: mail
+---
+extends shared/_mail
+block content
+
+  section.mail 
+    .container 
+      .mail-title.mb-4.mt-5 Ваш заказ отправлен
+      .mail-notice.mb-4 Ваш заказ принят передан в службу доставки. Вы можете отслеживать статус  своего заказа в
+        a(href="#") личном кабинете.
+      .mail-order 
+        .row.align-items-center.justify-content-between 
+          .col-auto
+            .mail-order-title Заказ №454
+          .col-auto
+            .mail-order-date 25.08.2021
+        .row.flex-column 
+          .col 
+            .row.align-items-center.py-2.border-bottom
+              .col-auto 
+                img(src="../img/prod/prod-img1.jpg", alt="item" width=90 height=90)
+              .col.text-start
+                .mail-order-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                .mail-order-code Код товара: 1231324156  
+                .row.justify-content-between.align-items-center.mt-3
+                  .col-auto 
+                    .mail-order-count Количество: 1 шт
+                  .col-auto 
+                    .product-card-price 3500 
+                      span грн.
+            .row.align-items-center.py-2.border-bottom
+              .col-auto 
+                img(src="../img/prod/prod-img2.jpg", alt="item" width=90 height=90)
+              .col.text-start
+                .mail-order-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
+                .mail-order-code Код товара: 1231324156  
+                .row.justify-content-between.align-items-center.mt-3
+                  .col-auto 
+                    .mail-order-count Количество: 1 шт
+                  .col-auto 
+                    .product-card-price 3500 
+                      span грн.
+          .col.border-bottom
+            .row.align-items-center.justify-content-end.g-2.py-2
+              .col-auto
+                .mail-order-delivery Стоимость доставки 
+              .col-auto
+                .product-card-price 70 
+                  span грн.
+          .col 
+            .row.align-items-center.justify-content-end.g-2.py-2
+              .col-auto 
+                .mail-order-total Итого
+              .col-auto
+                .product-card-price 7070 
+                  span грн.
+      .mail-order-notice.text-start.p-4.mb-5
+        .mail-order-total.mb-3 Дополнительная информация о заказе
+        .row.mb-2 
+          .col-4.col-sm-3
+            .mail-notice Доставка
+          .col
+            .mail-notice Самовывоз из отделения Новой Почты
+            .mail-order-adress Днепр, бульв. Кобзаря, 4
+        .row.mb-2
+          .col-4.col-sm-3 
+            .mail-notice Оплата
+          .col
+            .mail-notice Картой онлайн
+        .row.mb-2
+          .col-4.col-sm-3 
+            .mail-notice Покупатель
+          .col 
+            .mail-notice Иванов Иван Иванович
+            .mail-notice +380660077009
+        .row 
+          .col-4.col-sm-3 
+            .mail-notice Получатель
+          .col
+            .mail-notice Иванов Иван Иванович
+            .mail-notice +380660077009
+            
+            
+      .row.justify-content-center.py-2.border-top
+        .col-auto.border-end
+          a(href="#").mail-link Каталог товаров
+        .col-auto
+          a(href="#").mail-link Личный кабинет
+      

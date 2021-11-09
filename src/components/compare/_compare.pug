@@ -1,0 +1,24 @@
+section.compare.py-4
+  .container 
+    .compare-title.mb-4 Список сравнений: ноубуки
+    .compare-control.row.justify-content-between.align-items-center.mb-4
+      .col-auto
+        .row 
+          .col-auto
+            button 
+              +svgMono('compare-diff')
+              span Только отличия
+          .col-auto
+            button 
+              +svgMono('plus')
+              span Добавить модель
+          .col-auto
+            button 
+              +svgMono('trash')
+              span Очистить список
+      .col-auto
+        button 
+          +svgMono('scales')
+          span Списки сравнений
+    //- include _compare-table
+    include _compare-table

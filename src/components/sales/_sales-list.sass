@@ -1,0 +1,23 @@
+.sales-list
+
+  &-title
+    @extend %f-28-600
+
+  &-item
+    &-title
+      @extend %f-18-700-dark
+
+    &-end
+      display: flex
+      align-items: center
+      gap: 10px 
+      span
+        &:first-child
+          @extend %f-14-500-gs60
+        &:last-child
+          font-size: 16px
+          font-weight: 700
+          color: $colorRed
+
+    a
+      @extend %f-14-700-sec
