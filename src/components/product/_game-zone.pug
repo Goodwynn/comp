@@ -45,24 +45,28 @@ section.game-zone
       .product-sales-list.row.g-3 
         each item in products 
           include _product-card
-      .product-sales-controls.row.justify-content-between.my-4
+      .product-sales-controls.row.justify-content-between.my-4.px-3
         .col-auto
           a(href="#").show-more.toggle
             span Еще товары
             span Скрыть
             +svgMono('arrow-right')
         .col-auto
-          a(href="#").show-more
-            span Смотреть все товары
+          a(href="#").show-more.category
+            span Смотреть все
             +svgMono('arrow-right')
     h3.mb-4 Категории для геймеров
     .product-sales-group
       .product-sales-list.row.g-3
         each item in gamerProducts 
           include _game-card
-      .product-sales-controls.row.justify-content-between.my-4
+      .product-sales-controls.row.justify-content-between.my-4.px-3
         .col-auto
           a(href="#").show-more.toggle
             span Еще товары
             span Скрыть
+            +svgMono('arrow-right')
+        .col-auto
+          a(href="#").show-more.category
+            span Смотреть все
             +svgMono('arrow-right')

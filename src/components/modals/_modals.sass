@@ -7,14 +7,14 @@
     &[aria-hidden="false"]
       .micromodal-overlay
         animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1)
-      .micromodal-container
-        animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1)
+      // .micromodal-container
+      //   animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1)
 
     &[aria-hidden="true"]
       .micromodal-overlay
         animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1)
-      .micromodal-container
-        animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1)
+      // .micromodal-container
+      //   animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1)
 
   &-overlay
     position: fixed
@@ -28,6 +28,16 @@
     align-items: center
     will-change: transform
 
+  &-header
+    position: sticky
+    top: 0
+    transform: translateY(-25px)
+    margin-top: -25px
+    padding-top: 25px
+    padding-bottom: 25px
+    z-index: 2
+    background-color: $colorWhite
+
   &-container
     width: 100%
     background-color: $colorWhite
@@ -38,16 +48,32 @@
     box-sizing: border-box
     overflow-y: auto
     will-change: transform
+    +r($lg)
+      max-height: 100vh
+      height: 100%
+      width: 100%
     &.personal-cabinet
-      max-width: 330px
+      display: flex
+      flex-direction: column
+      max-width: 375px
+      +r($lg)
+        max-width: 1100px
+      .micromodal-content
+        margin: auto 0
     &.account-modal
       max-width: 500px
+      +r($lg)
+        max-width: 1100px
 
   &-content
     &-text
       font-size: 12px
       font-weght: 500
       color: #333333
+      &-small
+        font-size: 12px
+        font-weight: 500
+        color: #333333
     &.text-center
       .ico
         margin-bottom: 24px
@@ -59,6 +85,11 @@
     .swiper
       &-slide
         text-align: center
+        img
+          max-width: 700px
+          width: 100%
+          +r($sm)
+            max-width: 265px
       &-pagination
         position: absolute
         z-index: 2
@@ -83,35 +114,60 @@
           z-index: 2
           top: 50%
           transform: translateY(-50%)
-          size: 17px 30px
           background-size: cover
+          cursor: pointer
+          &:hover
+            .ico
+              color: $colorSecondaryHover
+          .ico
+            size: 17px 30px
+            color: $colorSecondary
         &-prev
           left: 100px
-          background-image: svg-load('../icons/svg-mono/chev-prev.svg')
+          .ico
+            transform: rotate(180deg)
+          +r($sm)
+            left: 10px
         &-next
           right: 100px
-          background-image: svg-load('../icons/svg-mono/chev-next.svg')
+          +r($sm)
+            right: 10px
+        &-disabled
+          &:hover
+            .ico
+              color: $colorGS20
+          .ico
+            color: $colorGS20
 
   &-close
     cursor: pointer
+    &:hover
+      .ico
+        transform: rotate(90deg)
     .ico
       fill: $colorRed
       stroke: $colorRed
+      transition: 0.25s all
 
   &-title
     @extend %f-18-600-dark
 
   &-notice
-    @extend %f-10-500-gs20
+    @extend %f-12-500-gs20
 
   &-footer
-    font-size: 10px
+    font-size: 14px
     text-align: center
-    a
+    a, button
       color: $colorSecondary
 
   hr
     background-color: $colorGS20
+
+  .custom-margin
+    +r($lg)
+      margin-top: 75px
+      margin-bottom: auto
 
   .product-card
     background-color: $colorWhite

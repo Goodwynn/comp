@@ -36,7 +36,7 @@
     .filter-price-item
 
   - for(i=1; i<=4; i++)
-    .ct-accordion 
+    .ct-accordion.open 
       .ct-accordion-title Название фильтра
       .ct-accordion-content 
         each item in filters 
@@ -48,7 +48,7 @@
               span (#{item.count})
         each item in filters 
           .filter-checkbox 
-            input(type="checkbox" id=item.slug + i + i)
+            input(type="checkbox" id=item.slug + i + i, disabled checked)
             label(for=item.slug + i + i) 
               span #{item.text}
               | &#32;

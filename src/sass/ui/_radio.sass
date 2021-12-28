@@ -18,8 +18,17 @@
       fill: $colorYellow
 
 .order-radio
+  &:not(:last-child)
+    margin-bottom: 12px
+  &:hover
+    & > .order-radio-header
+      &::before
+        border-color: $colorSecondaryHover
+      &::after
+        background-color: $colorSecondaryHover
 
   &.active
+    @extend .py-3
     border-radius: 4px
     border: 1px solid $colorSecondary
 
@@ -46,6 +55,16 @@
       border-radius: 50%
       background-color: $colorSecondary
 
+  &-inner
+    &:not(:last-child)
+      margin-bottom: 12px
+    &:hover
+      & > .order-radio-header
+        &::before
+          border-color: $colorSecondaryHover
+        &::after
+          background-color: $colorSecondaryHover
+
   &-content
     display: none
     padding-left: 30px
@@ -65,7 +84,7 @@
     color: $colorGS60
 
   &-price
-    font-size: 12px
+    font-size: 14px
     font-weight: 500
     color: $colorDark
     &.free

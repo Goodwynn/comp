@@ -1,6 +1,8 @@
 import gulp from 'gulp';
 import through2 from 'through2';
-import sass from 'gulp-sass';
+// import sass from 'gulp-sass';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 import globImporter from 'node-sass-glob-importer';
 import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
@@ -25,6 +27,8 @@ import config from '../config';
 // pseudoel - adds semicollumns -- https://github.com/axa-ch/postcss-pseudoelements
 // flexbugs - fix flex issues -- https://github.com/luisrudge/postcss-flexbugs-fixes
 // easings - gets easings.net -- https://github.com/postcss/postcss-easings
+
+const sass = gulpSass(dartSass);
 
 const processors = [
   short(),
@@ -54,7 +58,7 @@ const cssNanoParams = {
 // Sass task
 const task = () =>
   gulp
-    .src(config.src.sass + '/*.{sass,scss}')
+    .src(config.src.sass + '/*.sass')
     .pipe(config.production ? through2.obj() : sourcemaps.init())
     .pipe(
       plumber({
@@ -64,7 +68,7 @@ const task = () =>
     .pipe(
       sass({
         importer: globImporter(),
-        outputStyle: config.production ? 'compact' : 'expanded', // nested, expanded, compact, compressed
+        outputStyle: config.production ? 'compressed' : 'expanded', // nested, expanded, compact, compressed
         precision: 5,
         includePaths: ['node_modules', config.src.sass],
       })
@@ -78,7 +82,7 @@ const task = () =>
 const buildSass = () => task();
 const watch = () => () => {
   gulp.watch(
-    [config.src.sass + '/**/*.{sass,scss}', config.src.components + '/**/*.{sass,scss}'],
+    [config.src.sass + '/**/*.sass', config.src.components + '/**/*.sass'],
     buildSass
   );
 };

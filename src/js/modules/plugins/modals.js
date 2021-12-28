@@ -1,5 +1,8 @@
 (function (APP) {
   APP.Plugins.Modal = {
+    data: {
+
+    },
     init: function () {
       this.effects();
       // this.openModal();
@@ -61,8 +64,13 @@
         disableFocus: true,
         awaitOpenAnimation: false,
         awaitCloseAnimation: false,
-        debugMode: false,
+        debugMode: true,
         onShow: modal => {
+          if (document.querySelector('.usermenu').classList.contains('open') || document.querySelector('.megamenu').classList.contains('open')) {
+            document.querySelector('.usermenu').classList.remove('open')
+            document.querySelector('.megamenu').classList.remove('open')
+            document.querySelector('body').classList.remove('body-lock')
+          }
           document.querySelector('.page').classList.add('blur')
           document.querySelector('.header-up').classList.add('blur')
           document.querySelector('.header-functions').classList.add('blur')

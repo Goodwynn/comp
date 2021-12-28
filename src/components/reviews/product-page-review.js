@@ -10,6 +10,7 @@
         const toggleBtn = item.querySelector('.product-review-answer-toggler')
         
         toggleBtn.addEventListener('click', () => {
+          toggleBtn.classList.toggle('open')
           Array.from(item.querySelectorAll('.product-review-answer')).forEach(el => {
             el.classList.toggle('d-none')
           })

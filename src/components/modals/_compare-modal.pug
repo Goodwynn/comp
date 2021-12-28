@@ -1,0 +1,28 @@
+#compare-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Списки сравнений
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content
+        .compare-dropdown-item.row.justify-content-between.align-items-center
+          .col-auto 
+            a(href="#") Мониторы (2)
+          .col-auto
+            button 
+              +svgMono('trash')
+        .compare-dropdown-item.row.justify-content-between.align-items-center
+          .col-auto 
+            a(href="#") Ноутбуки (4)
+          .col-auto
+            button 
+              +svgMono('trash')
+        .compare-dropdown-item.row.justify-content-between.align-items-center
+          .col-auto 
+            a(href="#") Носители информации (2)
+          .col-auto
+            button 
+              +svgMono('trash')

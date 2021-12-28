@@ -4,6 +4,7 @@
     font-size: 14px
     font-weight: 500
     color: $colorPrimary
+    border-radius: 4px
     background-color: $colorSoft
     &.not
       color: $colorGS40
@@ -11,6 +12,13 @@
         fill: $colorGS40
 
   .ico
-    font-size: 28px
-    fill: none
-    stroke: $colorSecondary
+    font-size: 32px
+    fill: $colorSecondary
+    &.fillnone
+      fill: none
+      stroke: $colorSecondary
+
+  a
+    &:hover
+      .ico
+        fill: $colorSecondaryHover

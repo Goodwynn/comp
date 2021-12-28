@@ -1,4 +1,7 @@
 .product-mini
+  @extend .p-3
+  border-radius: 4px
+  box-shadow: 0px 2px 10px rgba(50, 50, 71, 0.28)
   &-image
     size: 70px
     object-fit: contain
@@ -9,8 +12,10 @@
 
   .ico
     font-size: 28px
-    fill: none
-    stroke: $colorSecondary
+    fill: $colorSecondary
+    &.fillnone
+      fill: none
+      stroke: $colorSecondary
 
   .btn-ct-primary-fill,
   .btn-ct-primary-out

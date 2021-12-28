@@ -1,8 +1,19 @@
 .crumbs
-
   .breadcrumb
+    &::-webkit-scrollbar
+      display: none
     &-item
       display: flex
       @extend %f-14-500-gs40
+      & + .breadcrumb-item::before
+        transform: translateY(-10%)
       a
         color: $colorSecondary
+        &:hover
+          color: $colorSecondaryHover
+
++r($sm)
+  .crumbs
+    .breadcrumb
+      &-item
+        font-size: 12px

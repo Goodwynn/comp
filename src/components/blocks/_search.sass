@@ -14,8 +14,10 @@
     border-radius: 0 0 4px 4px
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1)
     background-color: $colorWhite
-    &-results
-      & > *:not(:last-child)
+
+  &-links
+    *
+      &:not(:last-child)
         margin-bottom: 20px
 
   &-link
@@ -24,34 +26,34 @@
     span
       color: $colorGS40
 
-  &-category-link
-    display: flex
-    align-items: center
-    gap: 10px
-    @extend %f-16-700-dark
-    .ico, i
-      size: 24px
-    .ico
-      fill: none
-      stroke: $colorDark
-    span
-      position: relative
-    .notice
-      position: absolute
-      top: 0
-      left: calc(100% + 5px)
-      font-size: 10px
-      font-weight: 700
-      color: #f44336
-    &::after
-      position: relative
-      content: ''
-      margin-left: auto
-      size: 8px 14px
-      background-size: cover
-      background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=none, stroke=$colorDark)
+  // &-category-link
+  //   display: flex
+  //   align-items: center
+  //   gap: 10px
+  //   @extend %f-16-700-dark
+  //   .ico, i
+  //     size: 24px
+  //   .ico
+  //     fill: none
+  //     stroke: $colorDark
+  //   span
+  //     position: relative
+  //   .notice
+  //     position: absolute
+  //     top: 0
+  //     left: calc(100% + 5px)
+  //     font-size: 10px
+  //     font-weight: 700
+  //     color: #f44336
+  //   &::after
+  //     position: relative
+  //     content: ''
+  //     margin-left: auto
+  //     size: 8px 14px
+  //     background-size: cover
+  //     background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=none, stroke=$colorDark)
 
-  &-categories
+  &-categories-title
     display: flex
     align-items: center
     gap: 10px

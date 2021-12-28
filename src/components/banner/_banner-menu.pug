@@ -71,6 +71,16 @@
       svg: 'heart',
       text: 'Мониторы',
       notice: 'NEW'
+    },
+    {
+      svg: 'heart',
+      text: 'Мониторы',
+      notice: 'NEW'
+    },
+    {
+      svg: 'heart',
+      text: 'Мониторы',
+      notice: 'NEW'
     }
   ]
 
@@ -82,14 +92,16 @@ nav.banner-menu
         +svgMono(item.svg)
         span=item.text
       .ct-accordion
-        button.ct-accordion-title.py-3
+        button.ct-accordion-title
           +svgMono(item.svg)
           span=item.text
             .notice=item.notice
-        .ct-accordion-content.px-3 
+        .ct-accordion-content
           if (item.inner)
             each el in item.inner 
-              a(href="#")
-                span=el.text
+              a(href="#").py-3.border-bottom
+                span(style="margin-left: 40px")=el.text
                   .notice=el.notice
                 +svgMono('arrow-right')
+  button.js-show-more 
+    i.bi.bi-chevron-down

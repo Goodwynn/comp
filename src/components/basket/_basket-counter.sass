@@ -9,7 +9,11 @@
     align-items: center
     justify-content: center
     size: 32px
+    border-radius: 50%
     background-color: rgba(#e5e5e5, 0.5)
+    transition: 0.25s all
+    &:hover
+      background-color: rgba(#e5e5e5, 0.25)
     .ico
       size: 20px
       fill: none
@@ -21,3 +25,4 @@
     @extend %f-18-700
     text-align: center
     border: 1px solid $colorGS10
+    border-radius: 4px

@@ -3,12 +3,12 @@
   .row.gx-3
     .col-lg-6
       //- 
-      .order-radio.p-3
+      .order-radio.px-3
         input(type="radio" name="payment-way" id="cash").order-radio-input
         label(for="cash").order-radio-header 
           .order-radio-title Наличными при получении
       //- 
-      .order-radio.p-3
+      .order-radio.px-3
         input(type="radio" name="payment-way" id="card").order-radio-input
         label(for="card").order-radio-header 
           .order-radio-title Оплата картой
@@ -34,7 +34,7 @@
             .col-4
               input(type="text" placeholder="CVV").ct-input
       //- 
-      .order-radio.p-3
+      .order-radio.px-3
         input(type="radio" name="payment-way" id="check").order-radio-input
         label(for="check").order-radio-header 
           .order-radio-title Безналичный рассчет
@@ -44,6 +44,9 @@
             input(type="radio" name="person-type" id="phisic")
             label(for="phisic").order-radio-header
               .order-radio-title Физическое лицо
+            .order-radio-content.mt-2
+              input(type="text" placeholder="Название организации").ct-input.mb-2
+              input(type="text" placeholder="ЕРДПО").ct-input 
           //- 
           .order-radio-inner.mt-2
             input(type="radio" name="person-type" id="lawer")

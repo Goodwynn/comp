@@ -4,13 +4,16 @@
     @extend %f-28-600
 
   &-item
+    &:hover
+      cursor: pointer
     &-title
       @extend %f-18-700-dark
 
     &-end
+      width: max-content
       display: flex
       align-items: center
-      gap: 10px 
+      gap: 10px
       span
         &:first-child
           @extend %f-14-500-gs60

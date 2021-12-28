@@ -1,4 +1,4 @@
-.product-review.p-2.mb-4.shadow
+.product-review.mb-4.shadow
   .row.g-2 
     .d-none.d-sm-block.col-auto
       img(src=item.authorImg, alt=item.authorName)
@@ -70,7 +70,7 @@
             +svgMono('like')
             span 2
       each answer in item.answers
-        .product-review-answer.row.align-items-center.justify-content-between.ms-5.mt-2.border-start.d-none
+        .product-review-answer.row.align-items-center.justify-content-between.ms-5.mt-3.border-start.d-none
           .col-auto
             .product-review-answer-author=answer.author
           .col-auto

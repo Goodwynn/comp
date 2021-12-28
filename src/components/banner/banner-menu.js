@@ -1,45 +1,50 @@
 (function (APP) {
   APP.Components.BannerMenu = {
+    data: {
+      bannerContent: document.querySelector('.banner .banner-content'),
+      bannerMenu: document.querySelector('.banner .banner-menu'),
+      menuBtn: document.querySelector('.banner .banner-menu .js-show-more'),
+      openChecker: false
+    },
     init: function () {
       this.generate();
       this.show();
       this.resize();
     },
     generate: function () {
+
+      const contentHeight = this.data.bannerContent.clientHeight
+      const menuHeight = this.data.bannerMenu.clientHeight
       
-      let bannerContent = document.querySelector('.banner .banner-content')
-      let bannerMenu = document.querySelector('.banner .banner-menu')
-      let menuBtn = document.querySelector('.banner .banner-menu .js-show-more')
-      
-      if (menuBtn) {
-        menuBtn.remove()
-        bannerMenu.style.height = 'auto'
-      }
-      
-      let moreBtn = document.createElement('button')
-      moreBtn.className = 'js-show-more'
-      moreBtn.innerHTML = '<i class="bi bi-chevron-down"></i>'
-      
-      let contentHeight = parseInt(bannerContent.clientHeight);
-      let menuHeight = parseInt(bannerMenu.clientHeight);
-      
-      if (contentHeight < menuHeight) {
-        bannerMenu.style.height = `${contentHeight}px`
-        bannerMenu.style.overflowY = 'hidden'
-        bannerMenu.append(moreBtn)
+      if (contentHeight < menuHeight && window.innerWidth > 992) {
+        this.data.bannerMenu.style.height = `${contentHeight}px`
+        this.data.bannerMenu.style.overflowY = 'hidden'
+        this.data.menuBtn.style.display = "block"
+        this.data.openChecker = false
       } else {
-        bannerMenu.style.height = 'auto'
-        bannerMenu.style.overflow = 'auto'
+        this.data.bannerMenu.style.height = 'auto'
+        this.data.bannerMenu.style.overflow = 'auto'
+        this.data.menuBtn.style.display = "none"
+        this.data.openChecker = false
       }
+
     },
     show: function () {
-      let bannerMenu = document.querySelector('.banner .banner-menu')
-      bannerMenu.addEventListener('click', (e) => {
-        if (e.target.className == 'js-show-more') {
-          e.target.remove()
-          bannerMenu.style.height = "auto"
+
+      this.data.menuBtn.onclick = () => {
+        if (this.data.openChecker == false) {
+          this.data.openChecker = !this.data.openChecker
+          this.data.bannerMenu.style.height = 'auto'
+          this.data.menuBtn.style.position = 'relative'
+          this.data.menuBtn.style.transform = 'rotate(180deg)'
+        } else {
+          this.data.openChecker = !this.data.openChecker
+          this.data.bannerMenu.style.height = `${this.data.bannerContent.clientHeight}px`
+          this.data.menuBtn.style.position = 'absolute'
+          this.data.menuBtn.style.transform = 'none'
         }
-      })
+      }
+
     },
     resize: function () {
       window.addEventListener('resize', debounce(this.generate.bind(this), 250))

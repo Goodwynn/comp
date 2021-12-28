@@ -1,0 +1,35 @@
+.compare-dropdown
+  position: relative
+  &:hover
+    .btn-control
+      border-radius: 4px 4px 0 0
+      // box-shadow: 0 4px 16px rgba(50, 50, 71, 0.05), 0 4px 16px rgba(50, 50, 71, 0.15)
+      box-shadow: 4px -4px 16px 0px rgba(50, 50, 71, 0.15), -4px -4px 16px 0px rgba(50, 50, 71, 0.15)
+    .compare-dropdown-content
+      display: block
+      border-radius: 4px 0 4px 4px
+
+  &-content
+    display: none
+    position: absolute
+    min-width: 320px
+    top: 100%
+    right: 0
+    border-radius: 4px
+    box-shadow: 0 4px 16px rgba(50, 50, 71, 0.05), 0 4px 16px rgba(50, 50, 71, 0.15)
+    background-color: $colorWhite
+
+  &-title
+    @extend %f-18-600
+
+  &-item
+    &:not(:last-child)
+      @extend .mb-2
+    a
+      font-size: 14px
+      color: $colorSecondary
+
+    .ico
+      font-size: 16px
+      fill: none
+      stroke: $colorDark

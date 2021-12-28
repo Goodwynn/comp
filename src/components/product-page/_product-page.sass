@@ -1,5 +1,10 @@
 .product-page
 
+  &-layout
+    & + .footer
+      +r($sm)
+        padding-bottom: 65px
+
   &-title
     @extend %f-32-600
 
@@ -18,12 +23,14 @@
       position: sticky
       top: 0px
       z-index: 2
+      margin: 0 -14px
+      overflow-x: auto
       display: flex
       flex-wrap: nowrap
       border-bottom: 1px solid $colorGS10
       background-color: $colorWhite
-      overflow-x: auto
-      overflow-y: hidden
+      &::-webkit-scrollbar
+        display: none
 
     &-link
       display: block
@@ -33,7 +40,7 @@
       color: $colorDarkGrey
       white-space: nowrap
       border: 1px solid transparent
-      transform: translateY(1px)
+      // transform: translateY(1px)
       &.active
         border-color: transparent transparent $colorSecondary
         color: $colorSecondary
@@ -42,3 +49,19 @@
     display: none
     &.active
       display: block
+
++r($hd)
+  .product-page
+
+    // &-tabs
+    //   &-nav
+    //     margin: 0
+
+    .container
+      padding: 0 80px
+
++r($xl)
+  .product-page
+
+    .container
+      padding: 0 14px

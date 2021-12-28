@@ -1,37 +1,65 @@
 .google-reviews
-  padding: 8px
   border-radius: 4px
+  box-shadow: 0px 2px 10px rgba(50, 50, 71, 0.28)
+
+  &-middle-rating
+    font-size: 48px
+    font-weight: 900
+    color: $colorDark
+    text-align: center
+
+  &-grades
+    @extend %f-12-500-sec
+    text-align: center
 
   .swiper
     &-controls
       position: absolute
       z-index: 2
-      top: 6px
-      left: 69%
-      transform: translateX(-50%)
-      display: flex
-      align-items: center
-      gap: 10px
-    &-button
-      &-next,
-      &-prev
-        size: 8px
-        background-size: cover
-        background-image: svg-load('../icons/svg-mono/arrow-right.svg', fill=none, stroke=$colorSecondary)
-        cursor: pointer
-      &-prev
-        transform: rotate(180deg)
+      top: 5px
+      right: 5px
     &-pagination
       font-size: 10px
       font-weight: 600
-      color: $colorDarkGrey
+      color: #333
+    &-button
+      &-next,
+      &-prev
+        font-size: 12px
+        cursor: pointer
+        .ico
+          font-size: inherit
+          fill: none
+          stroke: #01579b
+      &-prev
+        .ico
+          transform: rotate(180deg)
 
-+r($xl)
+  .border-col
+    border-right: 1px solid #E6E6E6
+
++r($hd)
+  .google-reviews
+    margin-bottom: -8px
+    box-shadow: none
+
+    // &-middle-rating
+    //   font-size: 22px
+
+    .border-col
+      border-right: none
+
+    .swiper
+      &-container
+        padding: 8px
+        margin-right: -8px
+      &-controls
+        top: 15px
+        right: 15px
+
++r($lg)
   .google-reviews
 
     .swiper
       &-controls
-        top: 0
-        left: auto
-        right: 0
-        transform: none
+        display: none

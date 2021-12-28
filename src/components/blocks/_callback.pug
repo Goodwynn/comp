@@ -1,7 +1,8 @@
 .callback-block 
-  button.callback-block-btn
+  button.callback-block-btn.px-3
     span 050 065 87 96
-    i.bi.bi-chevron-down
+    //- i.bi.bi-chevron-down
+    +svgMono('down-arrow')
   .callback-block-content 
     a(href="tel:+").callback-block-phone
       +svgMono('phone')
@@ -23,6 +24,8 @@
         hr
     form(action="#").callback-block-form.d-flex.flex-column
       .callback-block-form-title Перезвонить мне
-      input(type="text" placeholder="Ваше имя").ct-input.mb-3
-      input(type="tel" placeholder="Ваш номер телефона").ct-input.mb-3
+      .ui-group.mb-3
+        input(type="text" placeholder="Ваше имя" required).ct-input
+      .ui-group.mb-3
+        input(type="tel" placeholder="Ваш номер телефона" required).ct-input
       input(type="submit" value="ЗАКАЗАТЬ ЗВОНОК").btn-ct-secondary-fill

@@ -3,7 +3,7 @@
   border-radius: 4px
 
   &-dismiss
-    padding: 8px 15px
+    padding: 4px 16px
     display: flex
     align-items: center
     gap: 10px
@@ -17,19 +17,35 @@
       border-color: $colorSoft
     &-all
       @extend %f-12-500-sec
+      &:hover
+        color: $colorSecondaryHover
 
   &-controls
     position: sticky
     bottom: 0
     left: 0
     width: 100%
+    .row
+      padding: 25px
+      margin-top: -25px
+      margin-left: -25px
+      margin-right: -25px
+      transform: translateY(25px)
+      background-color: #F4F8FB
+    button
+      padding: 15px !important
 
   &-price
     &-title
       @extend %f-18-600
+    &-max,
+    &-min
+      padding: 9px 8px
+      line-height: 16px
 
   .ct-accordion
-    margin-bottom: 26px
+    &:not(:last-child)
+      margin-bottom: 26px
     &-title
       @extend %f-18-600
     &-content
@@ -40,5 +56,6 @@
         @extend %f-12-700-sec
   .btn-ct-secondary-fill,
   .btn-ct-secondary-out
+    padding: 8px 15px
     width: 100%
     height: 100%

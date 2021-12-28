@@ -82,13 +82,13 @@
     }
   ]
 
-.search-menu.py-xxl-3.px-xxl-2.mb-3.shadow
+.search-menu.py-xxl-3.px-xxl-2.mb-4.mb-xxl-3.shadow
   a(href="#").search-menu-link.all.mb-4 Все результаты
     | &#32;
     span (28)
   each item in results
     .search-menu-group.mt-3
-      .search-menu-title.row.align-items-center.gx-1.mb-2
+      .search-menu-title.row.align-items-center.gx-2.mb-2
         .col-auto.search-menu-icon 
           +svgMono(item.category.icon)
         .col-auto.search-menu-name #{item.category.name}
@@ -97,3 +97,5 @@
           a(href="#").search-menu-link.mb-2 #{link.name}
             | &#32;
             span (#{link.count})
+  button.js-show-more.mt-4 Все категории
+    i.bi.bi-chevron-down

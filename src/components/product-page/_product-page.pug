@@ -93,16 +93,14 @@ section.product-page
           .row.align-items-start
             .col.col-lg-6
               include _product-images
-              .d-none.d-lg-block
+              .replaced-items-desctop
                 include _product-specs 
                 include _product-description
             .col.col-lg-6 
               include _product-gift
               include _product-controls
               include _product-information
-              .d-lg-none
-                include _product-specs 
-                include _product-description
+              .replaced-items-mobile
               include ../reviews/_product-page-reviews
           include ../basket/_basket-together
           .product-page-similar.mt-5
@@ -118,6 +116,7 @@ section.product-page
                     span Скрыть
                     +svgMono('arrow-right')
           include _product-credit
+          include _product-mini-fixed
         .product-page-tab
           .row 
             .col-lg-8.order-2.order-lg-1
@@ -141,10 +140,10 @@ section.product-page
             .col-lg-8.order-2.order-lg-1
               .product-reviews-title.mb-4 Отзывы (45)
               .row.align-items-center.justify-content-between.mb-4
-                .col-auto
+                .col-auto.d-none.d-sm-block
                   .product-reviews-subtitle Оставьте свой отзыв о товаре
-                .col-auto
-                  button.btn-ct-secondary-fill(data-micromodal-trigger="post-review") ДОБАВИТЬ ОТЗЫВ
+                .col-sm-auto
+                  button.btn-ct-secondary-fill.w-100(data-micromodal-trigger="post-review") ДОБАВИТЬ ОТЗЫВ
               include ../reviews/_product-page-reviews-2
               .row.align-items-center.justify-content-between.mb-4
                 .col-auto
@@ -167,7 +166,7 @@ section.product-page
                 a(href="#").pagination-link 34
                 a(href="#").pagination-link 
                   span Вперед
-                  +svgMono('arrow-right')
+                  +svgMono('arrow-left')
             .col-lg-4.mb-md-3.order-1.order-lg-2
               include _product-mini
           .product-page-similar.mt-5

@@ -1,12 +1,13 @@
 .basket-item
   padding: 12px
   border-top: 1px solid $colorGS10
-  border-bottom: 1px solid $colorGS10
+  // border-bottom: 1px solid $colorGS10
 
   &-price
     @extend %f-18-700-dark
     text-align: right
     span
+      margin-left: 2px
       font-size: 12px
       font-weight: 500
 
@@ -15,6 +16,8 @@
       font-size: 16px
       fill: none
       stroke: $colorRed
+    &:hover
+      opacity: 0.8
 
   img
     size: 70px

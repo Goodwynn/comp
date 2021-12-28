@@ -2,39 +2,41 @@
   .basket-together-title.mb-3.mb-md-4 Вместе дешевле
   .basket-together-slider
     .swiper-button-prev
+      +svgMono('chev-prev')
     .swiper-button-next 
+      +svgMono('chev-next')
     .swiper-container 
       .swiper-wrapper 
         -for(i=1; i<=2; i++)
           .swiper-slide 
             .row.align-items-center.g-2.flex-column.flex-lg-row
-              .col 
+              .col.px-3
                 .basket-together-card
                   .row
                     .col-auto
                       img(src="../img/prod/prod-img3.jpg", alt="") 
                     .col
                       a(href="#").basket-together-card-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
-                      .product-card-price-container.mt-3
+                      .product-card-price-container.d-flex.flex-row.flex-sm-column.justify-content-end.align-items-start.mt-2.mt-sm-3
                         .product-card-price.default 3600
                           span грн.
                         .product-card-price.sale 3500
                           span грн.
-              .col-auto
+              .col-auto.px-3
                 +svgMono('plus')
-              .col
+              .col.px-3
                 .basket-together-card
                   .row
                     .col-auto
                       img(src="../img/prod/prod-img1.jpg", alt="") 
                     .col
                       a(href="#").basket-together-card-name Процессор Intel Core i5-10400F, Box (BX8070110400F) (BX8070110400F)
-                      .product-card-price-container.mt-3
+                      .product-card-price-container.d-flex.flex-row.flex-sm-column.justify-content-end.align-items-start.mt-2.mt-sm-3
                         .product-card-price.default 3600
                           span грн.
                         .product-card-price.sale 3500
                           span грн
-            .row.align-items-center.gy-2.pt-3.mt-4.border-top 
+            .row.align-items-center.gy-sm-2.pt-3.mt-3.border-top 
               .order-3.order-lg-1.col-lg-6.text-center.text-lg-start
                 .basket-together-number Код комлекта: 1234567
               .order-1.order-lg-2.col-lg-auto.ms-auto.text-center.text-lg-end
@@ -42,5 +44,5 @@
                   span грн. 
                 .basket-together-discount Экономия: 200
                   span грн.
-              .order-2.order-lg-3.col-lg-auto
+              .order-2.order-lg-3.col-lg-auto.my-4
                 button.btn-ct-primary-fill КУПИТЬ КОМПЛЕКТ

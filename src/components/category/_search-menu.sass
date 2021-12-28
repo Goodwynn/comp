@@ -7,7 +7,7 @@
   &-icon
     .ico
       margin-bottom: 2px
-      font-size: 20px
+      size: 20px
       fill: none
       stroke: $colorDarkGrey
 
@@ -21,9 +21,11 @@
     display: block
     @extend %f-12-500
     span
+      margin-left: 16px
       color: $colorGS40
     &.all
-      padding-left: 30px
+      font-size: 14px
+      padding-left: 24px
 
   .js-show-more
     display: flex
@@ -32,6 +34,8 @@
     font-size: 12px
     font-weight: 500
     color: $colorSecondary
+    &:hover
+      color: $colorSecondaryHover
     &.open
       i
         transform: rotate(180deg)

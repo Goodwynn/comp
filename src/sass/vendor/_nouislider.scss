@@ -146,6 +146,11 @@
   &:after {
     left: 17px;
   }
+
+  &:hover {
+    background: $colorSecondaryHover;
+  }
+
 }
 
 .noUi-touch-area {

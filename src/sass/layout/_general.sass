@@ -2,6 +2,11 @@
   box-sizing: border-box
   outline: none
 
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
 body, html
   background: white
   color: black
@@ -20,7 +25,7 @@ body, html
   background: black
 
 .body-lock
-  overflow: hidden
+  overflow-y: scroll
   position: fixed
   top: 0
   right: 0
@@ -29,13 +34,13 @@ body, html
   size: 100%
   // padding-right: 17px
   &.is-mobile
-    overflow: visible
+    overflow: visible !important
 
 .page
   position: relative
   display: flex
   flex-direction: column
-  min-height: 100vh
+  // min-height: 100vh
 
   &__content
     // used for sticky footer (flexbox way)
@@ -55,6 +60,8 @@ body, html
     font-size: 10px
     font-weight: 700
     color: $colorSoft
+    &:hover
+      text-decoration: underline
   a
     &:not(.active)
       opacity: 0.5
@@ -68,13 +75,19 @@ body, html
   font-weight: 600
   color: $colorSecondary
   &:hover
-    color: $colorSecondary
+    color: $colorSecondaryHover
+    .ico
+      stroke: $colorSecondaryHover
   .ico
     font-size: 16px
     fill: none
     stroke: $colorSecondary
   span
     color: inherit
+  &.category
+    transition: 0.4s all
+    &:hover
+      transform: translateX(-20px)
   &.light
     font-weight: 500
   &.toggle
@@ -107,22 +120,33 @@ body, html
     display: block
 
 .blur
+  pointer-events: none
+  user-select: none
+  cursor: default
   filter: blur(5px)
   &::before
     position: absolute
     content: ""
+    z-index: 3
     top: 0
     left: 0
     size: 100%
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba($colorGS100, 0.5)
 
 .view
-  &.active
+  &:hover
     .ico
+      color: $colorSecondaryHover
+  &.active
+    &:hover
+      .ico
+        border-color: $colorSecondaryHover
+    .ico
+      border-radius: 4px
       border: 2px solid $colorSecondary
   .ico
     padding: 5px
-    size: 40px
+    size: 42px
     color: $colorSecondary
 
 .pagination
@@ -136,6 +160,7 @@ body, html
     align-items: center
     justify-content: center
     gap: 15px
+    border-radius: 4px
     font-size: 16px
     font-weight: 500
     color: $colorSecondary
@@ -144,10 +169,13 @@ body, html
     &:hover,
     &.active
       background-color: $colorSoft
+      color: $colorSecondaryHover
     &:first-child
       margin-right: 40px
     &:last-child
       margin-left: 40px
+      .ico
+        transform: rotate(180deg)
   +r($md)
     &-link
       padding: 5px 20px
@@ -174,7 +202,13 @@ body, html
     color: $colorDarkGrey
 
 .thx-page
-  margin: 100px 0
+  margin: auto 0
+  padding: 24px 0
+  &-layout
+    flex-grow: 1
+    .page__content
+      display: flex
+      justify-content: center
   &-image
     .ico
       size: 82px
@@ -189,5 +223,3 @@ body, html
     font-size: 14px
     font-weight: 400
     color: $colorDarkGrey
-  +r($sm)
-    margin: 24px 0

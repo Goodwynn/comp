@@ -3,6 +3,7 @@
     init: function () {
       this.generate();
       this.show();
+      this.close();
       // this.price();
       this.pricev2();
     },
@@ -90,9 +91,29 @@
       filterGroup.forEach(item => {
         item.addEventListener('click', (e) => {
           if ( e.target.className == 'js-show-more' ) {
-            e.target.remove() 
+            e.target.innerHTML = 'Свернуть'
             item.querySelectorAll('.hidden').forEach((el) => {
               el.classList.remove('hidden')
+              el.classList.add('showed')
+            })
+            setTimeout(() => {
+              e.target.classList.add('open')
+            })
+          }
+        })
+      })
+    },
+    close: function () {
+      let filterGroup = document.querySelectorAll('.filter .ct-accordion .ct-accordion-content ');
+
+      filterGroup.forEach(item => {
+        item.addEventListener('click', (e) => {
+          if (e.target.className == 'js-show-more open') {
+            e.target.innerHTML = 'Показать всё'
+            e.target.classList.remove('open')
+            item.querySelectorAll('.showed').forEach((el) => {
+              el.classList.remove('showed')
+              el.classList.add('hidden')
             })
           }
         })

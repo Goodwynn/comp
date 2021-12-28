@@ -18,12 +18,21 @@ button
 
   &-control
     position: relative
+    @extend .p-2
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 4px
     &.cart
       .counter
+        color: $colorWhite
         background-color: $colorPrimary
+      .ico
+        color: $colorDark
+        fill: $colorDark
     &.mobile
       .ico
-        stroke: $colorWhite
+        fill: $colorWhite
     .counter
       position: absolute
       top: 0
@@ -37,12 +46,11 @@ button
       color: $colorDark
       border-radius: 50%
       background-color: $colorYellow
-      transform: translate(40%, -50%)
+      transform: translate(25%, -25%)
     .ico, i
       font-size: 32px
     .ico
-      fill: none
-      stroke: $colorDark
+      color: $colorDark
 
   &-ct-primary-fill
     padding: 10px 15px
@@ -59,8 +67,7 @@ button
     background-color: $colorPrimary
     .ico, i
       font-size: 18px
-      fill: none
-      stroke: $colorSoft
+      color: $colorSoft
     &:hover
       background-color: #37bd8d
     &:active
@@ -72,8 +79,7 @@ button
       cursor: default
       pointer-events: none
       .ico, i
-        fill: none
-        stroke: $colorGS40
+        color: $colorGS40
 
   &-ct-primary-out
     padding: 10px 15px
@@ -89,14 +95,12 @@ button
     border-radius: 4px
     .ico, i
       font-size: 18px
-      fill: none
-      stroke: $colorPrimary
+      color: $colorPrimary
     &:hover
       color: $colorSoft
       background-color: #37bd8d
       .ico, i
-        fill: none
-        stroke: $colorSoft
+        color: $colorSoft
     &:active
       background-color: $colorPrimary
       border-color: rgba(38, 99, 255, 0.5)
@@ -121,8 +125,7 @@ button
     background-color: $colorSecondary
     .ico, i
       font-size: 18px
-      fill: none
-      stroke: $colorSoft
+      color: $colorSoft
     &:hover
       background-color: #3582bf
     &:active
@@ -134,8 +137,7 @@ button
       cursor: default
       pointer-events: none
       .ico, i
-        fill: none
-        stroke: $colorGS40
+        color: $colorGS40
 
   &-ct-secondary-out
     padding: 10px 15px
@@ -152,15 +154,13 @@ button
     background-color: $colorWhite
     .ico, i
       font-size: 18px
-      fill: none
-      stroke: $colorSecondary
+      color: $colorSecondary
     &:hover
       color: $colorSoft
       border-color: #3582bf
       background-color: #3582bf
       .ico, i
-        fill: none
-        stroke: $colorSoft
+        color: $colorSoft
     &:active
       background-color: $colorSecondary
       border-color: rgba(38, 99, 255, 0.5)
@@ -171,8 +171,7 @@ button
       cursor: default
       pointer-events: none
       .ico, i
-        fill: none
-        stroke: $colorGS40
+        color: $colorGS40
 
   &-banner
     padding: 15px 40px
@@ -195,6 +194,8 @@ button
     .ico
       font-size: 16px
       color: $colorDark
+    &:hover
+      background-color: #bbb
 
   &-google
     display: flex
@@ -208,10 +209,14 @@ button
     color: $colorWhite
     border-radius: 4px
     background-color: #ea4335
+    &:hover
+      opacity: 0.8
 
   &-fb
     @extend .btn-google
     background-color: #4267b2
+    &:hover
+      opacity: 0.8
 
   &-posts-more
     display: flex
@@ -222,6 +227,8 @@ button
     color: $colorSecondary
     .ico
       font-size: 20px
+    &:hover
+      color: $colorSecondaryHover
 
   &-share
     display: flex
@@ -238,6 +245,7 @@ button
     align-items: center
     justify-content: center
     gap: 10px
+    border-radius: 4px
     width: 100%
     font-size: 12px
     font-weight: 700

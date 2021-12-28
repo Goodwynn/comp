@@ -1,25 +1,24 @@
 section.sales-banner.mb-4
   .container 
-    .row.align-items-center.flex-column.flex-xl-row
+    .row.flex-column.flex-xl-row
       .col-xl-7.mb-4.mb-xl-0 
-        img(src="../img/sales.jpg", alt="sales")
+        img(src="../img/sales.jpg", alt="sales").h-100.w-100
       .col-xl-5
         .sales-banner-title.mb-4 Акция!  Cкидка 40% на игровые клавиатуры
-        .sales-baner-subtitle.mb-3 Период проведения акции: с 28 августа по 6 сентября 2021
+        .sales-banner-subtitle Период проведения акции: с 28 августа по 6 сентября 2021
         .sales-banner-description.mb-1 Покупайте игровые клавиатуры со скидкой до 40%.
         .sales-banner-description.mb-4 Акционные модели можно посмотреть 
           a(href="#") тут
-        .text-center.text-xl-start
-          .sales-banner-timer.py-2.px-3.shadow.d-inline-block.rounded
-            .sales-baner-subtitle.d-flex.align-items-center
-              +svgMono('clock')
-              span.ms-2 До конца акции осталось
-            .sales-banner-timer-counter.justify-content-center
-              span.days
-              span :
-              span.hours
-              span : 
-              span.minutes
-              span : 
-              span.seconds
+        .sales-banner-timer.shadow.d-sm-inline-block.rounded
+          .sales-banner-subtitle.d-flex.align-items-center.justify-content-center
+            +svgMono('clock')
+            span.ms-2 До конца акции осталось
+          .sales-banner-timer-counter.justify-content-center
+            span.days
+            span :
+            span.hours
+            span : 
+            span.minutes
+            span : 
+            span.seconds
 

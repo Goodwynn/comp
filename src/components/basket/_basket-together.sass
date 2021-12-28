@@ -16,13 +16,16 @@
 
   &-price
     @extend %f-28-700
+    line-height: 28px
     span
+      margin-left: 2px
       font-size: 16px
 
   &-discount
     font-size: 14px
     color: $colorPrimary
     span
+      margin-left: 2px
       font-size: 8px
 
   &-slider
@@ -33,6 +36,10 @@
     font-size: 20px
     fill: none
     stroke: $colorGS40
+
+  .btn-ct-primary-fill
+    +r($sm)
+      padding: 13px 20px
 
   .swiper
     &-container
@@ -45,22 +52,29 @@
       &-active
         opacity: 1
     &-button
-      &-next
-        position: absolute
-        top: 50%
-        right: 0
-        transform: translateY(-50%)
-        size: 8px 14px
-        background-image: svg-load('../icons/svg-mono/chev-next.svg')
-        cursor: pointer
+      &-next,
       &-prev
         position: absolute
         top: 50%
-        left: 0
         transform: translateY(-50%)
-        size: 8px 14px
-        background-image: svg-load('../icons/svg-mono/chev-prev.svg')
         cursor: pointer
+        .ico
+          size: 8px 14px
+          fill: none
+          stroke: $colorSecondary
+        &:hover
+          .ico
+            stroke: $colorSecondaryHover
+      &-next
+        right: 0
+      &-prev
+        left: 0
+      &-disabled
+        .ico
+          stroke: $colorGS60
+        &:hover
+          .ico
+            stroke: $colorGS60
 
 +r($lg)
   .basket-together
@@ -68,3 +82,15 @@
       padding: 0 20px
     .btn-ct-primary-fill
       width: 100%
+
++r($sm)
+  .basket-together
+    &-card
+      &-name
+        text-align: justify
+        font-size: 10px
+      img
+        size: 60px
+    // .product-card-price-container
+    //   display: flex
+    //   align-items: start

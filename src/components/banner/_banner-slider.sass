@@ -35,6 +35,25 @@
         cursor: pointer
         &-active
           background-color: $colorSecondary
+    &-navigation
+      position: absolute
+      display: flex
+      align-items: center
+      gap: 20px
+      z-index: 2
+      bottom: 35px
+      right: 40px
+    &-button
+      &-next,
+      &-prev
+        size: 25px
+        cursor: pointer
+        .ico
+          fill: none
+          stroke: $colorWhite
+          size: 100%
+      &-disabled
+        opacity: 0.6
 
 +r($lg)
   .banner-slider
@@ -65,3 +84,5 @@
         bottom: 15px
         left: auto
         right: 15px
+      &-navigation
+        display: none

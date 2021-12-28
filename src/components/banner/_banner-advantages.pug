@@ -2,19 +2,19 @@
   var items = [
     {
       icon: 'advantages1',
-      text: 'Бесплатная сборка'
+      text: 'Бесплатная<br>сборка'
     },
     {
       icon: 'advantages2',
-      text: 'Рассрочка 4 мес./0% без переплат'
+      text: 'Рассрочка 4 мес./0%<br>без переплат'
     },
     {
       icon: 'advantages3',
-      text: 'Бесплатная доставка'
+      text: 'Бесплатная<br>доставка'
     },
     {
       icon: 'advantages4',
-      text: 'Официальная гарантия'
+      text: 'Официальная<br>гарантия'
     },
     {
       icon: 'advantages5',
@@ -22,11 +22,11 @@
     },
     {
       icon: 'advantages6',
-      text: '11 лет на рынке'
+      text: '11 лет<br>на рынке'
     },
     {
       icon: 'advantages7',
-      text: 'Профессиональная консультация'
+      text: 'Профессиональная<br>консультация'
     }
   ]
 
@@ -36,4 +36,4 @@
       .col-auto
         .banner-advantages-item 
           +svgColor(item.icon)
-          .text=item.text
+          .text !{item.text}

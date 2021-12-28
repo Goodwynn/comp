@@ -11,13 +11,24 @@
       .show-history-part-price
         display: none
 
+  .usermenu &
+    &-content
+      a
+        margin-bottom: 10px
+        font-size: 12px
+        font-weight: 500
+        &:last-child
+          margin-bottom: 15px
+
   .megamenu &,
-  .banner-menu &
+  .banner-menu &,
+  .search-block &
     &.open
       .ct-accordion-title
         &::after
-          transform: translateY(-50%) rotate(90deg)
+          transform: translateY(-50%) translateX(-50%) rotate(90deg)
     &-title
+      padding: 12px
       display: flex
       align-items: center
       gap: 10px
@@ -43,19 +54,26 @@
         position: absolute
         content: ''
         top: 50%
-        right: 5px
+        right: 12px
         transform: translateY(-50%)
         size: 8px 14px
         background-size: cover
         background-image: svg-load('../icons/svg-inline/arrow-next.svg', fill=none, stroke=$colorDark)
+      &:hover
+        background-color: #F4F8FB
+      &:not(:last-child)
+        border-bottom: 1px solid $colorGS10
     &-content
       a
         display: flex
         justify-content: space-between
         align-items: center
+        padding-right: 12px
         font-size: 14px
         font-weight: 500
         color: $colorDarkGrey
+        &:hover
+          background-color: #F4F8FB
         span
           position: relative
         .notice
@@ -66,6 +84,7 @@
           font-weight: 700
           color: #f44336
         .ico
+          font-size: 18px
           fill: none
           stroke: $colorDarkGrey
 
@@ -89,7 +108,7 @@
       content: ""
       top: 50%
       right: 0
-      size: 14px 8px
+      size: 14px
       transform: translateY(-50%)
       background-size: cover
       background-image: svg-load('../icons/svg-mono/arrow-down.svg', fill="none", stroke=$colorWhite)
@@ -97,8 +116,5 @@
 
   &-content
     display: none
-    margin-bottom: 15px
     a
       display: block
-      &:not(:last-child)
-        margin-bottom: 10px

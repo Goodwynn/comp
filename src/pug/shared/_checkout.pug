@@ -1,0 +1,19 @@
+include ../utilities/_mixins
+doctype html
+html(lang="en")
+  head
+    include _head
+
+  body
+    block header
+      include ../../components/header/_header-checkout
+      
+    .page(class=outClass)
+      .page__content
+        block content
+
+    block footer
+      include ../../components/footer/_footer-checkout
+
+    block scripts
+      include _scripts

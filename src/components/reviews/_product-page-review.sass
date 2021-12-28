@@ -1,4 +1,5 @@
 .product-review
+  padding: 20px
   border-radius: 4px
 
   &-author
@@ -17,8 +18,8 @@
     color: $colorPrimary
     .ico
       margin-right: 10px
-      fill: none
-      stroke: $colorPrimary
+      font-size: 24px
+      fill: $colorPrimary
 
   &-pros,
   &-cons
@@ -48,8 +49,21 @@
       font-weight: 400
       color: $colorGS60
 
+  &-answer-toggler
+    &.open
+      i
+        transform: rotate(180deg)
+
   &-answer-toggler,
-  &-answer-btn,
+  &-answer-btn
+    display: flex
+    align-items: center
+    gap: 10px
+    font-size: 14px
+    font-weight: 400
+    color: $colorSecondary
+    &:hover
+      color: $colorSecondaryHover
   &-like
     display: flex
     align-items: center
@@ -57,3 +71,11 @@
     font-size: 14px
     font-weight: 400
     color: $colorSecondary
+    .ico
+      fill: $colorWhite
+      stroke: $colorSecondary
+    &:hover
+      color: $colorSecondaryHover
+      .ico
+        fill: $colorSecondaryHover
+        stroke: $colorWhite

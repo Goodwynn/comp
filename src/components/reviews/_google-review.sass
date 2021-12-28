@@ -1,24 +1,11 @@
 .google-review
 
   &-author
-    font-size: 18px
-    font-weight: 700
-    color: $colorDark
-    &-rating
-      font-size: 48px
-      font-weight: 900
-      line-height: normal
-      color: $colorDark
-      text-align: center
-    &-grades
-      font-size: 12px
-      font-weight: 600
-      color: $colorSecondary
-      text-align: center
+    @extend %f-18-700-dark
+
   &-text,
   &-date
-    font-size: 14px
-    color: $colorGS60
+    @extend %f-14-400-gs60
 
   &-stars
     display: flex
@@ -31,5 +18,18 @@
         .ico
           color: $colorYellow
 
-  .border-end
-    border-color: $colorGS10
++r($hd)
+  .google-review
+    padding: 8px
+    border-radius: 4px
+    box-shadow: 0px 2px 10px rgba(50, 50, 71, 0.28)
+
++r($lg)
+  .google-review
+    transition: 0.25s all
+    &-author
+      text-align: center
+
+    &:not(.swiper-slide-active)
+      transform: scale(1, 0.8)
+      opacity: 0.5

@@ -2,52 +2,69 @@
   var googleReviews = [
     {
       img: '../img/avatar.jpg',
-      name: 'Сергей Филимонов',
+      name: 'Сергей Филимонов 1',
       text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
       date: '07.04.2021',
-      curentRating: 1,
-      allReviews: 532,
-      averageRating: 4
+      curentRating: 1
     },
     {
       img: '../img/avatar.jpg',
-      name: 'Сергей Филимонов',
+      name: 'Сергей Филимонов 2',
       text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
       date: '07.04.2021',
-      curentRating: 2,
-      allReviews: 532,
-      averageRating: 4.2
+      curentRating: 2
     },
     {
       img: '../img/avatar.jpg',
-      name: 'Сергей Филимонов',
+      name: 'Сергей Филимонов 3',
       text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
       date: '07.04.2021',
-      curentRating: 3,
-      allReviews: 532,
-      averageRating: 4.5
+      curentRating: 3
     },
     {
       img: '../img/avatar.jpg',
-      name: 'Сергей Филимонов',
+      name: 'Сергей Филимонов 4',
       text: 'Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов.',
       date: '07.04.2021',
-      curentRating: 4,
-      allReviews: 532,
-      averageRating: 4.7
+      curentRating: 4
     },
   ]
-.google-reviews.shadow
-  .swiper-container 
-    .swiper-wrapper 
-      each item in googleReviews
-        include _google-review
-    .swiper-controls
-      .swiper-button-prev
-      .swiper-pagination
-      .swiper-button-next
-    
 
-a(href="#").show-more.mt-4.ms-auto
+.google-reviews.p-xxl-2.flex-grow-1
+  .row.h-100.align-items-xl-center.flex-column.flex-xl-row
+    .col-xxl-9.border-col.order-1.order-xxl-0.mt-auto.mt-xxl-0
+      .swiper-container
+        .swiper-wrapper 
+          each item in googleReviews 
+            include _google-review
+        .swiper-controls.row.align-items-center.g-2
+          .col-auto
+            .swiper-button-prev
+              +svgMono('arrow-right')
+          .col-auto
+            .swiper-pagination 
+          .col-auto
+            .swiper-button-next
+              +svgMono('arrow-right')
+    .col-xxl-3
+      .row.flex-column.align-items-center.justify-content-center
+        .col-auto
+          .google-reviews-middle-rating 4,7
+        .col-auto
+          .google-review-stars
+            - for (i=1; i<=5; i++)
+              if (4 >= i)
+                .star.active 
+                  +svgMono('star')
+              else 
+                .star 
+                  +svgMono('star') 
+        .col-auto
+          .google-reviews-grades.mt-2 532 
+            | &nbsp;
+            | отзыва на Google
+                                
+
+a(href="#").show-more.category.mt-4.ms-auto
   span Все отзывы на Google
   +svgMono('arrow-right')

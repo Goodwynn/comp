@@ -7,6 +7,9 @@
     display: none
     &:checked
       & + label
+        &:hover
+          &::before
+            border-color: $colorSecondaryHover
         &::before
           border-color: $colorSecondary
         &::after
@@ -24,6 +27,11 @@
     padding-left: 30px
     @extend %f-12-500
     cursor: pointer
+    &:hover
+      &::before
+        border-color: $colorSecondaryHover
+      &::after
+        background-image: svg-load('../icons/svg-mono/check.svg', fill=$colorSecondaryHover)
     &::before
       position: absolute
       content: ''
@@ -32,6 +40,7 @@
       transform: translateY(-50%)
       size: 20px
       border: 1px solid $colorGS20
+      border-radius: 4px
     &::after
       display: none
       position: absolute
@@ -67,7 +76,7 @@
         &::before
           background-color: $colorPrimary
         &::after
-          left: calc(30px - 12px)
+          left: calc(30px - 11px)
         & + .order-client-content
           display: block
 
@@ -85,14 +94,14 @@
       left: 0
       border-radius: 100px
       transform: translateY(-50%)
-      background-color: $colorSecondary
+      background-color: #C0C8CE
       transition: 0.25s all
     &::after
       position: absolute
       content: ''
-      size: 12px
+      size: 10px
       top: calc(50%)
-      left: 2px
+      left: 3px
       transform: translateY(-50%)
       border-radius: 50%
       background-color: $colorWhite

@@ -14,7 +14,7 @@
     .col-auto 
       .product-controls-availible.row.p-2.align-items-center.gx-3
         .col-auto
-          +svgColor('circle-check')
+          +svgColor('circle-check', 'fillnone')
         .col-auto
           span В наличии
     .col-auto
@@ -28,13 +28,4 @@
   button.btn-ct-primary-fill.mb-3 КУПИТЬ
   button.btn-ct-primary-out КУПИТЬ В КРЕДИТ
 
-.product-mini-fixed.d-md-none.fixed-bottom.p-3
-  .row.align-items-center.justify-content-between
-    .col-auto
-      .product-card-price-container
-        .product-card-price.default 27 900
-          span грн.
-        .product-card-price.sale 27 300
-          span грн.
-    .col-auto
-      button.btn-ct-primary-fill КУПИТЬ
+include _product-mini-fixed

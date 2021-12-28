@@ -10,3 +10,15 @@
 
     .text
       @extend %f-12-700-dark
+
+  .row
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      display: none
+
++r($lg)
+  .banner-advantages
+
+    &-item
+      min-width: 175px

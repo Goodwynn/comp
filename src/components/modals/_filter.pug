@@ -1,11 +1,11 @@
 #filter-modal.micromodal.micromodal-slide(aria-hidden='true')
   .micromodal-overlay(tabindex='-1' data-micromodal-close)
     .micromodal-container(role='dialog' aria-modal='true')
-      .micromodal-header.row.justify-content-between.mb-4
-        .col
-          .micromodal-title Фильтры
-        .col-auto
-          button.micromodal-close
-            +svgMono('close')
       .micromodal-content
+        .micromodal-header.row.justify-content-between
+          .col
+            .micromodal-title Фильтры
+          .col-auto
+            button.micromodal-close
+              +svgMono('close')
         include ../filter/_filter-modal

@@ -1,6 +1,9 @@
 .sales-slider
   background-color: $colorDark
 
+  .container
+    position: relative
+
   &-title
     @extend %f-32-600
     color: $colorWhite
@@ -24,3 +27,37 @@
         font-size: 16px
         font-weight: 700
         color: $colorRed
+
+  .swiper
+    &-slide
+      transition: 0.25s all
+      &-next,
+      &-prev
+        opacity: 0
+    &-controls
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      width: 100%
+    &-button
+      &-next,
+      &-prev
+        position: absolute
+        cursor: pointer
+        .ico
+          fill: none
+          stroke: $colorWhite
+      &-next
+        right: -50px
+      &-prev
+        left: -50px
+
++r($hd)
+  .sales-slider
+
+    .swiper
+      &-button
+        &-next,
+        &-prev
+          display: none

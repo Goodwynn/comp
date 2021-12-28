@@ -26,30 +26,67 @@
     }
   ]
 
+  var results = [
+    {
+      svg: 'menu1',
+      text: 'Комплектующие ПК',
+      notice: 'NEW',
+      inner: [
+        {
+          text: 'Процессоры',
+          notice: 'NEW'
+        },
+        {
+          text: 'SSD накопители',
+          notice: 'NEW'
+        },
+        {
+          text: 'Видеокарты',
+          notice: 'NEW'
+        },
+        {
+          text: 'Смотреть все',
+        }
+      ]
+    },
+    {
+      svg: 'menu2',
+      text: 'Мониторы',
+      notice: 'NEW'
+    },
+  ]
+
 .search-block 
   .input-group 
     input(type="text" placeholder="Поиск").ct-input
     button.btn-ct-secondary-fill
       +svgMono('search')
   .search-block-content
-    .search-block-content-results
+    .search-block-links.mb-4
       a(href="#").search-block-link Корпус 
         span для телефона
       a(href="#").search-block-link Корпус 
         span для ноутбука
       a(href="#").search-block-link Корпус 
         span системного блока
-      .search-block-categories 
+    .search-block-categories
+      .search-block-categories-title
         +svgMono('btn-icon')
         span Категории
-      a(href="#").search-block-category-link
-        +svgMono('menu1')
-        span Комплектующие ПК
-          .notice NEW
-      a(href="#").search-block-category-link
-        +svgMono('menu2')
-        span Мониторы
-          .notice NEW
+      .search-blokc-categories-list
+        each item in results 
+          .ct-accordion
+            button.ct-accordion-title
+              +svgMono(item.svg)
+              span=item.text
+                .notice=item.notice
+            .ct-accordion-content 
+              if (item.inner)
+                each el in item.inner 
+                  a(href="#").py-3.border-bottom
+                    span(style="margin-left: 40px")=el.text
+                      .notice=el.notice
+                    +svgMono('arrow-right')
     .search-block-content-offer.row.g-2.mt-3
       each item in searchItems
         include ../product/_search-card

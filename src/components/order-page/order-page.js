@@ -6,6 +6,8 @@
       if (document.body.clientWidth < 576){
         this.summary();
       }
+      this.rebase();
+      window.addEventListener('resize', debounce(this.rebase.bind(this), 250));
     },
     check: function () {
       let orderRadio = document.querySelectorAll('.order-radio');
@@ -41,6 +43,17 @@
         }
 
       })
+    },
+    rebase: function () {
+      if (window.innerWidth < 992) {
+        let item = document.querySelector('.order-summary-desctop .order-summary')
+        document.querySelector('.order-summary-desctop .order-summary').remove()
+        document.querySelector('.order-summary-mobile').append(item)
+      } else {
+        let item = document.querySelector('.order-summary-mobile .order-summary')
+        document.querySelector('.order-summary-mobile .order-summary').remove()
+        document.querySelector('.order-summary-desctop').append(item)
+      }
     }
   };
 })(window.APP);

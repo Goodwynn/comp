@@ -1,38 +1,19 @@
-.swiper-slide.google-review
-  .row.align-items-center.g-3
-    .col-xxl-9.border-end.order-2.order-xxl-0
-      .row.g-2.align-items-center.flex-column.flex-sm-row.align-items-sm-stretch
-        .col-auto 
-          img(src=item.img, alt="")
-        .col
-          .google-review-author=item.name 
-          .google-review-text=item.text
-          .row.justify-content-between.align-items-center.mt-1
-            .col-auto
-              .google-review-stars
-                - for (i=1; i<=5; i++)
-                  if (item.curentRating >= i)
-                    .star.active 
-                      +svgMono('star')
-                  else 
-                    .star 
-                      +svgMono('star')
-            .col-auto 
-              .google-review-date=item.date
-    .col-xxl-3
-      .row.align-items-center.justify-content-center.flex-xxl-column
+.google-review.swiper-slide 
+  .row.flex-column.flex-lg-row.justify-content-center.align-items-center.align-items-lg-stretch
+    .col-auto.mb-3
+      img(src=item.img, alt=item.name)
+    .col.d-flex.flex-column
+      .google-review-author.mb-2.mb-xl-0=item.name
+      .google-review-text=item.text
+      .row.align-items-center.justify-content-between.mt-1
         .col-auto
-          .google-review-author-rating=item.averageRating
-        .col-auto
-          .google-review-stars.my-2
+          .google-review-stars
             - for (i=1; i<=5; i++)
-              if (item.averageRating >= i)
+              if (item.curentRating >= i)
                 .star.active 
                   +svgMono('star')
               else 
                 .star 
-                  +svgMono('star')
+                  +svgMono('star') 
         .col-auto
-          .google-review-author-grades=item.allReviews
-            | &nbsp;
-            | отзыва на Google
+          .google-review-date=item.date

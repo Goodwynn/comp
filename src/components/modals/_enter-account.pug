@@ -1,0 +1,72 @@
+#enter-account-modal.micromodal.micromodal-slide(aria-hidden='true')
+  .micromodal-overlay(tabindex='-1' data-micromodal-close)
+    .micromodal-container.personal-cabinet(role='dialog' aria-modal='true')
+      .micromodal-header.row.justify-content-between.mb-4
+        .col
+          .micromodal-title Вход
+        .col-auto
+          button.micromodal-close
+            +svgMono('close')
+      .micromodal-content
+        form(action="#").d-flex.flex-column
+          .ui-group.mb-2
+            input(type="text" placeholder="Ваш номер телефона" required).ct-input
+          .ui-group
+            input(type="password" placeholder="Пароль" required).ct-input
+          button.show-more.align-self-end.my-3(onclick="resetPass()")
+            span Забыли пароль?
+          input(type="submit" value="ВОЙТИ").btn-ct-secondary-fill
+        .row.align-items-center.my-4 
+          .col
+            hr
+          .col-auto
+            .micromodal-notice или войти с помощью
+          .col
+            hr
+        .row
+          .col
+            button.btn-google
+              +svgMono('google')
+              span Google
+          .col 
+            button.btn-fb
+              +svgMono('fb')
+              span Facebook
+      .micromodal-footer.mt-4 Нет аккаунта? 
+        button(onclick="noAccount()") Зарегистрироваться
+
+script.
+  function noAccount () {
+    document.querySelector('#enter-account-modal .micromodal-close').click()
+    MicroModal.show('reg-account-modal', {
+      disableScroll: true,
+      disableFocus: true,
+      onShow: modal => {
+        document.querySelector('.page').classList.add('blur')
+        document.querySelector('.header-up').classList.add('blur')
+        document.querySelector('.header-functions').classList.add('blur')
+      },
+      onClose: modal => {
+        document.querySelector('.page').classList.remove('blur')
+        document.querySelector('.header-up').classList.remove('blur')
+        document.querySelector('.header-functions').classList.remove('blur')
+      }
+    })
+  }
+  function resetPass () {
+    document.querySelector('#enter-account-modal .micromodal-close').click()
+    MicroModal.show('reset-pass-modal', {
+      disableScroll: true,
+      disableFocus: true,
+      onShow: modal => {
+        document.querySelector('.page').classList.add('blur')
+        document.querySelector('.header-up').classList.add('blur')
+        document.querySelector('.header-functions').classList.add('blur')
+      },
+      onClose: modal => {
+        document.querySelector('.page').classList.remove('blur')
+        document.querySelector('.header-up').classList.remove('blur')
+        document.querySelector('.header-functions').classList.remove('blur')
+      }
+    })
+  }

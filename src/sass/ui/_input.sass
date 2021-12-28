@@ -10,8 +10,18 @@ input
   border-radius: 4px
   &:focus
     border-color: $colorSecondary
-  &:placeholder
-    color: $colorGS40
+  &::placeholder
+    color: $colorGS10
+  &.error
+    color: $colorRed
+    border-color: $colorRed
+
+.error-message
+  @extend .px-2
+  font-size: 10px
+  font-weight: 500
+  line-height: 12px
+  color: $colorRed
 
 .input-group
   .ct-input

@@ -14,30 +14,32 @@
 
 #gallery-modal.micromodal.micromodal-slide(aria-hidden='true')
   .micromodal-overlay(tabindex='-1' data-micromodal-close)
-    .micromodal-container(role='dialog' aria-modal='true')
+    .micromodal-container.d-flex.flex-column(role='dialog' aria-modal='true')
       .micromodal-header.row.justify-content-between.mb-4
         .col 
           .micromodal-title Фотографии Ноутбук Vinga Iron S140 Grey (S140-P50464GWP)
         .col-auto
           button.micromodal-close
             +svgMono('close')
-      .micromodal-content 
+      .micromodal-content.my-auto
         .micromodal-gallery
           .swiper-controls
             .swiper-pagination 
             .swiper-button-next 
+              +svgMono('chev')
             .swiper-button-prev
+              +svgMono('chev')
           .swiper-container.mb-5 
             .swiper-wrapper
               each item in images 
                 .swiper-slide 
                   img(src=item.img, alt="") 
-        .row.align-items-center.justify-content-center.pt-3
-          .col-auto 
-            .product-card-price-container
-              .product-card-price.default 27 900
-                span грн.
-              .product-card-price.sale 27 300
-                span грн.
-          .col-auto 
-            button.btn-ct-primary-fill КУПИТЬ
+      .row.align-items-center.justify-content-center.pt-3
+        .col-auto 
+          .product-card-price-container
+            .product-card-price.default 27 900
+              span грн.
+            .product-card-price.sale 27 300
+              span грн.
+        .col-auto 
+          button.btn-ct-primary-fill КУПИТЬ

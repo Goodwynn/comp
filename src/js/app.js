@@ -18,8 +18,11 @@ APP.Components = APP.Components || {};
     app.initPlugins = function () {
       APP.Plugins.Modal.init();
       APP.Plugins.Accordion.init();
-      APP.Plugins.Menus.init();
+      if (!document.querySelector('.header-checkout')) {
+        APP.Plugins.Menus.init();
+      }
       APP.Plugins.CustomSelect.init();
+      APP.Plugins.Validator.init();
       // APP.Plugins.Tabs.init();
       // APP.Plugins.Devtools.init();
     };
@@ -52,10 +55,12 @@ APP.Components = APP.Components || {};
         APP.Components.ProductPageReview.init('.user-reviews-list .ct-accordion');
         APP.Components.OrderPage.change();
       }
+      if (!document.querySelector('.header-checkout')) {
+        APP.Components.Search.init();
+      }
       APP.Components.ProductSales.init();
       APP.Components.BasketCounter.init();
       APP.Components.BasketTogether.init();
-      APP.Components.Search.init();
       APP.Components.GoogleSlider.init();
     };
 

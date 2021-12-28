@@ -7,7 +7,7 @@
       button.usermenu-close 
         +svgMono('close')
   .usermenu-content
-    .lang-toggle.mb-3
+    .lang-toggle.mb-3.d-sm-none
       a(href="#") RU
       .divider /
       a(href="#").active UA
@@ -22,23 +22,24 @@
               button.usermenu-login-out 
                 span Выйти
         .ct-accordion-content
-    .row.mb-3
-      .col-auto.border-end
-        button 
-          +svgMono('person')
-          span Вход
-      .col-auto
-        button Регистрация
-    button.mb-3
+    if (outClass != 'account-page')
+      .row.mb-3
+        .col-auto.border-end
+          button(data-micromodal-trigger="enter-account-modal") 
+            +svgMono('person')
+            span Вход
+        .col-auto
+          button(data-micromodal-trigger="reg-account-modal") Регистрация
+    button.mb-3.d-sm-none
       +svgMono('btn-icon')
       span Каталог товаров
-    button.mb-3
+    button.mb-3.d-sm-none
       +svgMono('basket')
       span Корзина
-    button.mb-3
+    button.mb-3.d-sm-none(data-micromodal-trigger="compare-modal")
       +svgMono('scales')
       span Сравнение
-    button.mb-3
+    button.mb-3.d-sm-none
       +svgMono('heart')
       span Избранное
     .ct-accordion 
@@ -82,7 +83,7 @@
       span Европейская, 8 (бывшая Миронова 8)
     p.description-small Понедельник-Пятница 9:00-19:00
     p.description-small Суббота-Воскресенье: с 9:00-16:00
-    .usermenu-title Следите за нами
+    .usermenu-title.mt-3 Следите за нами
     .row.g-2 
       .col-auto
         a(href="#").btn-soc

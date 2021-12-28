@@ -5,9 +5,10 @@
     font-weight: 600
     color: $colorDark
   &-description
-    font-size: 14px
+    font-size: 12px
     font-weight: 400
     color: $colorDarkGrey
+
   &-notice
     font-size: 12px
     font-weight: 400
@@ -15,6 +16,16 @@
   &-link
     font-size: 12px
     font-weight: 500
+    color: $colorSecondary
+    &:hover
+      color: $colorSecondaryHover
+
+  &-description,
+  &-notice
+    a
+      color: $colorSecondary
+      &:hover
+        color: $colorSecondaryHover
 
   &-order
     &-title

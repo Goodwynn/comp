@@ -1,5 +1,8 @@
 .product-card
   position: relative
+  height: 100%
+  display: flex
+  flex-direction: column
   border-radius: 4px
   background-color: $colorWhite
   &:hover
@@ -17,7 +20,7 @@
         span
           font-size: 8px
       &.sale
-        font-size: 28px
+        // font-size: 28px
         span
           font-size: 12px
       &.disabled
@@ -40,10 +43,12 @@
     min-height: 38px
     a
       display: flex
-    .ico
-      font-size: 18px
-      fill: none
-      stroke: $colorSecondary
+      &:hover
+        .ico
+          color: $colorSecondaryHover
+      .ico
+        font-size: 18px
+        color: $colorSecondary
 
   &-description
     padding: 6px 12px 10px
@@ -60,11 +65,11 @@
   &-stars
     display: flex
     align-items: center
-    gap: 5px
+    gap: 2px
     .star
       display: flex
       .ico
-        font-size: 10px
+        font-size: 16px
         color: #d9d9d9
       &.active
         .ico
@@ -81,6 +86,8 @@
     color: $colorGS40
 
   &-footer
+    margin-top: auto
+    // min-height: 70px
     display: flex
     justify-content: space-between
     align-items: center
@@ -95,11 +102,21 @@
     font-weight: 700
     color: $colorDark
     span
+      margin-left: 2px
       font-size: 12px
     &.default
+      position: relative
+      width: fit-content
       font-size: 10px
       color: $colorGS40
-      text-decoration: line-through
+      &::after
+        position: absolute
+        content: ''
+        top: 50%
+        left: 0
+        size: 100% 1px
+        background-color: $colorGS40
+        transform: translateY(-50%)
       span
         font-size: 8px
     &.sale
@@ -142,6 +159,7 @@
     display: none
     width: 100%
     padding: 0px 12px 10px
+    border-radius: 0 0 4px 4px
     background-color: $colorWhite
     .title
       font-size: 12px
@@ -173,8 +191,15 @@
     &-rating
       gap: 5px
 
+    &-stars
+      gap: 1px
+      .star
+        .ico
+          font-size: 12px
+
     &-footer
       .btn-ct-primary-fill
+        padding: 4px 8px
         span
           display: none
         .ico

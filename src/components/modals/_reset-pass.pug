@@ -1,13 +1,13 @@
 #reset-pass-modal.micromodal.micromodal-slide(aria-hidden='true')
   .micromodal-overlay(tabindex='-1' data-micromodal-close)
-    .micromodal-container.account-modal(role='dialog' aria-modal='true')
+    .micromodal-container.account-modal.d-flex.flex-column(role='dialog' aria-modal='true')
       .micromodal-header.row.justify-content-between.mb-4
         .col
           .micromodal-title Восстановление пароля
         .col-auto
           button.micromodal-close
             +svgMono('close')
-      .micromodal-content 
+      .micromodal-content.my-auto
         form(action="#") 
           .form-step
             .micromodal-content-text.mb-2 Введите ваш номер телефона. На него будет выслан код для подтверждения.

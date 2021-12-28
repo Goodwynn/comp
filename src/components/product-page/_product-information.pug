@@ -78,11 +78,12 @@
     },
     {
       icon: 'change',
+      svgClass: 'fill',
       description: 'Обмен/возврат товара в течение 14 дней'
     }
   ]
 
-.product-information.p-3.mb-4.shadow 
+.product-information.mb-4.shadow 
   .product-information-title.mb-3 Доставка
   each item in delivery
     .row.align-items-start.justify-content-between.gx-3.flex-column.flex-sm-row
@@ -100,7 +101,7 @@
         if (item.price.special)
           span #{item.price.special}
 
-.product-information.p-3.mb-4.shadow 
+.product-information.mb-4.shadow 
   .product-information-title.mb-3 Оплата
   each item in payment 
     .row.align-items-center.gx-3
@@ -109,12 +110,12 @@
       .col
         .product-information-text #{item.description}
 
-.product-information.p-3.mb-4.shadow 
+.product-information.mb-4.shadow 
   .product-information-title.mb-3 Гарантия  
   each item in warranty 
     .row.align-items-center.gx-3
       .col-auto
-        +svgMono(item.icon)
+        +svgMono(item.icon, item.svgClass)
       .col
         .product-information-text #{item.description}
 

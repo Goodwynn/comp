@@ -1,7 +1,19 @@
 // FOOTER
 .footer
+  // margin-top: 24px
   padding: 30px 0
   background-color: $colorDark
+
+  &-checkout
+    @extend .py-4
+    box-shadow: 0px 2px 10px rgba(50, 50, 71, 0.28)
+    +r($sm)
+      padding-bottom: 80px !important
+
+    &-text
+      font-size: 12px
+      line-height: 14px
+      color: $colorDarkGrey
 
   &-column
     &-title
@@ -47,13 +59,23 @@
   .container
     max-width: 1270px
 
+  .phone-small
+    color: $colorWhite
+    &:hover
+      text-decoration: underline
+
+  .ct-input
+    &:hover,
+    &:focus
+      border-color: #cccccc
+
   nav
     a
       display: block
       @extend .mb-2
       @extend %f-12-500-gray
-
-  p
+      &:hover
+        text-decoration: underline
 
   button[type="submit"]
     padding: 7px 12px
@@ -72,3 +94,9 @@
 
     &-copyright
       text-align: center
+
++r($sm)
+  .footer
+    margin-top: auto
+    &-bottom
+      border-top: none !important

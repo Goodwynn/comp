@@ -24,9 +24,9 @@
               ss = counter.querySelector('.seconds');
               
         dd.innerHTML = Math.floor( diff / day )
-        hh.innerHTML = Math.floor( (diff / hour) %24 )
-        mm.innerHTML = Math.floor( (diff / minute) %60 )
-        ss.innerHTML = Math.floor( (diff / second) %60 )
+        hh.innerHTML = Math.floor( (diff / hour) % 24 )
+        mm.innerHTML = Math.floor( (diff / minute) % 60 )
+        ss.innerHTML = Math.floor( (diff / second) % 60 )
       
 
       }, second)

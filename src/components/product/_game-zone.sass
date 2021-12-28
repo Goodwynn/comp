@@ -1,5 +1,7 @@
 .game-zone
   padding: 40px 0
+  background-size: cover
+  background-position: center
   background-image: url(../img/game-zone-bg.jpg)
 
   &-title
@@ -15,7 +17,12 @@
       background-color: $colorDark
       .product-card
         &-short-information
-          display: none
+          // display: none
+          background-color: $colorDark
+          .title,
+          .name,
+          .value
+            color: $colorWhite
         &-description
           &-name
             color: $colorSoft
@@ -27,11 +34,13 @@
             color: $colorGS40
         &-header
           .ico
-            stroke: $colorYellow
+            color: $colorYellow
 
   .show-more
     color: $colorWhite
+    opacity: 0.85
     &:hover
+      opacity: 1
       color: $colorWhite
     .ico
       stroke: $colorWhite
