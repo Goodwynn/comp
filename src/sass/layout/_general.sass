@@ -189,7 +189,8 @@ body, html
           display: none
 
 .error-page
-  margin: 100px 0
+  margin: auto 0
+  padding: 24px 0
   &-name
     font-size: 140px
     font-weight: 700
@@ -200,6 +201,9 @@ body, html
     font-size: 14px
     font-weight: 400
     color: $colorDarkGrey
+  +r($md)
+    &-name
+      font-size: 100px
 
 .thx-page
   margin: auto 0
