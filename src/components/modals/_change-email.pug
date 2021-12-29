@@ -1,7 +1,7 @@
 #change-email-modal.micromodal.micromodal-slide(aria-hidden='true')
   .micromodal-overlay(tabindex='-1' data-micromodal-close)
     .micromodal-container.account-modal(role='dialog' aria-modal='true')
-      .micromodal-header.row.justify-content-between.mb-4
+      .micromodal-header.row.justify-content-between
         .col
           .micromodal-title Изменение электронной почты
         .col-auto
@@ -12,11 +12,11 @@
         form(action="#") 
           input(type="text" placeholder="Новая электронная почта").ct-input.mb-2
           input(type="text" placeholder="Код из смс").ct-input.mb-2
-          .row.justify-content-between
+          .row.justify-content-between.flex-column-reverse.flex-md-row.g-2
             .col-auto
-              button.btn-ct-secondary-out(onclick="onErrorMail()") ОТМЕНИТЬ
+              button.btn-ct-secondary-out.w-100(onclick="onErrorMail()") ОТМЕНИТЬ
             .col-auto
-              button.btn-ct-secondary-fill(onclick="onSaveMail()") СОХРАНИТЬ
+              button.btn-ct-secondary-fill.w-100(onclick="onSaveMail()") СОХРАНИТЬ
 
 script.
   function onSaveMail () {

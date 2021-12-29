@@ -20,7 +20,7 @@
               .col 
                 .personal-data-content-text Иванов Иван Иванович
               .col-auto 
-                button(data-micromodal-trigger="change-username") 
+                button(data-micromodal-trigger="change-username-modal") 
                   +svgMono('pencil')
             .row.aling-items-start.gx-2.mb-2
               .col-4.col-sm-6
@@ -68,7 +68,7 @@
               .col-4.col-sm-6
                 .personal-data-content-title Основной способ доставки
               .col 
-                button Добавить
+                button(data-micromodal-trigger="change-delivery-modal") Добавить
           include _personal-data-social
           include _personal-data-subscribe
           .personal-data-controls.mt-3

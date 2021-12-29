@@ -7,6 +7,9 @@
     height: 100%
     background-color: $colorDark
 
+    .row
+      gap: 16px
+
   &-subtitle
     font-size: 16px
     font-weight: 400
@@ -23,6 +26,9 @@
     size: 25px
     fill: none
     stroke: $colorWhite
+    &.fill
+      fill: $colorWhite
+      stroke: none
 
   a
     display: block
@@ -35,8 +41,11 @@
       font-weight: 500
     .ico
       size: 15px
+      fill: $colorWhite
+      stroke: none
     *:not(:last-child)
       margin-right: 10px
 
   img
     size: 100%
+    object-fit: cover

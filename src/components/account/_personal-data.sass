@@ -18,6 +18,8 @@
           color: $colorWhite
     button
       @extend %f-12-500-sec
+      &:hover
+        color: $colorSecondaryHover
 
   &-content
     border-bottom: 1px solid $colorGS10
@@ -28,6 +30,10 @@
 
     button
       @extend %f-14-500-sec
+      &:hover
+        color: $colorSecondaryHover
+        .ico
+          stroke: $colorSecondaryHover
       .ico
         font-size: 14px
         fill: none
@@ -37,3 +43,5 @@
     button
       display: block
       @extend %f-12-500-sec
+      &:hover
+        color: $colorSecondaryHover

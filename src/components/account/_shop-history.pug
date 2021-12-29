@@ -68,9 +68,9 @@
 .shop-history 
   .shop-history-title.mb-4 История заказов
   each item in items
-    .ct-accordion.p-3.mb-3.shadow
+    .ct-accordion.p-3.mb-3
       .ct-accordion-title
-        .row.align-items-sm-center.justify-content-between.me-4.flex-column.flex-sm-row.gy-3.gy-sm-0
+        .row.align-items-sm-center.justify-content-between.me-5.flex-column.flex-sm-row.gy-3.gy-sm-0
           .col-auto
             .shop-history-part-subtitle #{item.number} от #{item.date}
             if ( item.status == 'В пути')
@@ -78,7 +78,7 @@
             else 
               .shop-history-order-status.delivered #{item.status}
           .show-history-part-price.col-auto.text-sm-end
-            .shop-history-part-subtitle Сумма
+            .shop-history-part-subtitle(style="text-align: center") Сумма
             - let fullPrice = 0
             each good in item.goods 
               if (good.salePrice != null)
@@ -99,7 +99,7 @@
           .col-12.col-md-7.mb-2.mb-md-0
             .shop-history-part-title.mb-3 Товары
             each good in item.goods
-              .shop-history-item.border-top.border-bottom
+              .shop-history-item.border-top
                 .row.align-items-center.p-2.g-3
                   .col-auto
                     img(src=good.img, alt=good.name)
@@ -129,13 +129,13 @@
                         else 
                           .product-card-price #{good.price * good.count}
                             span грн.
-            .shop-history-item.d-none.d-md-block
+            .shop-history-item.d-none.d-md-block.pt-3.border-top
               .row.align-items-center.justify-content-between
                 .col-auto
                   .shop-history-part-title Итого
                 .col-auto
                   .shop-history-title #{fullPrice}
-                    span грн.
+                    span(style="margin-left: 2px") грн.
           .col-12.col-md 
             .shop-history-part-title.mb-3 Данные о доставке
             .shop-history-part-subtitle.mt-2 Способ доставки

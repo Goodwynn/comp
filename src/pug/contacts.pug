@@ -9,10 +9,10 @@ block content
     .container 
       .contacts-title.mb-4 Контакты
       .row.row-col-2.g-0
-        .col-12.col-xxl
+        .col-12.col-xl.mb-4.mb-xl-0
           .contacts-data.p-3.p-md-4
             //- 
-            .row.flex-nowrap.g-4.mb-4.flex-column.flex-sm-row
+            .row.flex-nowrap.mb-4.flex-column.flex-sm-row
               .col-auto 
                  .row.align-items-center.g-3
                     .col-auto
@@ -35,35 +35,35 @@ block content
                 a(href="tel:").mb-3 (066) 097 33 03
                 a(href="tel:") (093) 097 33 03
             //- 
-            .row.flex-nowrap.g-4.mb-4.flex-column.flex-md-row
+            .row.flex-nowrap.mb-4.flex-column.flex-md-row
               .col-auto
                 .row.align-items-center.g-3
                   .col-auto
                     +svgMono('mail')
                   .col-auto.d-md-none
                     .contacts-subtitle-mobile E-mail
-              .col-auto
+              .col
                 .contacts-subtitle-dark.mb-2 Интернет-продажи 
                 a(href="mailto:").mb-4 yurij.kovika@v-comp.com.ua
                 .contacts-subtitle-dark.mb-2 Ремонт техники (сервисный центр) 
                 a(href="mailto:").mb-4 a.ovsyannikov@v-comp.com.ua
                 .contacts-subtitle-dark.mb-2 Отдел корпоративных продаж (счета с НДС, без НДС) 
                 a(href="mailto:") o.ryabiy@v-comp.com.ua
-              .col-auto
+              .col
                 .contacts-subtitle-dark.mb-2 Скупка б/у техники
                 a(href="mailto:").mb-4 a.krasnoschok@v-comp.com.ua
                 .contacts-subtitle-dark.mb-2 Жалобы и предложение
                 a(href="mailto:").mb-2 v.krasnoschok@v-comp.com.ua
                 a(href="mailto:") a.krasnoschok@v-comp.com.ua
-            //- 
-            .row.flex-nowrap.g-4.mb-4
+            //-
+            .row.flex-nowrap.mb-4
               .col-auto 
                 +svgMono('clock')
               .col
                 .contacts-subtitle.mb-2 Понедельник-Пятница 9:00-19:00
                 .contacts-subtitle Суббота-Воскресенье: с 9:00-16:00
             //- 
-            .row.flex-nowrap.g-4.mb-4
+            .row.flex-nowrap.mb-4
               .col-auto 
                 +svgMono('dest')
               .col
@@ -71,9 +71,9 @@ block content
             //- 
             .row
               .col-auto 
-                +svgMono('skype')
+                +svgMono('skype', 'fill')
               .col 
                 a(href="skype:example123?chat").contacts-subtitle yurij.kovika
 
-        .col-12.col-xxl
+        .col-12.col-xl
           img(src="../img/map2.jpg", alt="map")

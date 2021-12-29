@@ -3,14 +3,23 @@
     @extend %f-28-600
 
   &-controls
-
     button
       display: flex
       align-items: center
-      gap: 10px
+      gap: 8px
+      &:hover
+        span
+          color: $colorSecondaryHover
+        .ico
+          stroke: $colorSecondaryHover
       span
         @extend %f-14-500-sec
       .ico
         font-size: 24px
         fill: none
         stroke: $colorSecondary
+
+  .product-line-information
+    p
+      span
+        margin-left: 10px

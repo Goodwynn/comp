@@ -83,7 +83,7 @@
                 +svgMono('like')
                 span #{item.likes}
           each answer in item.answers
-            .product-review-answer.row.align-items-center.justify-content-between.ms-2.ms-sm-5.mt-2.border-start.d-none
+            .product-review-answer.row.align-items-center.justify-content-between.ms-2.ms-sm-5.border-start.d-none
               .col-auto
                 .product-review-answer-author=answer.name
               .col-auto
@@ -106,4 +106,4 @@
     a(href="#").pagination-link 34
     a(href="#").pagination-link 
       span Вперед
-      +svgMono('arrow-right')
+      +svgMono('arrow-left')

@@ -1,7 +1,7 @@
 #add-tel-modal.micromodal.micromodal-slide(aria-hidden='true')
   .micromodal-overlay(tabindex='-1' data-micromodal-close)
     .micromodal-container.account-modal(role='dialog' aria-modal='true')
-      .micromodal-header.row.justify-content-between.mb-4
+      .micromodal-header.row.justify-content-between
         .col
           .micromodal-title Изменение номера телефона
         .col-auto
@@ -13,4 +13,6 @@
         form(action="#") 
           input(type="text" placeholder="Номер телефона").ct-input.mb-2
           textarea(placeholder="Комментарий").ct-input
-          button.btn-ct-secondary-fill.ms-auto СОХРАНИТЬ
+          .row.justify-content-end
+            .col.col-md-auto
+              button.btn-ct-secondary-fill.w-100 СОХРАНИТЬ

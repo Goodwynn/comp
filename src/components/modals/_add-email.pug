@@ -1,7 +1,7 @@
 #add-email-modal.micromodal.micromodal-slide(aria-hidden='true')
   .micromodal-overlay(tabindex='-1' data-micromodal-close)
     .micromodal-container.account-modal(role='dialog' aria-modal='true')
-      .micromodal-header.row.justify-content-between.mb-4
+      .micromodal-header.row.justify-content-between
         .col
           .micromodal-title Добавление электронной почты
         .col-auto
@@ -11,8 +11,8 @@
         .micromodal-content-text.mb-3 Введите адрес элекронной почты. На вашу почту будет выслано письмо со ссылкой для подтверждения.
         form(action="#") 
           input(type="text" placeholder="Электронная почта").ct-input.mb-2
-          .row.justify-content-between
+          .row.justify-content-between.flex-column-reverse.flex-md-row.g-2
             .col-auto
-              button.btn-ct-secondary-out ОТМЕНИТЬ
+              button.btn-ct-secondary-out.w-100 ОТМЕНИТЬ
             .col-auto
-              button.btn-ct-secondary-fill СОХРАНИТЬ
+              button.btn-ct-secondary-fill.w-100 СОХРАНИТЬ

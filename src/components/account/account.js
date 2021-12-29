@@ -18,6 +18,8 @@
       this.data.tabsNav.forEach((item, index) => {
         item.addEventListener('click', () => {
 
+          document.querySelector('.usermenu-close').click()
+
           this.data.tabsNav.forEach(el => {
             el.classList.remove('active')
           })

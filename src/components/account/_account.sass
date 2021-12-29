@@ -10,12 +10,18 @@
           size: 24px
           fill: none
           stroke: $colorDark
+          &.fill
+            fill: $colorDark
+            stroke: none
         span
           @extend %f-16-500-dark
         &.active
           background-color: $colorSoft
           .ico
             stroke: $colorSecondary
+            &.fill
+              fill: $colorSecondary
+              stroke: none
           span
             color: $colorSecondary
     &-content
