@@ -11,7 +11,7 @@
         .micromodal-content-text.mb-3 Введите адрес элекронной почты. На вашу почту будет выслано письмо со ссылкой для подтверждения.
         form(action="#") 
           input(type="text" placeholder="Новая электронная почта").ct-input.mb-2
-          input(type="text" placeholder="Код из смс").ct-input.mb-2
+          input(type="text" placeholder="Код из смс").ct-input.mb-12
           .row.justify-content-between.flex-column-reverse.flex-md-row.g-2
             .col-auto
               button.btn-ct-secondary-out.w-100(onclick="onErrorMail()") ОТМЕНИТЬ
@@ -28,11 +28,13 @@ script.
         document.querySelector('.page').classList.add('blur')
         document.querySelector('.header-up').classList.add('blur')
         document.querySelector('.header-functions').classList.add('blur')
+        document.querySelector('.footer').classList.add('blur')
       },
       onClose: modal => {
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
     })
   };
@@ -45,11 +47,13 @@ script.
         document.querySelector('.page').classList.add('blur')
         document.querySelector('.header-up').classList.add('blur')
         document.querySelector('.header-functions').classList.add('blur')
+        document.querySelector('.footer').classList.add('blur')
       },
       onClose: modal => {
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
     })
   }

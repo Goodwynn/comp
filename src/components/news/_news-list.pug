@@ -52,14 +52,14 @@
 
 section.news-list.pb-5
   .container 
-    .news-list-title.mb-4 Новости
-    .row.g-3
+    .news-list-title Новости
+    .row.mb-4.g-32
       each item in news
         include _news-list-card
       each item in news
         include _news-list-card
     .row.justify-content-center 
-      .col-auto.my-4
+      .col-auto.mb-4
         button.btn-posts-more
           span Показать больше товаров
           +svgMono('reload')

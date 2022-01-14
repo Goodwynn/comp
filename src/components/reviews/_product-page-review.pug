@@ -8,19 +8,19 @@
           .row.align-items-center 
             .col-auto.d-sm-none
               img(src=item.authorImg, alt=item.authorName)
-            .col-auto
+            .col-auto.pe-3
               .product-review-author=item.authorName
               .d-sm-none
                 if (item.buyCheck)
                   .product-review-buy-badge 
                     +svgMono('basket')
                     span уже купил(а)
-            .d-none.d-sm-block.col-auto
+            .d-none.d-sm-block.col-auto.p-0.me-12
               if (item.buyCheck)
                 .product-review-buy-badge 
                   +svgMono('basket')
                   span уже купил(а)
-            .d-none.d-sm-block.col-auto 
+            .d-none.d-sm-block.col-auto.p-0
               .product-card-stars
                 - for (i=1; i<=5; i++)
                   if (item.rating >= i )

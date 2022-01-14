@@ -10,7 +10,7 @@
       .micromodal-content 
         form(action="#") 
           input(type="text" placeholder="Старый пароль").ct-input.mb-2
-          input(type="text" placeholder="Новый пароль").ct-input.mb-2
+          input(type="text" placeholder="Новый пароль").ct-input.mb-12
           .row.align-items-center.justify-content-between 
             .col-auto
               button(style="font-size: 12px; font-weight: 500; color: #01579b" onclick="onResetPass()") Забыли пароль?
@@ -19,36 +19,47 @@
 
 script.
   function onSavePass () {
+    event.preventDefault()
     document.querySelector('#change-pass-modal .micromodal-close').click()
     MicroModal.show('change-pass-complete-modal', {
       disableScroll: true,
       disableFocus: true,
+      awaitOpenAnimation: false,
+      awaitCloseAnimation: false,
       onShow: modal => {
         document.querySelector('.page').classList.add('blur')
         document.querySelector('.header-up').classList.add('blur')
         document.querySelector('.header-functions').classList.add('blur')
+        document.querySelector('.footer').classList.add('blur')
       },
       onClose: modal => {
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
     })
   };
+  
   function onResetPass () {
+    event.preventDefault()
     document.querySelector('#change-pass-modal .micromodal-close').click()
     MicroModal.show('reset-pass-modal', {
       disableScroll: true,
       disableFocus: true,
+      awaitOpenAnimation: false,
+      awaitCloseAnimation: false,
       onShow: modal => {
         document.querySelector('.page').classList.add('blur')
         document.querySelector('.header-up').classList.add('blur')
         document.querySelector('.header-functions').classList.add('blur')
+        document.querySelector('.footer').classList.add('blur')
       },
       onClose: modal => {
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
     })
   };

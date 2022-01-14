@@ -35,11 +35,15 @@
       @extend %f-14-500-gs60
     &-subtitle
       @extend %f-12-500-gs60
+      &.centered
+        text-align: center
     &-text
       @extend %f-12-500
 
   .ct-accordion
     box-shadow: 0px 2px 10px rgba(50, 50, 71, 0.28)
+    &:hover
+      background-color: #f4f8fb
     &-content
       img
         size: 70px
@@ -64,3 +68,10 @@
         font-size: 8px
         span
           font-size: 8px
+
++r($sm)
+  .shop-history
+    &-part
+      &-subtitle
+        &.centered
+          text-align: left

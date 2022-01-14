@@ -1,12 +1,30 @@
 .news-list-card
+  display: flex
+  flex-direction: column
   cursor: pointer
   &-title
+    flex-grow: 1
+    margin-bottom: 16px
     font-size: 20px
     font-weight: 700
     line-height: 24px
+    max-height: 72px
     color: $colorDark
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+  &-link
+    display: block
+    &:hover
+      & + .news-list-card-title
+        color: #0a58ca
   &-excerpt
     @extend %f-14-400
     color: $colorDark
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
   &-date
     @extend %f-12-500-gs20

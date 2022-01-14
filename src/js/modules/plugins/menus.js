@@ -14,6 +14,7 @@
           megamenu.classList.toggle('open')
           document.querySelector('body').classList.toggle('body-lock')
           document.querySelector('.page').classList.toggle('blur')
+          document.querySelector('.footer').classList.toggle('blur')
         }
       })
       
@@ -22,6 +23,7 @@
           megamenu.classList.remove('open')
           document.querySelector('body').classList.remove('body-lock')
           document.querySelector('.page').classList.remove('blur')
+          document.querySelector('.footer').classList.remove('blur')
         }
       })
 
@@ -42,6 +44,7 @@
           document.querySelector('.page').classList.add('blur')
           document.querySelector('.header-up').classList.add('blur')
           document.querySelector('.header-functions').classList.add('blur')
+          document.querySelector('.footer').classList.add('blur')
         }
       })
 
@@ -51,6 +54,7 @@
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
 
       document.addEventListener('click', () => {
@@ -60,6 +64,7 @@
           document.querySelector('.page').classList.remove('blur')
           document.querySelector('.header-up').classList.remove('blur')
           document.querySelector('.header-functions').classList.remove('blur')
+          document.querySelector('.footer').classList.remove('blur')
         }
       })
       

@@ -85,11 +85,18 @@
     .swiper
       &-slide
         text-align: center
-        img
+        .img-container
+          position: relative
           max-width: 700px
           width: 100%
-          +r($sm)
-            max-width: 265px
+          margin: 0 auto
+          display: flex
+          align-items: center
+          justify-content: center
+          &::before
+            content: ""
+            display: block
+            padding-top: 100%
       &-pagination
         position: absolute
         z-index: 2
@@ -145,6 +152,8 @@
       .ico
         transform: rotate(90deg)
     .ico
+      pointer-events: none
+      user-select: none
       fill: $colorRed
       stroke: $colorRed
       transition: 0.25s all

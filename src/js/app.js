@@ -58,6 +58,9 @@ APP.Components = APP.Components || {};
       if (!document.querySelector('.header-checkout')) {
         APP.Components.Search.init();
       }
+      // if (document.querySelector('.news-list-page')) {
+      //   APP.Components.NewsCard.init();
+      // }
       APP.Components.ProductSales.init();
       APP.Components.BasketCounter.init();
       APP.Components.BasketTogether.init();

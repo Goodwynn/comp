@@ -55,9 +55,9 @@ section.news-page.mb-2
             button.btn-share(style="background-color: #7aa5da")
               +svgMono('teleg')
     
-section.read-more 
+section.read-more.mb-4
   .container 
     .read-more-title.mb-4 Читайте также:
-    .row 
+    .row.g-3
       each item in items 
         include _news-list-card

@@ -9,7 +9,7 @@
             +svgMono('close')
       .micromodal-content  
         include ../order-page/_order-delivery
-        .row.justify-content-end.flex-column-reverse.flex-md-row.g-2.mt-2
+        .row.justify-content-end.flex-column-reverse.flex-md-row.g-2.mt-12
           .col-auto
             button.btn-ct-secondary-fill.w-100(onclick="onSaveDelivery()") СОХРАНИТЬ
 
@@ -23,11 +23,13 @@ script.
         document.querySelector('.page').classList.add('blur')
         document.querySelector('.header-up').classList.add('blur')
         document.querySelector('.header-functions').classList.add('blur')
+        document.querySelector('.footer').classList.add('blur')
       },
       onClose: modal => {
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
     })
   }

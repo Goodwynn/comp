@@ -78,7 +78,7 @@
             else 
               .shop-history-order-status.delivered #{item.status}
           .show-history-part-price.col-auto.text-sm-end
-            .shop-history-part-subtitle(style="text-align: center") Сумма
+            .shop-history-part-subtitle.centered Сумма
             - let fullPrice = 0
             each good in item.goods 
               if (good.salePrice != null)

@@ -11,7 +11,7 @@
         form(action="#") 
           .form-step
             .micromodal-content-text Вы хотите изменить номер телефона?
-            .micromodal-content-text.mb-3 Ваш текущий номер: 
+            .micromodal-content-text.mb-12 Ваш текущий номер: 
               span(style="font-size: 16px; font-weight: 500; color: #060f42") +380670099009
             .row.justify-content-between.flex-column-reverse.flex-md-row.g-2
               .col-auto
@@ -20,7 +20,7 @@
                 button.btn-ct-secondary-fill.w-100(onclick="stepChange(this)") ИЗМЕНИТЬ
           .form-step.d-none
             .micromodal-content-text На текущий номер телефона было выслано сообщение с кодом для подтверждения. Введите этот код ниже.
-            input(type="text" placeholder="Код").ct-input.mb-2
+            input(type="text" placeholder="Код").ct-input.mb-12
             .row.align-items-center.justify-content-between
               .col-auto 
                 button(style="font-size: 12px; font-weight: 500; color: #01579b") Нет доступа к текущему номеру?
@@ -28,7 +28,7 @@
                 button.btn-ct-secondary-fill(onclick="stepChange(this)") ОТПРАВИТЬ
           .form-step.d-none
             .micromodal-content-text.mb-2 Укажите новый номер телефона
-            input(type="text" placeholder="Новый номер телефона").ct-input.mb-2
+            input(type="text" placeholder="Новый номер телефона").ct-input.mb-12
             .row.justify-content-between.align-items-md-center.flex-column-reverse.flex-md-row.g-2
               .col-auto
                 button.btn-ct-secondary-out.w-100(onclick="onErrorTel()") ОТМЕНИТЬ
@@ -36,7 +36,7 @@
                 button.btn-ct-secondary-fill.w-100(onclick="stepChange(this)") СОХРАНИТЬ
           .form-step.d-none
             .micromodal-content-text.mb-2 На новый номер телефона было выслано сообщение с кодом для подтверждения. Введите этот код ниже.
-            input(type="text" placeholder="Код").ct-input.mb-2
+            input(type="text" placeholder="Код").ct-input.mb-12
             .row.align-items-md-center.justify-content-between.flex-column-reverse.flex-md-row.g-2
               .col-auto
                 button.btn-ct-secondary-out.w-100(onclick="onErrorTel()") ОТМЕНИТЬ
@@ -65,11 +65,13 @@ script.
         document.querySelector('.page').classList.add('blur')
         document.querySelector('.header-up').classList.add('blur')
         document.querySelector('.header-functions').classList.add('blur')
+        document.querySelector('.footer').classList.add('blur')
       },
       onClose: modal => {
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
     })
   };
@@ -89,11 +91,13 @@ script.
         document.querySelector('.page').classList.add('blur')
         document.querySelector('.header-up').classList.add('blur')
         document.querySelector('.header-functions').classList.add('blur')
+        document.querySelector('.footer').classList.add('blur')
       },
       onClose: modal => {
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
     })
   }

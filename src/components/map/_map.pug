@@ -1,0 +1,81 @@
+.map#google-map
+  <iframe src="https://snazzymaps.com/embed/363221" style="border:none;"></iframe>
+
+//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgum2aNd10OeJrPbWGRFAr1LoMGNxBTa4") 
+//- script.
+//-   function map () {
+//-     const options = {
+//-       zoom: 15,
+//-       center: new google.maps.LatLng(48.4667136, 35.0482528),
+//-       disableDefaultUI: true,
+//-       styles: [
+//-         {
+//-           "featureType": "administrative.country",
+//-           "elementType": "geometry",
+//-           "stylers": [
+//-             {
+//-               "visibility": "simplified"
+//-             },
+//-             {
+//-               "color": "#01579b"
+//-             }
+//-           ]
+//-         },
+//-         {
+//-           "featureType": "administrative.country",
+//-           "elementType": "labels",
+//-           "stylers": [
+//-             {
+//-               "color": "#01579b"
+//-             }
+//-           ]
+//-         },
+//-         {
+//-           "featureType": "poi",
+//-           "elementType": "all",
+//-           "stylers": [
+//-             {
+//-               "visibility": "off"
+//-             }
+//-           ]
+//-         },
+//-         {
+//-           "featureType": "poi",
+//-           "elementType": "labels.text",
+//-           "stylers": [
+//-             {
+//-               "color": "#060f42"
+//-             },
+//-             {
+//-               "visibility": "simplified"
+//-             }
+//-           ]
+//-         },
+//-         {
+//-           "featureType": "poi",
+//-           "elementType": "labels.icon",
+//-           "stylers": [
+//-             {
+//-               "color": "#01579b"
+//-             }
+//-           ]
+//-         }
+//-       ]
+//-     }
+
+//-     let element = document.getElementById('google-map');
+
+//-     let map = new google.maps.Map(element, options);
+
+//-     let marker = new google.maps.Marker({
+//-       position: new google.maps.LatLng(48.4667136, 35.0482528),
+//-       map: map,
+//-       title: 'V-COMP',
+//-       icon: {
+//-         url: document.location.origin + '/img/svg/map-icon.svg',
+//-         //- scaledSize: new google.maps.Size(20, 29.75),
+//-       }
+      
+//-     })
+//-   }
+//-   map()

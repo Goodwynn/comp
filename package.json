@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "start": "gulp",
+    "share": "gulp --tunnel=aruteam",
     "build": "gulp build --production",
     "lint:js": "node_modules/.bin/eslint . --fix",
     "surge": "surge --project ./dist --domain khmelevskoy.surge.sh",

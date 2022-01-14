@@ -6,6 +6,13 @@
         display: flex
         gap: 30px
         border-bottom: 1px solid $colorGS10
+        &:hover
+          .ico
+            stroke: $colorSecondary
+            &.fill
+              fill: $colorSecondary
+          span
+            color: $colorSecondary
         .ico
           size: 24px
           fill: none

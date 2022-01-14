@@ -23,6 +23,8 @@ button
     align-items: center
     justify-content: center
     border-radius: 4px
+    &:hover
+      background-color: #EFF8FF
     &.cart
       .counter
         color: $colorWhite
@@ -35,9 +37,9 @@ button
         fill: $colorWhite
     .counter
       position: absolute
-      top: 0
-      right: 0
-      size: 25px
+      top: 1px
+      right: 1px
+      size: 20px
       display: flex
       align-items: center
       justify-content: center
@@ -46,7 +48,7 @@ button
       color: $colorDark
       border-radius: 50%
       background-color: $colorYellow
-      transform: translate(25%, -25%)
+      // transform: translate(25%, -25%)
     .ico, i
       font-size: 32px
     .ico

@@ -11,11 +11,11 @@
         form(action="#") 
           .form-step
             .micromodal-content-text.mb-2 Введите ваш номер телефона. На него будет выслан код для подтверждения.
-            input(type="text" placeholder="Ваш номер телефона").ct-input.mb-2
+            input(type="text" placeholder="Ваш номер телефона").ct-input.mb-12
             button.btn-ct-secondary-fill.ms-auto(onclick="stepChange(this)") СОХРАНИТЬ
           .form-step.d-none
             .micromodal-content-text.mb-2 Введите код из СМС
-            input(type="text" placeholder="Код").ct-input.mb-2
+            input(type="text" placeholder="Код").ct-input.mb-12
             .row.align-items-center.justify-content-between 
               .col-auto
                 .micromodal-content-text Не пришел код? 
@@ -24,16 +24,17 @@
                 button.btn-ct-secondary-fill.ms-auto(onclick="stepChange(this)") ОТПРАВИТЬ
           .form-step.d-none
             .micromodal-content-text.mb-2 Придумайте новый пароль
-            input(type="text" placeholder="Новый пароль").ct-input.mb-2
+            input(type="text" placeholder="Новый пароль").ct-input.mb-12
             button.btn-ct-secondary-fill.ms-auto(onclick="onSave()") СОХРАНИТЬ
 
 script.
- function stepChange(e) {
-   e.closest('.form-step').classList.add('d-none');
-   e.closest('.form-step').nextElementSibling.classList.remove('d-none');
- };
- function onSave () {
-   document.querySelector('#reset-pass-modal .micromodal-close').click()
+  function stepChange(e) {
+    e.closest('.form-step').classList.add('d-none');
+    e.closest('.form-step').nextElementSibling.classList.remove('d-none');
+  };
+
+  function onSave () {
+    document.querySelector('#reset-pass-modal .micromodal-close').click()
     Array.from(document.querySelectorAll('#reset-pass-modal form .form-step')).forEach((item, index) => {
       if (index != 0) {
         item.classList.add('d-none');
@@ -48,11 +49,13 @@ script.
         document.querySelector('.page').classList.add('blur')
         document.querySelector('.header-up').classList.add('blur')
         document.querySelector('.header-functions').classList.add('blur')
+        document.querySelector('.footer').classList.add('blur')
       },
       onClose: modal => {
         document.querySelector('.page').classList.remove('blur')
         document.querySelector('.header-up').classList.remove('blur')
         document.querySelector('.header-functions').classList.remove('blur')
+        document.querySelector('.footer').classList.remove('blur')
       }
     })
   };

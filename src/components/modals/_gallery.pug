@@ -33,7 +33,8 @@
             .swiper-wrapper
               each item in images 
                 .swiper-slide 
-                  img(src=item.img, alt="") 
+                  .img-container
+                    img(src=item.img, alt="") 
       .row.align-items-center.justify-content-center.pt-3
         .col-auto 
           .product-card-price-container
